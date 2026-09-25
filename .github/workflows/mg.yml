@@ -32,12 +32,13 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
+      # mg-3backends: android-actions/setup-android@v3 currently fails trying
+      # to install the removed 'tools' package. The runner image already ships
+      # a full SDK at $ANDROID_HOME — just accept licenses and add the NDK.
       - name: Install Android NDK
         run: |
-          echo "y" | sdkmanager "ndk;27.3.13750724"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;27.3.13750724" >/dev/null
           echo "ndk.dir=$ANDROID_HOME/ndk/27.3.13750724" >> local.properties
 
       - name: Change wrapper permissions
