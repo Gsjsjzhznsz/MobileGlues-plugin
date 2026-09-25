@@ -365,9 +365,9 @@ enum class RendererBackend(
     val wire: String,
     @param:StringRes private val labelRes: Int,
 ) {
-    DirectVulkan(R.string.backend_vulkan_direct),
-    MobileGlues(R.string.backend_gles),
-    DirectGLES(R.string.backend_opengl40);
+    DirectVulkan("DirectVulkan", R.string.backend_vulkan_direct),
+    MobileGlues("MobileGlues", R.string.backend_gles),
+    DirectGLES("DirectGLES", R.string.backend_opengl40);
 
     fun label(context: Context): CharSequence = context.getString(labelRes)
 
