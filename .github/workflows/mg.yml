@@ -35,7 +35,8 @@ jobs:
             3rdparty/VulkanMemoryAllocator \
             3rdparty/SPIRV-Reflect \
             3rdparty/xxHash \
-            3rdparty/asio
+            3rdparty/asio \
+            include/ska
 
       # glslang no longer registers its External deps as submodules; this
       # script fetches spirv-tools/spirv-headers so ENABLE_OPT=ON configures.
