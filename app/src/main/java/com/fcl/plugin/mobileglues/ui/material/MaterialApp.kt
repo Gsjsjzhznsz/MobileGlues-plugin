@@ -14,10 +14,19 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.calculateBottomPadding
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -45,10 +54,19 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import top.yukonga.miuix.kmp.blur.Backdrop
+import top.yukonga.miuix.kmp.blur.layerBackdrop
+import top.yukonga.miuix.kmp.blur.rememberLayerBackdrop
 import com.fcl.plugin.mobileglues.R
+import com.fcl.plugin.mobileglues.settings.ThemeMode
 import com.fcl.plugin.mobileglues.ui.AppController
 import com.fcl.plugin.mobileglues.ui.AppSubPage
 import com.fcl.plugin.mobileglues.ui.AppTab
+import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBar
+import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBarItem
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableBlur
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableFloatingBottomBar
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableFloatingBottomBarGlass
 
 /**
  * MD3 皮肤的外壳：底部导航三页 + 子页面，全部对话框挂在这一层。
@@ -57,8 +75,15 @@ import com.fcl.plugin.mobileglues.ui.AppTab
  * 所以和 Miuix 皮肤看到的是同一份真相。
  */
 @Composable
-fun MaterialApp(controller: AppController) {
-    MgMaterialTheme {
+fun MaterialApp(
+    controller: AppController,
+    themeMode: ThemeMode,
+    keyColor: Int,
+    darkTheme: Boolean,
+) {
+    // 动态取色三档在 MD3 侧 = S+ 的系统动态色板；非动态档用基线色板。
+    // keyColor 种子在 MD3 侧不落地（compose MD3 不支持直接播种），主题色在 Miuix 皮肤生效。
+    MgMaterialTheme(darkTheme = darkTheme, dynamic = themeMode.isMonet) {
         val tab by controller.tab.collectAsStateWithLifecycle()
         val subPage by controller.subPage.collectAsStateWithLifecycle()
         val snackbarHostState = remember { SnackbarHostState() }
@@ -91,6 +116,14 @@ fun MaterialApp(controller: AppController) {
         // 本来就稀缺的高度，而左侧的宽度反而有富余。判断的是高度而不是朝向，理由见
         // Responsive。
         val heightCompact = Responsive.isHeightCompact()
+        val enableBlur = LocalEnableBlur.current
+        val floatingBar = LocalEnableFloatingBottomBar.current
+        val glassBar = LocalEnableFloatingBottomBarGlass.current
+        // 悬浮底栏液态玻璃的采集层：先垫 surface 底色再画内容，否则采样到透明像素会发黑。
+        val glassBackdrop = rememberLayerBackdrop {
+            drawRect(MaterialTheme.colorScheme.background)
+            drawContent()
+        }
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(
                 containerColor = MaterialTheme.colorScheme.background,
@@ -102,11 +135,22 @@ fun MaterialApp(controller: AppController) {
                         enter = slideInVertically { it } + fadeIn(),
                         exit = slideOutVertically { it } + fadeOut(),
                     ) {
-                        MaterialNavigationBar(current = tab, onSelect = controller::navigateTab)
+                        MaterialBottomBar(
+                            current = tab,
+                            onSelect = controller::navigateTab,
+                            backdrop = glassBackdrop,
+                            floatingBar = floatingBar,
+                            glassBar = glassBar,
+                        )
                     }
                 },
             ) { innerPadding ->
-                Row(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding)
+                        .then(if (floatingBar && glassBar) Modifier.layerBackdrop(glassBackdrop) else Modifier),
+                ) {
                     AnimatedVisibility(
                         visible = subPage == null && heightCompact,
                         enter = slideInHorizontally { -it } + fadeIn(),
@@ -131,6 +175,7 @@ fun MaterialApp(controller: AppController) {
                                     AppSubPage.GlInfo -> MaterialGlInfoPage(controller)
                                     AppSubPage.Privacy -> MaterialPrivacyPage(controller)
                                     AppSubPage.ThirdParty -> MaterialThirdPartyPage(controller)
+                                    AppSubPage.Theme -> MaterialThemePage(controller)
                                 }
                             }
                         }
@@ -158,6 +203,59 @@ private fun MaterialNavigationBar(current: AppTab, onSelect: (AppTab) -> Unit) {
                 },
                 label = { Text(stringResource(label)) },
             )
+        }
+    }
+}
+
+/**
+ * 底栏双形态（与 Miuix 皮肤同语义）：标准 NavigationBar / Apple 风格悬浮液态玻璃胶囊。
+ * 悬浮栏底距 = 导航栏 inset + 8dp（无手势导航设备回退 28dp）。
+ */
+@Composable
+private fun MaterialBottomBar(
+    current: AppTab,
+    onSelect: (AppTab) -> Unit,
+    backdrop: Backdrop,
+    floatingBar: Boolean,
+    glassBar: Boolean,
+) {
+    if (!floatingBar) {
+        MaterialNavigationBar(current = current, onSelect = onSelect)
+        return
+    }
+    val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
+        .let { inset -> if (inset != 0.dp) 8.dp + inset else 28.dp }
+    FloatingBottomBar(
+        modifier = Modifier
+            .pointerInput(Unit) { detectTapGestures { } }
+            .padding(start = 28.dp, end = 28.dp, bottom = bottomPadding),
+        selectedIndex = current.ordinal,
+        onSelected = { index -> onSelect(AppTab.entries[index]) },
+        backdrop = backdrop,
+        tabsCount = AppTab.entries.size,
+        isBlurEnabled = glassBar,
+    ) { activateTab ->
+        NavigationDestinations.forEach { (destination, icon, label) ->
+            FloatingBottomBarItem(
+                selected = current == destination,
+                onClick = { activateTab(destination.ordinal) },
+                // weight 子项在 IntrinsicSize.Min 的 intrinsic 测量中宽度为 0，
+                // 必须 minWidth 兜底，否则整个底栏塌缩成一个颗粒（KSU 同款写法）
+                modifier = Modifier.defaultMinSize(minWidth = 76.dp),
+            ) {
+                Icon(
+                    painter = painterResource(icon),
+                    contentDescription = stringResource(label),
+                )
+                Text(
+                    text = stringResource(label),
+                    fontSize = 11.sp,
+                    lineHeight = 14.sp,
+                    maxLines = 1,
+                    softWrap = false,
+                    overflow = TextOverflow.Visible,
+                )
+            }
         }
     }
 }

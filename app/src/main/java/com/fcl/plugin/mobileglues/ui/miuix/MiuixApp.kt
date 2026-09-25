@@ -28,11 +28,29 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
+import com.fcl.plugin.mobileglues.settings.ThemeMode
 import com.fcl.plugin.mobileglues.ui.AppController
 import com.fcl.plugin.mobileglues.ui.AppSubPage
 import com.fcl.plugin.mobileglues.ui.AppTab
+import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBar
+import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBarItem
+import com.fcl.plugin.mobileglues.ui.liquid.FALLBACK_KEY_COLOR
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableBlur
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableFloatingBottomBar
+import com.fcl.plugin.mobileglues.ui.liquid.LocalEnableFloatingBottomBarGlass
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.calculateBottomPadding
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import top.yukonga.miuix.kmp.basic.NavigationRail
 import top.yukonga.miuix.kmp.basic.NavigationRailItem
 import com.fcl.plugin.mobileglues.ui.Responsive
@@ -43,9 +61,20 @@ import top.yukonga.miuix.kmp.basic.SnackbarHost
 import top.yukonga.miuix.kmp.basic.SnackbarDuration
 import top.yukonga.miuix.kmp.basic.SnackbarHostState
 import top.yukonga.miuix.kmp.basic.SnackbarResult
+import top.yukonga.miuix.kmp.blur.Backdrop
+import top.yukonga.miuix.kmp.blur.LayerBackdrop
+import top.yukonga.miuix.kmp.blur.layerBackdrop
+import top.yukonga.miuix.kmp.blur.rememberLayerBackdrop
+import com.fcl.plugin.mobileglues.ui.BlurredBar
+import com.fcl.plugin.mobileglues.ui.rememberBlurBackdrop
+import top.yukonga.miuix.kmp.theme.ColorSchemeMode
 import top.yukonga.miuix.kmp.theme.MiuixTheme
+import top.yukonga.miuix.kmp.theme.ThemeController
 import top.yukonga.miuix.kmp.theme.darkColorScheme
 import top.yukonga.miuix.kmp.theme.lightColorScheme
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 
 /**
  * Miuix 皮肤的外壳。
@@ -54,9 +83,28 @@ import top.yukonga.miuix.kmp.theme.lightColorScheme
  * 唯一共享的是 [AppController]——所有操作逻辑因此只有一份。
  */
 @Composable
-fun MiuixApp(controller: AppController) {
-    val dark = isSystemInDarkTheme()
-    MiuixTheme(colors = if (dark) darkColorScheme() else lightColorScheme()) {
+fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
+    val dark = themeMode.isDark || (themeMode.isSystem && isSystemInDarkTheme())
+
+    // BandQQ 同款：主题模式（六档）映射到 miuix ThemeController 的 ColorSchemeMode，
+    // 动态取色三档走系统 Monet 色板；旧 colors= 参数的重载永远停在浅色，不能再用。
+    val schemeMode = when (themeMode) {
+        ThemeMode.System -> ColorSchemeMode.System
+        ThemeMode.Light -> ColorSchemeMode.Light
+        ThemeMode.Dark -> ColorSchemeMode.Dark
+        ThemeMode.MonetSystem -> ColorSchemeMode.MonetSystem
+        ThemeMode.MonetLight -> ColorSchemeMode.MonetLight
+        ThemeMode.MonetDark -> ColorSchemeMode.MonetDark
+    }
+    val seedColor: Color? = when {
+        keyColor != 0 -> Color(keyColor)
+        themeMode.isMonet && android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.S -> FALLBACK_KEY_COLOR
+        else -> null
+    }
+    val themeController = remember(schemeMode, dark, seedColor) {
+        ThemeController(colorSchemeMode = schemeMode, keyColor = seedColor, isDark = dark)
+    }
+    MiuixTheme(controller = themeController) {
         val tab by controller.tab.collectAsStateWithLifecycle()
         val subPage by controller.subPage.collectAsStateWithLifecycle()
         val snackbarHostState = remember { SnackbarHostState() }
@@ -87,6 +135,17 @@ fun MiuixApp(controller: AppController) {
         // 垂直方向紧张（通常是手机横屏）时导航让到侧边，理由与 Material 皮肤相同：
         // 底栏吃掉的是横屏下最稀缺的高度。判断的是高度而不是朝向，见 Responsive。
         val heightCompact = Responsive.isHeightCompact()
+        val enableBlur = LocalEnableBlur.current
+        val floatingBar = LocalEnableFloatingBottomBar.current
+        val glassBar = LocalEnableFloatingBottomBarGlass.current
+        // BandQQ/KernelSU 同款双采集层：
+        // - blurBackdrop 供标准底栏的 textureBlur（enableBlur 关闭或设备不支持时为 null，回退实色）；
+        // - glassBackdrop 供悬浮底栏液态玻璃，先垫 surface 底色再画内容，防止采样透明像素发黑。
+        val blurBackdrop = rememberBlurBackdrop(enableBlur)
+        val glassBackdrop = rememberLayerBackdrop {
+            drawRect(MiuixTheme.colorScheme.surface)
+            drawContent()
+        }
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             // Miuix 的语义与 MD3 相反：页面是 surface（深色下是纯黑），卡片才是 surfaceContainer。
@@ -99,12 +158,29 @@ fun MiuixApp(controller: AppController) {
                     enter = slideInVertically { it } + fadeIn(),
                     exit = slideOutVertically { it } + fadeOut(),
                 ) {
-                    MiuixNavigationBar(current = tab, onSelect = controller::navigateTab)
+                    MiuixBottomBar(
+                        current = tab,
+                        onSelect = controller::navigateTab,
+                        backdrop = glassBackdrop,
+                        blurBackdrop = blurBackdrop,
+                        floatingBar = floatingBar,
+                        glassBar = glassBar,
+                    )
                 }
             },
         ) { innerPadding ->
             // 对话框宿主要在 Scaffold 之内：Miuix 的弹窗渲染进 Scaffold 提供的 popup host。
-            Box(modifier = Modifier.fillMaxSize()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .then(
+                        when {
+                            floatingBar && glassBar -> Modifier.layerBackdrop(glassBackdrop)
+                            !floatingBar && blurBackdrop != null -> Modifier.layerBackdrop(blurBackdrop)
+                            else -> Modifier
+                        }
+                    )
+            ) {
                 Row(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
                     AnimatedVisibility(
                         visible = subPage == null && heightCompact,
@@ -130,6 +206,7 @@ fun MiuixApp(controller: AppController) {
                                 AppSubPage.GlInfo -> MiuixGlInfoPage(controller)
                                 AppSubPage.Privacy -> MiuixPrivacyPage(controller)
                                 AppSubPage.ThirdParty -> MiuixThirdPartyPage(controller)
+                                AppSubPage.Theme -> MiuixThemePage(controller)
                             }
                         }
                     }
@@ -145,8 +222,12 @@ fun MiuixApp(controller: AppController) {
 }
 
 @Composable
-private fun MiuixNavigationBar(current: AppTab, onSelect: (AppTab) -> Unit) {
-    NavigationBar {
+private fun MiuixNavigationBar(
+    current: AppTab,
+    onSelect: (AppTab) -> Unit,
+    containerColor: Color = MiuixTheme.colorScheme.surface,
+) {
+    NavigationBar(color = containerColor) {
         NavigationBarItem(
             selected = current == AppTab.Home,
             onClick = { onSelect(AppTab.Home) },
@@ -166,6 +247,86 @@ private fun MiuixNavigationBar(current: AppTab, onSelect: (AppTab) -> Unit) {
             label = stringResource(R.string.nav_info),
         )
     }
+}
+
+/**
+ * 底栏双形态（BandQQ/KernelSU 同款语义）：
+ * - 非悬浮：标准 NavigationBar；
+ * - 悬浮：Apple 风格 FloatingBottomBar（液态玻璃 + 阻尼拖拽指示 pill + 交互高光）。
+ *
+ * 悬浮栏底距 = 导航栏 inset + 8dp（无手势导航设备回退 28dp），否则底栏贴到屏幕底边。
+ */
+@Composable
+private fun MiuixBottomBar(
+    current: AppTab,
+    onSelect: (AppTab) -> Unit,
+    backdrop: Backdrop,
+    blurBackdrop: LayerBackdrop?,
+    floatingBar: Boolean,
+    glassBar: Boolean,
+) {
+    if (!floatingBar) {
+        // BandQQ 同款：模糊开启时标准底栏包进 textureBlur，本体透明让模糊层透出来。
+        if (blurBackdrop != null) {
+            BlurredBar(backdrop = blurBackdrop) {
+                MiuixNavigationBar(
+                    current = current,
+                    onSelect = onSelect,
+                    containerColor = Color.Transparent,
+                )
+            }
+        } else {
+            MiuixNavigationBar(current = current, onSelect = onSelect)
+        }
+        return
+    }
+    val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
+        .let { inset -> if (inset != 0.dp) 8.dp + inset else 28.dp }
+    FloatingBottomBar(
+        modifier = Modifier
+            .pointerInput(Unit) { detectTapGestures { } }
+            .padding(start = 28.dp, end = 28.dp, bottom = bottomPadding),
+        selectedIndex = current.ordinal,
+        onSelected = { index -> onSelect(AppTab.entries[index]) },
+        backdrop = backdrop,
+        tabsCount = AppTab.entries.size,
+        isBlurEnabled = glassBar,
+    ) { activateTab ->
+        AppTab.entries.forEach { tab ->
+            FloatingBottomBarItem(
+                selected = current == tab,
+                onClick = { activateTab(tab.ordinal) },
+                // weight 子项在 IntrinsicSize.Min 的 intrinsic 测量中宽度为 0，
+                // 必须 minWidth 兜底，否则整个底栏塌缩成一个颗粒（KSU 同款写法）
+                modifier = Modifier.defaultMinSize(minWidth = 76.dp),
+            ) {
+                Icon(
+                    imageVector = rememberVectorIcon(tab.iconRes()),
+                    contentDescription = stringResource(tab.labelRes()),
+                )
+                Text(
+                    text = stringResource(tab.labelRes()),
+                    fontSize = 11.sp,
+                    lineHeight = 14.sp,
+                    maxLines = 1,
+                    softWrap = false,
+                    overflow = TextOverflow.Visible,
+                )
+            }
+        }
+    }
+}
+
+private fun AppTab.iconRes(): Int = when (this) {
+    AppTab.Home -> R.drawable.ic_home
+    AppTab.Settings -> R.drawable.ic_settings
+    AppTab.Info -> R.drawable.ic_info
+}
+
+private fun AppTab.labelRes(): Int = when (this) {
+    AppTab.Home -> R.string.nav_home
+    AppTab.Settings -> R.string.nav_settings
+    AppTab.Info -> R.string.nav_info
 }
 
 /** 底栏的侧边形态，条目与顺序同一份语义——两种形态永远不会各说各话。 */

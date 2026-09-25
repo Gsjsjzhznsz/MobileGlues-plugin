@@ -6,6 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.settings.UiStyle
+import com.fcl.plugin.mobileglues.ui.liquid.MgGlassTheme
 import com.fcl.plugin.mobileglues.ui.material.MaterialApp
 import com.fcl.plugin.mobileglues.ui.miuix.MiuixApp
 
@@ -33,8 +34,12 @@ fun MobileGluesApp(controller: AppController) {
         onDispose { view.keepScreenOn = false }
     }
 
-    when (style) {
-        UiStyle.Material -> MaterialApp(controller)
-        UiStyle.Miuix -> MiuixApp(controller)
+    // 主题与液态玻璃的 CompositionLocal 在这一层提供：两套皮肤吃同一份主题模式
+    // 与玻璃开关，底栏/顶栏的玻璃效果不经过皮肤组件就能取到状态。
+    MgGlassTheme(controller) { themeMode, keyColor, darkTheme ->
+        when (style) {
+            UiStyle.Material -> MaterialApp(controller, themeMode, keyColor, darkTheme)
+            UiStyle.Miuix -> MiuixApp(controller, themeMode, keyColor)
+        }
     }
 }

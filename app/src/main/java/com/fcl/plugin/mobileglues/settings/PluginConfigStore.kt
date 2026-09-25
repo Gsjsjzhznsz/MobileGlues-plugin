@@ -57,6 +57,28 @@ object SponsorPrompt {
 }
 
 /**
+ * 主题模式（BandQQ/KernelSU 同款六档，miuix ThemeController 的 ColorSchemeMode 一一对应）。
+ *
+ * 动态取色三档在 Android 12+ 走系统 Monet 色板，12 以下回退品牌蓝种子色。
+ */
+enum class ThemeMode(val value: Int) {
+    System(0),
+    Light(1),
+    Dark(2),
+    MonetSystem(3),
+    MonetLight(4),
+    MonetDark(5);
+
+    val isDark: Boolean get() = this == Dark || this == MonetDark
+    val isSystem: Boolean get() = this == System || this == MonetSystem
+    val isMonet: Boolean get() = this == MonetSystem || this == MonetLight || this == MonetDark
+
+    companion object {
+        fun fromValue(value: Int): ThemeMode = entries.firstOrNull { it.value == value } ?: System
+    }
+}
+
+/**
  * 本 App 自己的本地设置（与 MobileGlues 的 config.json 无关）。
  *
  * 用 SharedPreferences、不引新依赖。它记录的是「界面风格、授权方式、启动次数」这类
@@ -77,6 +99,61 @@ class PluginConfigStore(context: Context) {
     fun setUiStyle(style: UiStyle) {
         prefs.edit { putString(KEY_UI_STYLE, style.key) }
         mutableUiStyle.value = style
+    }
+
+    // ===== 主题与液态玻璃（BandQQ 移植）=====
+
+    private val mutableThemeMode =
+        MutableStateFlow(ThemeMode.fromValue(prefs.getInt(KEY_THEME_MODE, ThemeMode.System.value)))
+
+    /** 主题模式：跟随系统/浅色/深色/动态取色三档。 */
+    val themeMode: StateFlow<ThemeMode> = mutableThemeMode.asStateFlow()
+
+    fun setThemeMode(mode: ThemeMode) {
+        prefs.edit { putInt(KEY_THEME_MODE, mode.value) }
+        mutableThemeMode.value = mode
+    }
+
+    private val mutableKeyColor = MutableStateFlow(prefs.getInt(KEY_KEY_COLOR, 0))
+
+    /** Monet 种子色 ARGB；0 = 跟随系统色板。 */
+    val keyColor: StateFlow<Int> = mutableKeyColor.asStateFlow()
+
+    fun setKeyColor(color: Int) {
+        prefs.edit { putInt(KEY_KEY_COLOR, color) }
+        mutableKeyColor.value = color
+    }
+
+    private val mutableEnableBlur = MutableStateFlow(prefs.getBoolean(KEY_ENABLE_BLUR, true))
+
+    /** 顶栏/底栏模糊（Android 13+ 生效；设备不支持时自动回退实色）。 */
+    val enableBlur: StateFlow<Boolean> = mutableEnableBlur.asStateFlow()
+
+    fun setEnableBlur(enabled: Boolean) {
+        prefs.edit { putBoolean(KEY_ENABLE_BLUR, enabled) }
+        mutableEnableBlur.value = enabled
+    }
+
+    private val mutableFloatingBottomBar =
+        MutableStateFlow(prefs.getBoolean(KEY_FLOATING_BOTTOM_BAR, false))
+
+    /** Apple 风格悬浮底栏（替代标准 NavigationBar）。 */
+    val floatingBottomBar: StateFlow<Boolean> = mutableFloatingBottomBar.asStateFlow()
+
+    fun setFloatingBottomBar(enabled: Boolean) {
+        prefs.edit { putBoolean(KEY_FLOATING_BOTTOM_BAR, enabled) }
+        mutableFloatingBottomBar.value = enabled
+    }
+
+    private val mutableFloatingBottomBarGlass =
+        MutableStateFlow(prefs.getBoolean(KEY_FLOATING_BOTTOM_BAR_GLASS, true))
+
+    /** 悬浮底栏的液态玻璃折射效果（Android 13+ 生效）。 */
+    val floatingBottomBarGlass: StateFlow<Boolean> = mutableFloatingBottomBarGlass.asStateFlow()
+
+    fun setFloatingBottomBarGlass(enabled: Boolean) {
+        prefs.edit { putBoolean(KEY_FLOATING_BOTTOM_BAR_GLASS, enabled) }
+        mutableFloatingBottomBarGlass.value = enabled
     }
 
     private val mutableAuthMethod =
@@ -187,5 +264,10 @@ class PluginConfigStore(context: Context) {
         const val KEY_DONATED = "donated"
         const val KEY_PRIVACY_ACCEPTED = "privacy_accepted"
         const val KEY_ANGLE_SOURCE = "angle_source_package"
+        const val KEY_THEME_MODE = "theme_mode"
+        const val KEY_KEY_COLOR = "theme_key_color"
+        const val KEY_ENABLE_BLUR = "enable_blur"
+        const val KEY_FLOATING_BOTTOM_BAR = "floating_bottom_bar"
+        const val KEY_FLOATING_BOTTOM_BAR_GLASS = "floating_bottom_bar_glass"
     }
 }

@@ -64,7 +64,7 @@ import kotlin.coroutines.resume
 enum class AppTab { Home, Settings, Info }
 
 /** 从信息页进入的子页面（带返回）。 */
-enum class AppSubPage { GlInfo, Privacy, ThirdParty }
+enum class AppSubPage { GlInfo, Privacy, ThirdParty, Theme }
 
 /** 配置加载状态：权限门之内的内容区按它决定显示什么。 */
 enum class SettingsLoadState { NotLoaded, Loading, Ready }

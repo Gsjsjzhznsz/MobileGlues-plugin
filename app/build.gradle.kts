@@ -18,14 +18,14 @@ val forkSigningReady = file("../keystore-air.p12").exists()
 
 android {
     namespace = "com.fcl.plugin.mobileglues"
-    compileSdk = 36
+    compileSdk = 37
 
     ndkVersion = "27.3.13750724"
 
     defaultConfig {
         applicationId = "com.fcl.plugin.mobileglues"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 2000
         versionName = "2.0.0"
 
@@ -144,6 +144,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.documentfile)
     implementation(libs.miuix.ui)
+    implementation(libs.miuix.blur)
     // 协程和 lifecycleScope 以前是从 appcompat 传递依赖里蹭来的，这里显式声明。
     implementation(libs.coroutines.android)
     implementation(libs.lifecycle.runtime.ktx)

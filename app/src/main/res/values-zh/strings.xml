@@ -250,4 +250,25 @@
     <string name="sponsor_confirm_msg">如果刚才已经捐赠了，点「已捐赠」，我们就不再提醒；没有的话也没关系哦~</string>
     <string name="sponsor_action_donated">已捐赠</string>
     <string name="sponsor_action_not_yet">还没有</string>
+
+    <!-- 主题与液态玻璃（自 BandQQ 移植） -->
+    <string name="theme_title">主题设置</string>
+    <string name="theme_mode">主题模式</string>
+    <string name="theme_mode_system">跟随系统</string>
+    <string name="theme_mode_light">浅色</string>
+    <string name="theme_mode_dark">深色</string>
+    <string name="theme_mode_monet_system">动态取色 · 跟随系统</string>
+    <string name="theme_mode_monet_light">动态取色 · 浅色</string>
+    <string name="theme_mode_monet_dark">动态取色 · 深色</string>
+    <string name="theme_mode_summary">%1$s</string>
+    <string name="theme_key_color">主题色</string>
+    <string name="theme_key_color_system">跟随系统色板</string>
+    <string name="theme_key_color_summary">作用于动态取色模式（Android 12+）</string>
+    <string name="glass_group">液态玻璃</string>
+    <string name="glass_blur">模糊效果</string>
+    <string name="glass_blur_summary">让半透明表面背后的内容被模糊（Android 13+ 生效）</string>
+    <string name="glass_floating_bar">悬浮底栏</string>
+    <string name="glass_floating_bar_summary">Apple 风格的悬浮胶囊底栏</string>
+    <string name="glass_floating_glass">液态玻璃折射</string>
+    <string name="glass_floating_glass_summary">悬浮底栏的折射与高光效果（Android 13+ 生效）</string>
 </resources>

@@ -10,6 +10,10 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,18 +21,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
+import com.fcl.plugin.mobileglues.settings.ThemeMode
 import com.fcl.plugin.mobileglues.ui.AppController
 import com.fcl.plugin.mobileglues.ui.PrivacySections
 import com.fcl.plugin.mobileglues.ui.ThirdPartyGroups
@@ -250,3 +258,145 @@ private fun MiuixSubPage(
 }
 
 private const val GL_INFO_CLIP_LABEL = "MobileGlues GL info"
+
+/**
+ * 主题设置页（BandQQ ThemeScreen 的移植形态，Miuix 版）：
+ * 主题模式六档 + 动态取色种子色 + 液态玻璃三开关。
+ * 状态全部落在 [AppController.pluginConfig]，AppRoot 的 MgGlassTheme 消费。
+ */
+@Composable
+fun MiuixThemePage(controller: AppController) {
+    val themeMode by controller.pluginConfig.themeMode.collectAsStateWithLifecycle()
+    val keyColor by controller.pluginConfig.keyColor.collectAsStateWithLifecycle()
+    val enableBlur by controller.pluginConfig.enableBlur.collectAsStateWithLifecycle()
+    val floatingBar by controller.pluginConfig.floatingBottomBar.collectAsStateWithLifecycle()
+    val glassBar by controller.pluginConfig.floatingBottomBarGlass.collectAsStateWithLifecycle()
+
+    val modeLabels = listOf(
+        stringResource(R.string.theme_mode_system),
+        stringResource(R.string.theme_mode_light),
+        stringResource(R.string.theme_mode_dark),
+        stringResource(R.string.theme_mode_monet_system),
+        stringResource(R.string.theme_mode_monet_light),
+        stringResource(R.string.theme_mode_monet_dark),
+    )
+
+    MiuixSubPage(
+        title = stringResource(R.string.theme_title),
+        onBack = { controller.navigateBack() },
+    ) {
+        MiuixGroup(title = stringResource(R.string.theme_mode)) {
+            MiuixDropdownRow(
+                title = stringResource(R.string.theme_mode),
+                options = modeLabels,
+                selectedIndex = themeMode.value,
+                onSelect = { index -> controller.pluginConfig.setThemeMode(ThemeMode.fromValue(index)) },
+            )
+            // 种子色只在动态取色三档里有意义：其他三档着色跟着系统/明暗走，改色没有可见效果。
+            MiuixKeyColorRow(
+                title = stringResource(R.string.theme_key_color),
+                summary = stringResource(R.string.theme_key_color_summary),
+                selected = keyColor,
+                enabled = themeMode.isMonet,
+                onSelect = { controller.pluginConfig.setKeyColor(it) },
+            )
+        }
+
+        MiuixGroup(title = stringResource(R.string.glass_group)) {
+            MiuixSwitchRow(
+                title = stringResource(R.string.glass_blur),
+                summary = stringResource(R.string.glass_blur_summary),
+                checked = enableBlur,
+                onCheckedChange = { controller.pluginConfig.setEnableBlur(it) },
+            )
+            MiuixSwitchRow(
+                title = stringResource(R.string.glass_floating_bar),
+                summary = stringResource(R.string.glass_floating_bar_summary),
+                checked = floatingBar,
+                onCheckedChange = { controller.pluginConfig.setFloatingBottomBar(it) },
+            )
+            MiuixSwitchRow(
+                title = stringResource(R.string.glass_floating_glass),
+                summary = stringResource(R.string.glass_floating_glass_summary),
+                checked = glassBar,
+                onCheckedChange = { controller.pluginConfig.setFloatingBottomBarGlass(it) },
+                enabled = floatingBar,
+            )
+        }
+
+        MiuixBottomSpacer()
+    }
+}
+
+/** 动态取色的种子色选择：跟随系统 + 一排预设色，点选即生效（落盘 + 全局刷新）。 */
+@Composable
+private fun MiuixKeyColorRow(
+    title: String,
+    summary: String,
+    selected: Int,
+    enabled: Boolean,
+    onSelect: (Int) -> Unit,
+) {
+    MiuixTextRow(title = title, summary = summary, enabled = enabled)
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = MiuixScreenPadding + 16.dp, vertical = 6.dp),
+    ) {
+        MiuixKeyColorSwatch(color = 0, selected = selected == 0, enabled = enabled, onSelect = onSelect)
+        PresetKeyColors.forEach { argb ->
+            MiuixKeyColorSwatch(color = argb, selected = selected == argb, enabled = enabled, onSelect = onSelect)
+        }
+    }
+}
+
+/** KernelSU/BandQQ 同款预设种子色板；0 号位是「跟随系统色板」。 */
+private val PresetKeyColors = intArrayOf(
+    0xFF3482FF.toInt(),
+    0xFF9C27B0.toInt(),
+    0xFFE91E63.toInt(),
+    0xFFFF5722.toInt(),
+    0xFFFFC107.toInt(),
+    0xFF4CAF50.toInt(),
+    0xFF009688.toInt(),
+    0xFF607D8B.toInt(),
+)
+
+@Composable
+private fun MiuixKeyColorSwatch(color: Int, selected: Boolean, enabled: Boolean, onSelect: (Int) -> Unit) {
+    val shape = androidx.compose.foundation.shape.CircleShape
+    Box(
+        modifier = Modifier
+            .padding(end = 10.dp)
+            .size(28.dp)
+            .clip(shape)
+            .background(
+                if (color == 0) {
+                    MiuixTheme.colorScheme.surfaceContainer
+                } else {
+                    Color(color)
+                },
+                shape,
+            )
+            .border(
+                width = if (selected) 2.dp else 1.dp,
+                color = when {
+                    selected -> MiuixTheme.colorScheme.primary
+                    color == 0 -> MiuixTheme.colorScheme.onSurfaceVariantSummary
+                    else -> Color.Transparent
+                },
+                shape,
+            )
+            .clickable(enabled = enabled) { onSelect(color) },
+        contentAlignment = Alignment.Center,
+    ) {
+        if (color == 0) {
+            Text(
+                text = "A",
+                style = MiuixTheme.textStyles.body2,
+                color = MiuixTheme.colorScheme.onSurface,
+            )
+        }
+    }
+}

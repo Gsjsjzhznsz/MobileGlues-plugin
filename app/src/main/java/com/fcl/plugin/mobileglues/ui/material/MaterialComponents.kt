@@ -67,15 +67,21 @@ import kotlin.math.roundToInt
 /** 页面左右留白。三个页面用同一个值，滚动时各组卡片的边缘才对得齐。 */
 val ScreenPadding = 16.dp
 
-/** MD3 皮肤主题：Android 12+ 用动态取色（Material You），以下回落到默认色板。 */
+/**
+ * MD3 皮肤主题：Android 12+ 用动态取色（Material You），以下回落到默认色板。
+ *
+ * [dynamic] 来自主题模式的「动态取色」三档（BandQQ 移植）：关闭时即使设备支持
+ * Monet 也用基线色板，让「跟随系统/浅色/深色」三档保持稳定的品牌观感。
+ */
 @Composable
 fun MgMaterialTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    dynamic: Boolean = true,
     content: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     val colorScheme = when {
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ->
+        dynamic && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ->
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
 
         darkTheme -> darkColorScheme()

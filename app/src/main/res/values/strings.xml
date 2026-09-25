@@ -266,4 +266,25 @@ Please note, this action is <b><font color="@colorError">irreversible</font></b>
     <string name="sponsor_confirm_msg">If you happened to complete a donation just now, tap “Donated” and we will never bring this up again. If not, that is completely fine too.</string>
     <string name="sponsor_action_donated">I donated</string>
     <string name="sponsor_action_not_yet">Not yet</string>
+
+    <!-- Theme & liquid glass (ported from BandQQ) -->
+    <string name="theme_title">Theme</string>
+    <string name="theme_mode">Theme mode</string>
+    <string name="theme_mode_system">Follow system</string>
+    <string name="theme_mode_light">Light</string>
+    <string name="theme_mode_dark">Dark</string>
+    <string name="theme_mode_monet_system">Dynamic color · Follow system</string>
+    <string name="theme_mode_monet_light">Dynamic color · Light</string>
+    <string name="theme_mode_monet_dark">Dynamic color · Dark</string>
+    <string name="theme_mode_summary">%1$s</string>
+    <string name="theme_key_color">Accent color</string>
+    <string name="theme_key_color_system">System palette</string>
+    <string name="theme_key_color_summary">Applies to the dynamic color modes (Android 12+)</string>
+    <string name="glass_group">Liquid glass</string>
+    <string name="glass_blur">Blur</string>
+    <string name="glass_blur_summary">Blur the bars behind translucent surfaces (Android 13+)</string>
+    <string name="glass_floating_bar">Floating bottom bar</string>
+    <string name="glass_floating_bar_summary">Apple-style floating navigation pill</string>
+    <string name="glass_floating_glass">Liquid glass refraction</string>
+    <string name="glass_floating_glass_summary">Refraction and specular highlights on the floating bar (Android 13+)</string>
 </resources>
