@@ -16,8 +16,32 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
+
+      # mg-3backends: recursive checkout of everything drags in DiligentCore
+      # (commented out in CMake), apitrace (trace_replay only) and tracy
+      # (profiling only) — a 55-minute clone for nothing. The Android build
+      # needs exactly: MobileGlues (recursive), MobileGL, and the MobileGL
+      # 3rdparty set that the root CMakeLists add_subdirectory's unconditionally.
+      - name: Init submodules (Android build set)
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git submodule update --init --recursive MobileGlues
+          git submodule update --init MobileGL
+          git -C MobileGL submodule update --init --recursive \
+            3rdparty/glslang \
+            3rdparty/SPIRV-Cross \
+            3rdparty/Vulkan-Headers \
+            3rdparty/Vulkan-Utility-Libraries \
+            3rdparty/VulkanMemoryAllocator \
+            3rdparty/SPIRV-Reflect \
+            3rdparty/xxHash \
+            3rdparty/asio
+
+      # glslang no longer registers its External deps as submodules; this
+      # script fetches spirv-tools/spirv-headers so ENABLE_OPT=ON configures.
+      - name: Update glslang external sources
+        working-directory: MobileGL/3rdparty/glslang
+        run: python update_glslang_sources.py
 
       - name: Set current date as env variable
         run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
