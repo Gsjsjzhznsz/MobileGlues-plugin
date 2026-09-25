@@ -38,6 +38,7 @@ import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.MGConfig
 import com.fcl.plugin.mobileglues.settings.NoErrorConfig
+import com.fcl.plugin.mobileglues.settings.RendererBackend
 import com.fcl.plugin.mobileglues.settings.SpinnerOption
 import com.fcl.plugin.mobileglues.settings.UiStyle
 import com.fcl.plugin.mobileglues.ui.AppController
@@ -135,6 +136,13 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
 
     Column(modifier = Modifier.fillMaxWidth()) {
         PreferenceGroup(title = stringResource(R.string.settings_group_render)) {
+            // mg-3backends：Air 6.0 同款切换器 —— MobileGlues 分区里的单一
+            // 渲染后端 pick 行，三选一，默认 Vulkan 直连；严禁拆成三条独立条目。
+            TextPreferenceRow(
+                title = stringResource(R.string.option_renderer_backend),
+                summary = config.backend.label(context).toString(),
+                onClick = { choice = ChoiceTarget.Backend },
+            )
             TextPreferenceRow(
                 title = stringResource(R.string.option_angle),
                 summary = config.angle.label(context).toString(),
@@ -217,6 +225,15 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
     // ---- 选项对话框 ----
 
     when (choice) {
+        ChoiceTarget.Backend -> OptionDialog(
+            title = stringResource(R.string.option_renderer_backend),
+            options = RendererBackend.entries,
+            selected = config.backend,
+            labelOf = { it.label(context) },
+            onSelect = controller::selectBackend,
+            onDismiss = { choice = null },
+        )
+
         ChoiceTarget.Angle -> OptionDialog(
             title = stringResource(R.string.option_angle),
             options = AngleConfig.entries,
@@ -305,4 +322,24 @@ private fun <T : SpinnerOption> OptionDialog(
     )
 }
 
-private enum class ChoiceTarget { Angle, NoError, DepthClear, GlVersion }
+/** 带 label 映射的重载：RendererBackend 的 wire 是字符串（dispatcher 按名字路由），
+ *  进不了 SpinnerOption 的 wire:Int 约束，但对话框形态与此完全同构。 */
+@Composable
+private fun <T> OptionDialog(
+    title: String,
+    options: List<T>,
+    selected: T,
+    labelOf: (T) -> CharSequence,
+    onSelect: (T) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    SingleChoiceDialog(
+        title = title,
+        options = options.map { labelOf(it).toString() },
+        selectedIndex = options.indexOf(selected),
+        onSelect = { onSelect(options[it]) },
+        onDismiss = onDismiss,
+    )
+}
+
+private enum class ChoiceTarget { Backend, Angle, NoError, DepthClear, GlVersion }

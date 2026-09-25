@@ -354,12 +354,41 @@ sealed interface GlslCacheSize {
 }
 
 /**
+ * mg-3backends（Air 6.0 定义）：统一渲染器入口 `libmobileglues.so` 的三个后端。
+ *
+ * 写进 `config.json` 的是 [wire] 这个**名字**——统一入口的 dispatcher 按这个名字路由
+ * 核心库，取值与 `MOBILEGL_BACKEND_TYPE` 环境变量一字不差（名字不会被序号漂移破坏，
+ * 这是 multidraw backend 先例的同款决策）。三档的显示文案对齐 Air 6.0
+ * 「设置 > MobileGlues > 渲染后端」：Vulkan 直连（默认）/ GLES / OpenGL 4.0（实验性）。
+ */
+enum class RendererBackend(
+    val wire: String,
+    @param:StringRes private val labelRes: Int,
+) {
+    DirectVulkan(R.string.backend_vulkan_direct),
+    MobileGlues(R.string.backend_gles),
+    DirectGLES(R.string.backend_opengl40);
+
+    fun label(context: Context): CharSequence = context.getString(labelRes)
+
+    companion object {
+        /** Air 6.0 的默认档：Vulkan 直连。 */
+        val Default: RendererBackend = DirectVulkan
+
+        /** 未知名字一律回落默认档，绝不抛异常。 */
+        fun fromWire(wire: String?): RendererBackend =
+            entries.firstOrNull { it.wire.equals(wire?.trim(), ignoreCase = true) } ?: Default
+    }
+}
+
+/**
  * MobileGlues 的配置，一个不可变的值。
  *
  * 它不知道文件、不知道 UI、也没有任何副作用：改配置就是 [copy]，落盘由 [MGConfigStore] 负责。
  * 这里的默认值是全 App 唯一的一份——[MGConfigCodec] 解析时的回落值也取自这里。
  */
 data class MGConfig(
+    val backend: RendererBackend = RendererBackend.Default,
     val angle: AngleConfig = AngleConfig.EnableIfPossible,
     val noError: NoErrorConfig = NoErrorConfig.Auto,
     val multidraw: MultidrawSettings = MultidrawSettings.Default,

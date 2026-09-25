@@ -23,3 +23,6 @@ dependencyResolutionManagement {
 rootProject.name = "MobileGlues-plugin"
 include(":app")
 include(":MobileGlues")
+// mg-3backends: MobileGL core + unified dispatcher (libMobileGL.so +
+// libmobileglues.so) built from the MobileGL submodule's own root CMake.
+include(":MobileGLCore")

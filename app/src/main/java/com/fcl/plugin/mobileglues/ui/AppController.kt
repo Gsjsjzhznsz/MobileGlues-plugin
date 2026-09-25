@@ -25,6 +25,7 @@ import com.fcl.plugin.mobileglues.settings.Fsr1Preset
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.GlslCacheSize
+import com.fcl.plugin.mobileglues.settings.RendererBackend
 import com.fcl.plugin.mobileglues.settings.MGConfig
 import com.fcl.plugin.mobileglues.settings.MgStats
 import com.fcl.plugin.mobileglues.settings.MultidrawBackend
@@ -441,6 +442,12 @@ class AppController(
     val benchOutdated: MutableSharedFlow<Unit> = mutableBenchOutdated
 
     fun selectNoError(target: NoErrorConfig) = update { it.copy(noError = target) }
+
+    /**
+     * mg-3backends：渲染后端三选一（Air 6.0「MobileGlues > 渲染后端」浮窗）。
+     * 只改配置：dispatcher 在启动器进程里自己读 config.json，选完下次启动生效。
+     */
+    fun selectBackend(target: RendererBackend) = update { it.copy(backend = target) }
 
     fun selectGlVersion(target: GlVersion) {
         val current = configStore.config.value ?: return

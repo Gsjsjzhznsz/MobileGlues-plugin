@@ -35,6 +35,12 @@ internal object MGConfigCodec {
     private const val KEY_GL_VERSION = "customGLVersion"
     private const val KEY_FSR1 = "fsr1Setting"
 
+    /**
+     * mg-3backends：统一入口 dispatcher 按这个键路由核心库，取值与
+     * MOBILEGL_BACKEND_TYPE 环境变量同款名字（dispatcher 侧的容错扫描也认它）。
+     */
+    private const val KEY_BACKEND = "backendType"
+
     private val KNOWN_KEYS = listOf(
         KEY_ANGLE,
         KEY_NO_ERROR,
@@ -48,6 +54,7 @@ internal object MGConfigCodec {
         KEY_DEPTH_CLEAR_FIX,
         KEY_GL_VERSION,
         KEY_FSR1,
+        KEY_BACKEND,
     ) + MultidrawEntry.entries.flatMap { listOf(it.orderKey, it.legacyModeKey) }
 
     fun decode(root: JsonObject): MGConfig {
@@ -69,6 +76,7 @@ internal object MGConfigCodec {
             extDirectStateAccess = root.boolOrNull(KEY_EXT_DIRECT_STATE_ACCESS)
                 ?: defaults.extDirectStateAccess,
             fsr1 = Fsr1Preset.entries.fromWire(root.intOrNull(KEY_FSR1), defaults.fsr1),
+            backend = RendererBackend.fromWire(root.stringOrNull(KEY_BACKEND)),
         )
     }
 
@@ -83,6 +91,7 @@ internal object MGConfigCodec {
             addProperty(KEY_DEPTH_CLEAR_FIX, config.depthClearFix.wire)
             addProperty(KEY_GL_VERSION, config.glVersion.wire)
             addProperty(KEY_FSR1, config.fsr1.wire)
+            addProperty(KEY_BACKEND, config.backend.wire)
             encodeMultidraw(config.multidraw)
         }
 

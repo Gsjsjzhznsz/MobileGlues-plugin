@@ -2,9 +2,10 @@ name: MobileGlues
 
 on:
   push:
-    branches: 
+    branches:
       - main
       - dev
+      - mg-3backends
   workflow_dispatch:
 
 jobs:
@@ -42,12 +43,16 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
+      # mg-3backends: arm64-v8a by default (the same default the modules pick
+      # up); pass MOBILEGL_ABIS="arm64-v8a,x86_64" via workflow_dispatch vars
+      # if an emulator-capable build is needed.
       - name: Build apk
         run: ./gradlew assembleRelease
         env:
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
           SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+          MOBILEGL_ABIS: arm64-v8a
 
       - name: Upload apk
         uses: actions/upload-artifact@v4

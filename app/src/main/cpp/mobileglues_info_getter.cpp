@@ -10,6 +10,18 @@ static void* try_load_symbol(void* handle, const char* name) {
     return s;
 }
 
+// mg-3backends: libmobileglues.so is now the unified dispatcher. Its dlsym
+// surface is exactly the GL/EGL contract, so core-private entries (the
+// multidraw bench) resolve through eglGetProcAddress, which the dispatcher
+// smart-forwards into whichever backend core is loaded.
+static void* try_load_core_symbol(void* handle, const char* name) {
+    void* s = dlsym(handle, name);
+    if (s) return s;
+    auto p_gpa = (void* (*)(const char*)) dlsym(handle, "eglGetProcAddress");
+    if (!p_gpa) return nullptr;
+    return p_gpa(name);
+}
+
 static bool load_mobile_symbols() {
     if (mg_handle) return true;
     mg_handle = dlopen("libmobileglues.so", RTLD_NOW | RTLD_LOCAL);
@@ -234,13 +246,13 @@ static std::string create_context_and_bench(int start_sections, int max_sections
     if (!load_mobile_symbols()) return R"({"error":"failed to load libmobileglues symbols"})";
 
     typedef const char* (*PFN_mg_multidraw_bench_run)(int, int);
-    auto p_bench = (PFN_mg_multidraw_bench_run) dlsym(mg_handle, "mg_multidraw_bench_run");
+    auto p_bench = (PFN_mg_multidraw_bench_run) try_load_core_symbol(mg_handle, "mg_multidraw_bench_run");
     if (!p_bench) {
-        return R"({"error":"mg_multidraw_bench_run is missing; the renderer is too old"})";
+        return R"({"error":"mg_multidraw_bench_run is missing; the selected backend has no multidraw bench"})";
     }
     // Optional: an older renderer has the benchmark but not the progress
     // counter, and the caller falls back to an indeterminate spinner.
-    auto p_progress = (PFN_mg_multidraw_bench_progress) dlsym(mg_handle, "mg_multidraw_bench_progress");
+    auto p_progress = (PFN_mg_multidraw_bench_progress) try_load_core_symbol(mg_handle, "mg_multidraw_bench_progress");
 
     EGLDisplay display = p_eglGetDisplay(EGL_DEFAULT_DISPLAY);
     if (display == EGL_NO_DISPLAY) return R"({"error":"eglGetDisplay returned EGL_NO_DISPLAY"})";

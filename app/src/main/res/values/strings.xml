@@ -108,6 +108,12 @@
     <string name="option_ext_direct_state_access">Enable Advanced \'direct_state_access\' Extension</string>
     <string name="option_enable_fsr1" tools:ignore="Typos">(Experimental) Enable built-in FSR1</string>
 
+    <!-- mg-3backends: Air 6.0 renderer backend switcher (single pick row) -->
+    <string name="option_renderer_backend">Renderer backend</string>
+    <string name="backend_vulkan_direct">Vulkan (direct, default)</string>
+    <string name="backend_gles">GLES</string>
+    <string name="backend_opengl40">OpenGL 4.0 (experimental)</string>
+
     <string name="option_custom_gl_version">Custom target OpenGL Version</string>
     <string name="option_custom_gl_version_default">Disable</string>
     <string name="warning_enabling_custom_gl_version"><![CDATA[<b><big>⚠️ Important Notice:</big></b><br/><br/>

@@ -1,4 +1,8 @@
 [submodule "MobileGlues"]
 	path = MobileGlues
-	url = https://github.com/MobileGL-Dev/MobileGlues
-	branch = plugin
+	url = https://github.com/Gsjsjzhznsz/MobileGlues
+	branch = mg-3backends
+[submodule "MobileGL"]
+	path = MobileGL
+	url = https://github.com/Gsjsjzhznsz/MobileGL
+	branch = mg-3backends

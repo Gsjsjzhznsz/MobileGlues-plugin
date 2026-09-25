@@ -4,6 +4,18 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+// mg-3backends: fork CI passes the SIGNING_* secrets as EMPTY strings, and a
+// release must stay installable (stable signature across runs), so blank
+// counts as absent and the committed fork-owned PKCS12 kicks in — the same
+// keystore the MobileGL android-plugin signs with. Env/property overrides
+// remain for the upstream side and for rotation.
+fun signingEnvOr(name: String, fallback: String): String =
+    System.getenv(name)?.takeIf { it.isNotBlank() }
+        ?: (project.findProperty(name) as String?)?.takeIf { it.isNotBlank() }
+        ?: fallback
+
+val forkSigningReady = file("../keystore-air.p12").exists()
+
 android {
     namespace = "com.fcl.plugin.mobileglues"
     compileSdk = 36
@@ -18,14 +30,29 @@ android {
         versionName = "2.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // mg-3backends: keep the APK's ABI set identical across every native
+        // module (:MobileGLCore restricts itself with the same key). Default
+        // arm64-v8a; override with -Pmobilegl.abis=... or MOBILEGL_ABIS.
+        ndk {
+            abiFilters += (findProperty("mobilegl.abis") ?: System.getenv("MOBILEGL_ABIS") ?: "arm64-v8a")
+                .toString().split(',').map(String::trim).filter(String::isNotEmpty)
+        }
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file("../keystore.jks")
-            storePassword = System.getenv("SIGNING_STORE_PASSWORD") ?: project.findProperty("SIGNING_STORE_PASSWORD") as String?
-            keyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: project.findProperty("SIGNING_KEY_ALIAS") as String?
-            keyPassword = System.getenv("SIGNING_KEY_PASSWORD") ?: project.findProperty("SIGNING_KEY_PASSWORD") as String?
+            if (forkSigningReady) {
+                storeFile = file("../keystore-air.p12")
+                storePassword = signingEnvOr("SIGNING_STORE_PASSWORD", "mgair-air-3backends")
+                keyAlias = signingEnvOr("SIGNING_KEY_ALIAS", "mgair")
+                keyPassword = signingEnvOr("SIGNING_KEY_PASSWORD", "mgair-air-3backends")
+            } else {
+                storeFile = file("../keystore.jks")
+                storePassword = System.getenv("SIGNING_STORE_PASSWORD") ?: project.findProperty("SIGNING_STORE_PASSWORD") as String?
+                keyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: project.findProperty("SIGNING_KEY_ALIAS") as String?
+                keyPassword = System.getenv("SIGNING_KEY_PASSWORD") ?: project.findProperty("SIGNING_KEY_PASSWORD") as String?
+            }
         }
     }
 
@@ -63,8 +90,8 @@ android {
             manifestPlaceholders["pojavEnv"] = mutableMapOf<String,String>().apply {
                 put("LIBGL_ES", "3")
                 put("POJAV_RENDERER", "opengles3")
-				put("POJAVEXEC_EGL", "libmobileglues.so")
-				put("LIBGL_EGL", "libmobileglues.so")
+                                put("POJAVEXEC_EGL", "libmobileglues.so")
+                                put("LIBGL_EGL", "libmobileglues.so")
                 put("MG_COUNT_LAUNCH", "1")
             }.run {
                 var env = ""
@@ -99,6 +126,9 @@ android {
     packaging {
         jniLibs {
             useLegacyPackaging = true
+            // mg-3backends: defensive — the MobileGL tree vendors SPIRV-Tools;
+            // a shared build of it must never slip into the APK.
+            excludes += "**/libSPIRV-Tools-shared.so"
         }
     }
 }
@@ -118,6 +148,10 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(project(":MobileGlues"))
+    // mg-3backends: the unified renderer entry (dispatcher libmobileglues.so)
+    // plus the MobileGL core (libMobileGL.so, DirectVulkan / DirectGLES) ride
+    // in the APK next to the MobileGlues core (libmg_gles.so, :MobileGlues).
+    implementation(project(":MobileGLCore"))
 
     testImplementation(libs.junit)
     testImplementation(libs.coroutines.test)

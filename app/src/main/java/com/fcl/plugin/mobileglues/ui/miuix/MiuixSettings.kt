@@ -34,6 +34,7 @@ import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.MGConfig
 import com.fcl.plugin.mobileglues.settings.NoErrorConfig
+import com.fcl.plugin.mobileglues.settings.RendererBackend
 import com.fcl.plugin.mobileglues.settings.SpinnerOption
 import com.fcl.plugin.mobileglues.settings.UiStyle
 import com.fcl.plugin.mobileglues.ui.AppController
@@ -147,6 +148,15 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
 
     Column(modifier = Modifier.fillMaxWidth()) {
         MiuixGroup(title = stringResource(R.string.settings_group_render)) {
+            // mg-3backends：Air 6.0 同款切换器 —— 单一渲染后端行，三选一，
+            // 默认 Vulkan 直连；与 Material 主题的行位完全一致。
+            OptionRow(
+                title = stringResource(R.string.option_renderer_backend),
+                options = RendererBackend.entries,
+                selected = config.backend,
+                labelOf = { it.label(context) },
+                onSelect = controller::selectBackend,
+            )
             OptionRow(
                 title = stringResource(R.string.option_angle),
                 options = AngleConfig.entries,
@@ -274,6 +284,23 @@ private fun <T : SpinnerOption> OptionRow(
     MiuixDropdownRow(
         title = title,
         options = options.map { it.label(context).toString() },
+        selectedIndex = options.indexOf(selected),
+        onSelect = { onSelect(options[it]) },
+    )
+}
+
+/** 带 label 映射的重载：RendererBackend 的 wire 是字符串，进不了 SpinnerOption 约束。 */
+@Composable
+private fun <T> OptionRow(
+    title: String,
+    options: List<T>,
+    selected: T,
+    labelOf: (T) -> CharSequence,
+    onSelect: (T) -> Unit,
+) {
+    MiuixDropdownRow(
+        title = title,
+        options = options.map { labelOf(it).toString() },
         selectedIndex = options.indexOf(selected),
         onSelect = { onSelect(options[it]) },
     )
