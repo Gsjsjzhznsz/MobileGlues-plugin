@@ -1,0 +1,1024 @@
+==================== Before Start ====================
+invoke redirectStdio
+invoke setLogPipeReady
+Log pipe ready.
+invoke setFCLNativeWindow
+invoke setEventPipe
+==================== Start Minecraft ====================
+Renderer: MobileGlues
+Device: Xiaomi xaga 22041216C
+Architecture: arm64
+CPU: MT6895Z/TCZA
+Android SDK: 35
+Language: zh_CN
+FCL Version Code: 1335
+==================== Mods ====================
+animatica-0.6.2+26.3 | animatica | 0.6.2+26.3 | FABRIC
+bbe-fabric-1.3.9+mc26.3-mod | betterblockentities | 1.3.9+mc26.3 | FABRIC
+BetterGrassify-1.8.8+fabric.26.3 | bettergrass | 1.8.8+fabric.26.3 | FABRIC
+bettermounthud-1.3.1 | bettermounthud | 1.3.1 | FABRIC
+cape-provider-5.6.1 | cape-provider | 5.6.1 | FABRIC
+cloth-config-26.3.158 | cloth-config | 26.3.158 | FABRIC
+ConfigManager-fabric-26.1_26.2-1.1.3 | config_manager | 1.1.3 | FABRIC
+continuity-3.0.1+26.3 | continuity | 3.0.1+26.3 | FABRIC
+CrashAssistant-fabric-26.2-26.3-1.11.13 | crash_assistant | 1.11.13 | FABRIC
+dynamic-fps-3.11.10+minecraft-26.3.0-fabric | dynamic_fps | 3.11.10 | FABRIC
+e4mc-fabric-6.2.1-modern | e4mc | 6.2.1+modern | FABRIC
+entity_model_features-3.3.8-26.3-fabric | entity_model_features | 3.3.8 | FABRIC
+entity_texture_features-7.2.4-26.3-fabric | entity_texture_features | 7.2.4 | FABRIC
+entityculling-fabric-1.11.1-mc26.3 | entityculling | 1.11.1 | FABRIC
+fabric-api-0.161.0+26.3 | fabric-api | 0.161.0+26.3 | FABRIC
+fabric-language-kotlin-1.14.1+kotlin.2.4.20 | fabric-language-kotlin | 1.14.1+kotlin.2.4.20 | FABRIC
+fastquit-3.1.5+mc26.2 | fastquit | 3.1.5+mc26.2 | FABRIC
+ferritecore-9.0.0-fabric | ferritecore | 9.0.0 | FABRIC
+ForgeConfigAPIPort-v26.3.0-mc26.3.x-Fabric | forgeconfigapiport | 26.3.0 | FABRIC
+ImmediatelyFast-Fabric-1.17.1+26.3 | immediatelyfast | 1.17.1+26.3 | FABRIC
+iris-fabric-1.11.6+mc26.3 | iris | 1.11.6+mc26.3 | FABRIC
+Ixeris-4.6.7+26.3-fabric | ixeris | 4.6.7+26.3-fabric | FABRIC
+lambdynamiclights-4.13.0+26.3 | lambdynlights | 4.13.0+26.3 | FABRIC
+lithium-fabric-0.26.1+mc26.3 | lithium | 0.26.1+mc26.3 | FABRIC
+main-menu-credits-1.4.0+26.2-universal | main_menu_credits | 1.4.0+26.2 | FABRIC
+mixintrace-1.0-26.1-universal | mixintrace | 1.0 | FABRIC
+modernfix-5.27.20-build.1 | modernfix | 5.27.20-build.1 | FABRIC
+modmenu-21.0.0-beta.1 | modmenu | 21.0.0-beta.1 | FABRIC
+morechathistory-2.0.0 | morechathistory | 2.0.0 | FABRIC
+moreculling-fabric-26.3-1.9.0-beta.1 | moreculling | 1.9.0-beta.1 | FABRIC
+optigui-2.3.0-beta.10+26.3 | optigui | 2.3.0-beta.10+26.3 | FABRIC
+placeholder-api-3.1.0-beta.1+26.2 | placeholder-api | 3.1.0-beta.1+26.2 | FABRIC
+reeses-sodium-options-fabric-2.2.4+mc26.3 | reeses-sodium-options | 2.2.4+mc26.3 | FABRIC
+renice-shot-1.1.0+mc26.3 | renice-shot | 1.1.0+mc26.3 | FABRIC
+rrls-5.2.8+mc.26.3 | rrls | 5.2.8+mc.26.3 | FABRIC
+sodium-extra-fabric-0.9.4+mc26.3 | sodium-extra | 0.9.4+mc26.3 | FABRIC
+sodium-fabric-0.9.2+mc26.3 | sodium | 0.9.2+mc26.3 | FABRIC
+sodium-shadowy-path-blocks-fabric-8.0.0 | sspb | 8.0.0 | FABRIC
+
+==================== Env Map ====================
+Env: PATH=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin:/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
+Env: FCL_VERSION_CODE=1335
+Env: POJAV_RENDERER=opengles3
+Env: SDL_OPENGL_LIBRARY=/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64/libmobileglues.so
+Env: POJAV_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: MG_COUNT_LAUNCH=1
+Env: FORCE_VSYNC=false
+Env: DALVIK_JAVAVM=-5476376626380572496
+Env: JAVA_HOME=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25
+Env: MOD_ANDROID_RUNTIME=/data/user/0/com.tungsten.fcl/app_runtime_mod
+Env: VULKAN_DRIVER_SYSTEM=1
+Env: POJAVEXEC_EGL=libmobileglues.so
+Env: TMPDIR=/data/user/0/com.tungsten.fcl/cache
+Env: LIBGL_ES=3
+Env: DALVIK_APPLICATION=0x37e6
+Env: LIBGL_EGL=libmobileglues.so
+Env: FCL_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: SDL_EGL_LIBRARY=/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64/libmobileglues.so
+Env: DRIVER_PATH=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: LD_LIBRARY_PATH=/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: ALSOFT_DRIVERS=opensl
+Env: HOME=/storage/emulated/0/FCL/log
+Env: INST_FABRIC=1
+==================== DLOPEN ====================
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjli.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server/libjvm.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libfreetype.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libverify.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjava.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libnet.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libnio.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libawt.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libawt_headless.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libfontmanager.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjawt.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjavajpeg.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjava.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libfreetype.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libj2pkcs11.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libinstrument.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libawt_xawt.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libawt.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libverify.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libj2gss.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/librmi.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libprefs.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libsyslookup.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjdwp.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libsctp.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libmanagement.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libmlib_image.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server/libjvm.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server/libjsig.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libfontmanager.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libsleef.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libnet.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libmanagement_ext.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libnio.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libmanagement_agent.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libzip.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libdt_socket.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/liblcms.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjsig.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libawt_headless.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjli.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjaas.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjimage.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libextnet.so
+DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjsound.so
+DLOPEN: loading /data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
+Working directory: /storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized
+DLOPEN: loading /data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64/libmobileglues.so
+==================== Minecraft Arguments ====================
+Java argument: /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin/java
+Java argument: -Djava.awt.headless=false
+Java argument: -Dcacio.managed.screensize=2360x1080
+Java argument: -Dcacio.font.fontmanager=sun.awt.X11FontManager
+Java argument: -Dcacio.font.fontscaler=sun.font.FreetypeFontScaler
+Java argument: -Dswing.defaultlaf=javax.swing.plaf.nimbus.NimbusLookAndFeel
+Java argument: -Dawt.toolkit=com.github.caciocavallosilano.cacio.ctc.CTCToolkit
+Java argument: -Djava.awt.graphicsenv=com.github.caciocavallosilano.cacio.ctc.CTCGraphicsEnvironment
+Java argument: -javaagent:/data/user/0/com.tungsten.fcl/app_runtime/caciocavallo17/cacio-agent.jar
+Java argument: --add-exports=java.desktop/java.awt=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.awt.image=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.java2d=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/java.awt.dnd.peer=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.awt=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.awt.event=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.awt.datatransfer=ALL-UNNAMED
+Java argument: --add-exports=java.desktop/sun.font=ALL-UNNAMED
+Java argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+Java argument: --add-opens=java.base/java.util=ALL-UNNAMED
+Java argument: --add-opens=java.desktop/java.awt=ALL-UNNAMED
+Java argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+Java argument: --add-opens=java.desktop/sun.java2d=ALL-UNNAMED
+Java argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+Java argument: --add-opens=java.base/java.net=ALL-UNNAMED
+Java argument: -Xbootclasspath/a:/data/user/0/com.tungsten.fcl/app_runtime/caciocavallo17/cacio-agent.jar:/data/user/0/com.tungsten.fcl/app_runtime/caciocavallo17/cacio-shared-1.19.1-SNAPSHOT.jar:/data/user/0/com.tungsten.fcl/app_runtime/caciocavallo17/cacio-tta-1.19.1-SNAPSHOT.jar
+Java argument: -Xmx2048m
+Java argument: -Xms2048m
+Java argument: -Dfile.encoding=UTF-8
+Java argument: -Dstdout.encoding=UTF-8
+Java argument: -Dstderr.encoding=UTF-8
+Java argument: -Djava.rmi.server.useCodebaseOnly=true
+Java argument: -Dcom.sun.jndi.rmi.object.trustURLCodebase=false
+Java argument: -Dcom.sun.jndi.cosnaming.object.trustURLCodebase=false
+Java argument: -Dlog4j2.formatMsgNoLookups=true
+Java argument: -Dlog4j.configurationFile=/storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized/log4j2.xml
+Java argument: -Dminecraft.client.jar=/storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized/Fabulously Optimized.jar
+Java argument: -XX:ActiveProcessorCount=8
+Java argument: -Dfml.ignoreInvalidMinecraftCertificates=true
+Java argument: -Dfml.ignorePatchDiscrepancies=true
+Java argument: -Dext.net.resolvPath=/data/user/0/com.tungsten.fcl/app_runtime/java/resolv.conf
+Java argument: -Djava.io.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher
+Java argument: -Dos.name=Linux
+Java argument: -Dos.version=Android-15
+Java argument: -Dorg.lwjgl.opengl.libname=/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.egl.libname=/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.openal.libname=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
+Java argument: -Dorg.lwjgl.freetype.libname=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a/libfreetype.so
+Java argument: -Dorg.lwjgl.librarypath=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a
+Java argument: -Dorg.lwjgl.system.allocator=system
+Java argument: -Dfml.earlyprogresswindow=false
+Java argument: -Dglfwstub.initEgl=false
+Java argument: -Dloader.disable_forked_guis=true
+Java argument: -Duser.home=/storage/emulated/0/FCL/.minecraft
+Java argument: -Duser.language=zh
+Java argument: -Duser.country=CN
+Java argument: -Duser.timezone=Asia/Hong_Kong
+Java argument: -Dorg.lwjgl.vulkan.libname=libvulkan.so
+Java argument: -Dorg.lwjgl.spvc.libname=spirv-cross-c-shared
+Java argument: -Dsodium.checks.issue2561=false
+Java argument: -Djdk.lang.Process.launchMechanism=FORK
+Java argument: -Dcpu.name=MT6895Z/TCZA
+Java argument: -Djna.boot.library.path=/data/user/0/com.tungsten.fcl/app_runtime/jna/5.17.0
+Java argument: -javaagent:/data/user/0/com.tungsten.fcl/files/plugins/MioLibPatcher.jar
+Java argument: -XX:StackShadowPages=32
+Java argument: --enable-native-access=ALL-UNNAMED
+Java argument: --add-exports
+Java argument: java.base/jdk.internal.misc=ALL-UNNAMED
+Java argument: -Djava.library.path=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/jli:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server:/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~xayldO1JKou0-MW3piaI9A==/com.fcl.plugin.mobileglues-4m6btnwwLCafLgwa994g5Q==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Java argument: -Djna.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/jna
+Java argument: -Dorg.lwjgl.system.SharedLibraryExtractPath=/data/user/0/com.tungsten.fcl/cache/fclauncher/lwjgl
+Java argument: -Dio.netty.native.workdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/netty
+Java argument: -Dminecraft.launcher.brand=Fold Craft Launcher
+Java argument: -Dminecraft.launcher.version=1.3.3.5
+Java argument: -cp
+Java argument: /data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-3.4.1-merged-modules.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-spng.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-stb.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-freetype.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-nanovg.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-shaderc.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-spvc.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-vulkan.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-openal.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-tinyfd.jar:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/lwjgl-vma.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/intermediary/0.0.0/intermediary-0.0.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar:/storage/emulated/0/FCL/.minecraft/libraries/at/yawk/lz4/lz4-java/1.10.1/lz4-java-1.10.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/azure/azure-json/1.4.0/azure-json-1.4.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/github/oshi/oshi-core/6.9.0/oshi-core-6.9.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/ibm/icu/icu4j/78.3/icu4j-78.3.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/microsoft/azure/msal4j/1.24.1/msal4j-1.24.1.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/authlib/10.0.77/authlib-10.0.77.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/brigadier/1.3.11/brigadier-1.3.11.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/jtracy/1.14.38/jtracy-1.14.38.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/logging/1.7.12/logging-1.7.12.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/storage/emulated/0/FCL/.minecraft/libraries/com/mojang/text2speech/1.19.12/text2speech-1.19.12.jar:/storage/emulated/0/FCL/.minecraft/libraries/commons-codec/commons-codec/1.22.0/commons-codec-1.22.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-transport-classes-epoll/4.2.16.Final/netty-transport-classes-epoll-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-transport-classes-kqueue/4.2.16.Final/netty-transport-classes-kqueue-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar:/storage/emulated/0/FCL/.minecraft/libraries/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/java/dev/jna/jna-platform/5.17.0/jna-platform-5.17.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/joml/joml/1.10.9/joml-1.10.9.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/storage/emulated/0/FCL/.minecraft/libraries/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/data/user/0/com.tungsten.fcl/files/plugins/MioLaunchWrapper.jar:/storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized/Fabulously Optimized.jar
+Java argument: --add-exports
+Java argument: net.fabricmc.loader.impl.launch.knot/net.fabricmc.loader.impl.launch.knot=ALL-UNNAMED
+MainClass: mio.Wrapper
+MainClass: net.fabricmc.loader.impl.launch.knot.KnotClient
+Minecraft argument: --username
+Minecraft argument: yiqiu4178
+Minecraft argument: --version
+Minecraft argument: Fabulously Optimized
+Minecraft argument: --gameDir
+Minecraft argument: /storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized
+Minecraft argument: --assetsDir
+Minecraft argument: /storage/emulated/0/FCL/.minecraft/assets
+Minecraft argument: --assetIndex
+Minecraft argument: 34
+Minecraft argument: --uuid
+Minecraft argument: 87572e4aa598381faf52a0412c2f714a
+Minecraft argument: --accessToken
+Minecraft argument: ***
+Minecraft argument: --clientId
+Minecraft argument: ${clientid}
+Minecraft argument: --xuid
+Minecraft argument: ${auth_xuid}
+Minecraft argument: --versionType
+Minecraft argument: Fold Craft Launcher
+Minecraft argument: --width
+Minecraft argument: 2360
+Minecraft argument: --height
+Minecraft argument: 1080
+Successfully initialized exit hook, stub: 0x79b059c550SDL_Hook: Successfully initialized SDL hooks, stubs: InitSubSystem=0x79b058f770 GetWindowFromEvent=0x79b058f6e0 GetWindowFromID=0x79b05915d0 LoadFunction=0x79b0591780 CreateWindow=0x79b059c5e0 CreateWindowWithProps=0x79b05911e0 LoadObject=0x79b058e600 UnloadObject=0x79b058e4e0 DestroyWindow=0x79b05c7f60
+Hook success
+Done processing args
+Found JLI lib
+Calling JLI_Launch
+WARNING: Unknown module: net.fabricmc.loader.impl.launch.knot specified to --add-exports
+WARNING: package sun.security.action not in java.base
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.github.caciocavallosilano.cacio.agent.CTCJavaAgent
+WARNING: Please consider reporting this to the maintainers of class com.github.caciocavallosilano.cacio.agent.CTCJavaAgent
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[MioLibPatcher/INFO]: MioPatcher is running!
+[00:34:57] [main/INFO]: Loading Minecraft 26.3 with Fabric Loader 0.19.5
+[00:34:59] [main/INFO]: Dependencies overridden for minecraft, polytone
+[00:34:59] [main/WARN]: Warnings were found!
+ - 'Minecraft' (minecraft) 26.3 建议安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本，但没有安装它！
+	 - 为了最佳体验，您应该安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本。
+[00:34:59] [main/INFO]: Loading 121 mods:
+	- animatica 0.6.2+26.3
+	- betterblockentities 1.3.9+mc26.3
+	- bettergrass 1.8.8+fabric.26.3
+	- bettermounthud 1.3.1
+	- cape-provider 5.6.1
+	- cloth-config 26.3.158
+	   \-- cloth-basic-math 0.6.1
+	- config_manager 1.1.3
+	- continuity 3.0.1+26.3
+	- crash_assistant 1.11.13
+	- dynamic_fps 3.11.10
+	   |-- dynamic_fps_common 3.11.10
+	   \-- net_lostluma_battery 2.1.0
+	- e4mc 6.2.1+modern
+	   \-- folk_sisby_kaleido-config 0.3.3+1.3.2
+	- entity_model_features 3.3.8
+	- entity_texture_features 7.2.4
+	- entityculling 1.11.1
+	   |-- transition 1.0.25
+	   \-- trender 1.0.17
+	- fabric-api 0.161.0+26.3
+	   |-- fabric-advancement-api-v1 1.0.0+38c7a2d55d
+	   |-- fabric-api-base 2.0.6+fcdff87f5d
+	   |-- fabric-api-lookup-api-v1 2.0.24+3434d6d95d
+	   |-- fabric-biome-api-v1 20.0.9+74ed1ea55d
+	   |-- fabric-block-api-v1 3.1.0+0ae6f9115d
+	   |-- fabric-block-getter-api-v2 2.0.9+3434d6d95d
+	   |-- fabric-command-api-v2 3.1.2+fcdff87f5d
+	   |-- fabric-content-registries-v0 15.0.4+74ed1ea55d
+	   |-- fabric-convention-tags-v2 4.10.3+6b5b47fd5d
+	   |-- fabric-crash-report-info-v1 1.0.7+fcdff87f5d
+	   |-- fabric-creative-tab-api-v1 5.0.21+fcdff87f5d
+	   |-- fabric-data-attachment-api-v1 2.2.30+3434d6d95d
+	   |-- fabric-data-generation-api-v1 27.2.4+427eab975d
+	   |-- fabric-debug-api-v1 1.0.4+3434d6d95d
+	   |-- fabric-dimensions-v1 5.1.19+47f74c985d
+	   |-- fabric-entity-events-v1 6.0.4+3434d6d95d
+	   |-- fabric-events-interaction-v0 5.3.6+3434d6d95d
+	   |-- fabric-game-rule-api-v1 4.0.10+3434d6d95d
+	   |-- fabric-item-api-v1 14.7.0+cf6bc2db5d
+	   |-- fabric-key-mapping-api-v1 2.0.8+3434d6d95d
+	   |-- fabric-lifecycle-events-v1 4.1.9+ffef5f675d
+	   |-- fabric-loot-api-v3 4.0.8+4068fd645d
+	   |-- fabric-menu-api-v1 2.0.27+ed66f0a35d
+	   |-- fabric-message-api-v1 7.0.10+3434d6d95d
+	   |-- fabric-model-loading-api-v1 8.0.35+fcdff87f5d
+	   |-- fabric-networking-api-v1 6.3.8+fcdff87f5d
+	   |-- fabric-object-builder-api-v1 24.1.9+3434d6d95d
+	   |-- fabric-particles-v1 5.0.24+3434d6d95d
+	   |-- fabric-permission-api-v1 1.0.8+fcdff87f5d
+	   |-- fabric-recipe-api-v1 10.0.8+fcdff87f5d
+	   |-- fabric-registry-sync-v0 8.0.1+fcdff87f5d
+	   |-- fabric-renderer-api-v1 17.0.15+79385d0b5d
+	   |-- fabric-renderer-indigo 9.1.23+b9d63e335d
+	   |-- fabric-rendering-fluids-v1 6.0.6+3434d6d95d
+	   |-- fabric-rendering-v1 27.0.14+901a437c5d
+	   |-- fabric-resource-conditions-api-v1 6.1.5+3434d6d95d
+	   |-- fabric-resource-loader-v0 3.3.26+4fc5413f5d
+	   |-- fabric-resource-loader-v1 3.0.4+fcdff87f5d
+	   |-- fabric-screen-api-v1 5.2.4+48607d035d
+	   |-- fabric-serialization-api-v1 2.0.7+74ed1ea55d
+	   |-- fabric-sound-api-v1 2.0.7+3434d6d95d
+	   |-- fabric-tag-api-v1 2.1.10+fcdff87f5d
+	   |-- fabric-transfer-api-v1 8.0.25+fcdff87f5d
+	   \-- fabric-transitive-access-wideners-v1 8.1.16+52268a0e5d
+	- fabric-language-kotlin 1.14.1+kotlin.2.4.20
+	   |-- org_jetbrains_kotlin_kotlin-reflect 2.4.20
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 2.4.20
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 2.4.20
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 2.4.20
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.33.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm 0.9.1
+	   |-- org_jetbrains_kotlinx_kotlinx-io-core-jvm 0.9.1
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.11.0
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.11.0
+	- fabricloader 0.19.5
+	   \-- mixinextras 0.5.5
+	- fastquit 3.1.5+mc26.2
+	- ferritecore 9.0.0
+	- forgeconfigapiport 26.3.0
+	   |-- com_electronwill_night-config_core 3.8.4
+	   \-- com_electronwill_night-config_toml 3.8.4
+	- immediatelyfast 1.17.1+26.3
+	- iris 1.11.6+mc26.3
+	   |-- io_github_douira_glsl-transformer 3.0.0-pre3
+	   |-- org_anarres_jcpp 1.4.14
+	   \-- org_antlr_antlr4-runtime 4.13.1
+	- ixeris 4.6.7+26.3-fabric
+	- java 25
+	- lambdynlights 4.13.0+26.3
+	   |-- lambdynlights_api 4.13.0+26.3
+	   |    |-- yumi_commons_collections 2.0.0
+	   |    |-- yumi_commons_core 2.0.0
+	   |    \-- yumi_commons_event 2.0.0
+	   |-- pride 1.8.0+26.3
+	   |-- spruceui 12.0.0+26.3
+	   \-- yumi_mc_core 1.1.3+26.2
+	        |-- yumi_commons_collections 2.0.0
+	        |-- yumi_commons_core 2.0.0
+	        \-- yumi_commons_event 2.0.0
+	- lithium 0.26.1+mc26.3
+	- main_menu_credits 1.4.0+26.2
+	- minecraft 26.3
+	- mixintrace 1.0
+	- modernfix 5.27.20-build.1
+	- modmenu 21.0.0-beta.1
+	- morechathistory 2.0.0
+	- moreculling 1.9.0-beta.1
+	   \-- conditional-mixin 0.6.3
+	- optigui 2.3.0-beta.10+26.3
+	   |-- org_apache_commons_commons-text 1.12.0
+	   \-- org_ini4j_ini4j 0.5.4
+	- placeholder-api 3.1.0-beta.1+26.2
+	- reeses-sodium-options 2.2.4+mc26.3
+	- renice-shot 1.1.0+mc26.3
+	- rrls 5.2.8+mc.26.3
+	- sodium 0.9.2+mc26.3
+	- sodium-extra 0.9.4+mc26.3
+	   \-- me_flashyreese_mods_greenlight-api 0.1.0+mc26.3
+	- sspb 8.0.0
+[00:35:00] [main/INFO]: No flag found, running a usual copy
+[00:35:01] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-fabric-26.2-26.3-1.11.13.jar)
+[MioLibPatcher/INFO]: Patch target class: oshi/hardware/platform/linux/LinuxCentralProcessor
+[MioLibPatcher/INFO]: Patch target class: oshi/hardware/CentralProcessor$ProcessorIdentifier
+[00:35:03] [CrashAssistantApp process logger/ERROR]: Error changing dalvik-cache ownership : Permission denied
+[00:35:03] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[00:35:05] [CrashAssistantApp process logger/ERROR]: CrashAssistantApp failed to start with exit code: 134
+Crash Assistant won't work.
+This won't cause any issues to the main game process, just Crash Assistant won't popup after crash.
+Please report to https://github.com/KostromDan/Crash-Assistant/issues
+[00:35:05] [main/WARN]: Reference map 'entityculling.refmap.mixins.json' for entityculling.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
+[00:35:07] [main/WARN]: Ixeris is not supported on Android!
+[00:35:07] [main/WARN]: Reference map 'ixeris.mixins.refmap.json' for ixeris.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:08] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
+[00:35:08] [main/INFO]: Option 'mixin.world.chunk_ticking.random_block_ticking' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.world.chunk_ticking.random_block_ticking=false'.
+[00:35:08] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
+[00:35:08] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
+[00:35:08] [main/INFO]: Loaded configuration file for Lithium: 170 options available, 0 override(s) found.
+[00:35:08] [main/WARN]: Reference map 'mixintrace-refmap.json' for mixintrace.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:08] [main/INFO]: Loaded configuration file for ModernFix 5.27.20-build.1: 67 options available, 4 override(s) found
+[00:35:08] [main/WARN]: Option 'mixin.feature.measure_time' overriden (by user configuration) to 'false'
+[00:35:08] [main/WARN]: Option 'mixin.feature.snapshot_easter_egg' overriden (by user configuration) to 'false'
+[00:35:08] [main/WARN]: Option 'mixin.feature.branding' overriden (by user configuration) to 'false'
+[00:35:08] [main/WARN]: Option 'mixin.feature.remove_telemetry' overriden (by user configuration) to 'false'
+[00:35:08] [main/INFO]: Applying Nashorn fix
+[00:35:08] [main/INFO]: Configuring Minecraft's max.bg.threads option with 5 threads
+[00:35:08] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:08] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:08] [main/WARN]: Reference map 'reeses-sodium-options.refmap.json' for reeses-sodium-options.mixins.json could not be read. If this is a development environment you can ignore this message
+[00:35:08] [main/INFO]: Loaded configuration file for Sodium: 37 options available, 1 override(s) found
+[00:35:08] [main/INFO]: Loaded configuration file for Sodium Extra: 26 options available, 0 override(s) found
+[00:35:16] [main/WARN]: Error loading class: dev/zelo/renderscale/RenderScale (java.lang.ClassNotFoundException: dev/zelo/renderscale/RenderScale)
+[00:35:16] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[00:35:16] [main/INFO]: Searching for graphics cards...
+[00:35:16] [main/WARN]: Could not find any graphics adapters! Probably the device is not on a bus we can probe, or there are no devices supporting 3D acceleration.
+[00:35:16] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
+[00:35:16] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
+[00:35:17] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[MioLibPatcher/INFO]: Patch target class: org/lwjgl/system/Library
+Registered forkAndExec
+Installing LWJGL dlopen() hook
+EGLBridge: LWJGL-side Vulkan loader requested the Vulkan handle
+OSMDroid: loading vulkan regularly...
+OSMDroid: loaded vulkan, ptr=0x6bc3f225ff2a4abf
+[00:35:27] [main/WARN]: Did not find udev library in operating system. Some features may not work.
+[00:35:28] [main/WARN]: File not found or not readable: /proc/stat
+[00:35:28] [Datafixer Bootstrap #0/INFO]: 307 Datafixer optimizations took 1497 milliseconds
+[00:35:28] [main/WARN]: File not found or not readable: /etc/os-release
+[00:35:28] [main/WARN]: File not found or not readable: /etc/lsb-release
+[00:35:28] [main/WARN]: File not found or not readable: /proc/version
+[00:35:28] [main/INFO]: ModernFix reached bootstrap stage (36.27 s after launch)
+[00:35:38] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[00:36:03] [Render thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[00:36:03] [Render thread/INFO]: Setting user: yiqiu4178
+[MioLibPatcher/INFO]: Patch target class: io/netty/util/internal/PlatformDependent
+[00:36:06] [Render thread/INFO]: Building config cache from user defined config file...
+[00:36:06] [Render thread/INFO]: Collecting API Entrypoint's...
+[00:36:06] [Render thread/INFO]: Registering alt renderers via each collected entrypoint...
+[00:36:06] [Render thread/INFO]: [BetterGrassify] [FAST] Gamers can finally touch grass!?
+[00:36:06] [Download-2/ERROR]: Failed to fetch user properties
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at knot//com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:70)
+	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:168)
+	at knot//net.minecraft.client.Minecraft.lambda$new$1(Minecraft.java:451)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: MinecraftClientHttpException[type=HTTP_ERROR, status=401, response=ErrorResponse[path=/player/attributes, error=null, errorMessage=null, details=null]]
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.buildHttpException(MinecraftClient.java:170)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:147)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:65)
+	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:118)
+	... 5 more
+[00:36:07] [Render thread/INFO]: [ETF]: Modifying ETF Render State constructor because: for EMF
+[00:36:07] [Render thread/INFO]: Loading Entity Model Features, ,serutaeF ledoM ytitnE gnidoaL
+[00:36:07] [Render thread/INFO]: [ETF]: 6 new ETF Random Properties registered by entity_model_features
+[00:36:07] [Render thread/INFO]: Loading Entity Texture Features, breaking your resource packs since 17 Jan 2022.
+[00:36:08] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[00:36:08] [Render thread/INFO]: [FastQuit] Initialized
+[00:36:13] [Render thread/INFO]: Config service: org.redlance.dima_dencep.mods.rrls.fabric.config.FabricConfigImpl
+[00:36:13] [Render thread/INFO]: [SSPB] Broken dirt path lighting is best dirt path lighting lol
+[00:36:13] [Render thread/INFO]: [STDOUT]: [TRender] Initializing Client...
+[00:36:13] [Render thread/INFO]: Initializing mods (entrypoint yumi:init)...
+[00:36:14] [Render thread/INFO]: [LambDynLights] Initializing LambDynamicLights...
+[00:36:14] [Render thread/INFO]: [LambDynLights] Configuration loaded.
+[00:36:16] [Render thread/INFO]: Backend library: LWJGL version 3.4.1-snapshot
+SDL dlsym proxy for SDL_InitSubSystem
+[00:36:16] [Render thread/INFO]: SDL [SYSTEM]: App name: Minecraft
+[00:36:16] [Render thread/INFO]: SDL [SYSTEM]: App version: 26.3
+[00:36:16] [Render thread/INFO]: SDL [SYSTEM]: App ID: com.mojang.minecraft
+[00:36:16] [Render thread/INFO]: SDL [SYSTEM]: SDL revision: 
+SDL dlsym proxy for SDL_CreateWindow
+SDL dlsym proxy for SDL_CreateWindowWithProperties
+SDL dlsym proxy for SDL_GetWindowFromID
+SDL dlsym proxy for SDL_DestroyWindow
+[00:36:17] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required features from FeatureSet [Minecraft base required], missing: [VkPhysicalDeviceSynchronization2Features.synchronization2, VkPhysicalDeviceDynamicRenderingFeatures.dynamicRendering, VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.vertexAttributeInstanceRateDivisor]
+[00:36:17] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required extensions from FeatureSet [Minecraft base required], missing: [VK_KHR_dynamic_rendering, VK_KHR_push_descriptor, VK_KHR_synchronization2, VK_EXT_vertex_attribute_divisor]
+[00:36:17] [Render thread/WARN]: Device [Mali-G610 MC6] does not support Vulkan 1.2
+Initializing MobileGlues ...
+The Open Source License of MobileGlues: 
+  GNU LGPL-2.1 License
+MG_DIR_PATH = /sdcard/MG
+[MobileGlues] Setting: enableAngle                 = false
+[MobileGlues] Setting: ignoreError                 = 0
+[MobileGlues] Setting: enableExtComputeShader      = false
+[MobileGlues] Setting: enableExtTimerQuery         = true
+[MobileGlues] Setting: enableExtDirectStateAccess  = false
+[MobileGlues] Setting: maxGlslCacheSize            = 64
+[MobileGlues] Setting: angleDepthClearFixMode      = 0
+[MobileGlues] Setting: bufferCoherentAsFlush       = 1
+[MobileGlues] Setting: customGLVersion             = 4.0.0
+[MobileGlues] Setting: fsr1Setting                 = 0
+[MobileGlues] Setting: hideMGEnvLevel              = 0
+EGL initialized successfully
+OpenGL ES Version: OpenGL ES 3.2 (320)
+Not Detected GL_EXT_multi_draw_indirect!
+Enable-capability extensions: multisample_compatibility=0 clip_cull_distance=0 depth_clamp=0 sRGB_write_control=1 NV_polygon_mode=0 OES_sample_shading=1
+multidrawMode/multidrawDisableBackends are no longer used. The selection is an order now: multidrawOrder (global, backend names best first, may contain "native") and multidrawOrder<EntryPoint> for per-function exceptions.
+multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
+[MobileGlues] multidrawOrderArrays               = unroll
+[MobileGlues] multidrawOrderElements             = unroll > indirect
+[MobileGlues] multidrawOrderElementsBaseVertex   = basevertex > indirect > compute > unroll
+[MobileGlues] multidrawOrderArraysIndirect       = indirect
+[MobileGlues] multidrawOrderElementsIndirect     = indirect
+[00:36:17] [Render thread/INFO]: SDL [APPLICATION]: pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
+SDL_Hook: reusing primary window 0x7a307352d0
+[00:36:18] [Render thread/INFO]: Debug functionality is disabled.
+[00:36:18] [Render thread/INFO]: DSA support not detected.
+[00:36:19] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[00:36:19] [Render thread/INFO]: Initializing ImmediatelyFast 1.17.1+26.3 on Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten) with OpenGL 4.0.0 MobileGlues 2.0.0
+[00:36:19] [Render thread/INFO]: Using graphics backend OpenGL, using drivers: 4.0.0 MobileGlues 2.0.0
+[00:36:19] [Render thread/INFO]: Using graphics device: Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten)
+[00:36:19] [Render thread/INFO]: Using graphics device extensions: GL_ARB_buffer_storage, GL_ARB_vertex_attrib_binding
+SDL_Hook: reusing primary window 0x7a307352d0
+[00:36:19] [Render thread/INFO]: Created window using SDL video driver: android
+[00:36:19] [Render thread/ERROR]: Couldn't leave fullscreen: That operation is not supported
+[00:36:19] [Render thread/WARN]: Failed to set window icon: That operation is not supported
+SDL dlsym proxy for SDL_GetWindowFromEvent
+[MioLibPatcher/INFO]: Patch target class: org/lwjgl/openal/ALC10
+[00:36:22] [Render thread/INFO]: Hardware information:
+[00:36:23] [Render thread/INFO]: CPU: 8x MT6895Z/TCZA
+[00:36:23] [Render thread/INFO]: GPU: Mali-G610 MC6 | OpenGL ES 3.2 (Supports OpenGL 4.0.0 MobileGlues 2.0.0)
+[00:36:23] [Render thread/INFO]: OS: Linux (Android-15)
+[00:36:23] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 7a988a11a65d48d9aed37b359da324d7
+[00:36:23] [Download-2/ERROR]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 7a988a11a65d48d9aed37b359da324d7'
+	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
+	at knot//com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:204)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/Narrator
+[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/NarratorLinux
+[00:36:25] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
+[00:36:27] [Worker-ResourceReload-4/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
+[00:36:28] [Render thread/INFO]: Thread[#3,Render thread,5,main]
+[00:36:28] [Render thread/INFO]: OpenGL Vendor: Swung0x48, BZLZHH, Tungsten
+[00:36:28] [Render thread/INFO]: OpenGL Renderer: Mali-G610 MC6 | OpenGL ES 3.2
+[00:36:28] [Render thread/INFO]: OpenGL Version: 4.0.0 MobileGlues 2.0.0
+[MioLibPatcher/INFO]: Patch target class: net/caffeinemc/mods/sodium/client/compatibility/checks/PostLaunchChecks
+[00:36:28] [Render thread/INFO]: Cached all modded block culling states
+[00:36:29] [Worker-ResourceReload-4/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
+[00:36:29] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:224: L0002: Undeclared variable '_uniform'
+0:226: L0002: Undeclared variable 'param'
+0:228: L0002: Undeclared variable 'param_2'
+0:230: L0001: Typename expected, found 'else'
+[00:36:30] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:30] [Worker-ResourceReload-4/INFO]: Found unifont_pua-17.0.01.hex, loading
+[00:36:30] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:230: L0002: Undeclared variable '_uniform'
+0:232: L0002: Undeclared variable 'param'
+0:234: L0002: Undeclared variable 'param_2'
+0:236: L0001: Typename expected, found 'else'
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:31] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/block): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_entity_shadow): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:32] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:168: L0002: Undeclared variable '_uniform'
+0:170: L0002: Undeclared variable 'param'
+0:172: L0002: Undeclared variable 'param_2'
+0:174: L0001: Typename expected, found 'else'
+[00:36:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_beacon_beam): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:162: L0002: Undeclared variable '_uniform'
+0:164: L0002: Undeclared variable 'param'
+0:166: L0002: Undeclared variable 'param_2'
+0:168: L0001: Typename expected, found 'else'
+[00:36:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_lines): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:380: L0002: Undeclared variable '_uniform'
+0:382: L0002: Undeclared variable 'param'
+0:384: L0002: Undeclared variable 'param_2'
+0:386: L0001: Typename expected, found 'else'
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_crumbling): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:374: L0002: Undeclared variable '_uniform'
+0:376: L0002: Undeclared variable 'param'
+0:378: L0002: Undeclared variable 'param_2'
+0:380: L0001: Typename expected, found 'else'
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:35] [Render thread/ERROR]: Resource reload future completed exceptionally
+java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
+	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
+	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at mio.Wrapper.main(Wrapper.java:21)
+Caused by: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
+	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
+	... 15 more
+[00:36:35] [Render thread/INFO]: Caught error loading resourcepacks, removing all selected resourcepacks
+java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
+	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
+	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at mio.Wrapper.main(Wrapper.java:21)
+Caused by: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
+	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
+	... 15 more
+[00:36:35] [Render thread/INFO]: [EMF]: Clearing data for reload.
+[00:36:35] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
+[00:36:35] [Worker-Main-5/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
+[00:36:36] [Worker-Main-5/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
+[00:36:36] [Worker-Main-5/INFO]: Found unifont_pua-17.0.01.hex, loading
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:224: L0002: Undeclared variable '_uniform'
+0:226: L0002: Undeclared variable 'param'
+0:228: L0002: Undeclared variable 'param_2'
+0:230: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:230: L0002: Undeclared variable '_uniform'
+0:232: L0002: Undeclared variable 'param'
+0:234: L0002: Undeclared variable 'param_2'
+0:236: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/block): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_entity_shadow): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:168: L0002: Undeclared variable '_uniform'
+0:170: L0002: Undeclared variable 'param'
+0:172: L0002: Undeclared variable 'param_2'
+0:174: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_beacon_beam): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:36] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:162: L0002: Undeclared variable '_uniform'
+0:164: L0002: Undeclared variable 'param'
+0:166: L0002: Undeclared variable 'param_2'
+0:168: L0001: Typename expected, found 'else'
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_lines): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:380: L0002: Undeclared variable '_uniform'
+0:382: L0002: Undeclared variable 'param'
+0:384: L0002: Undeclared variable 'param_2'
+0:386: L0001: Typename expected, found 'else'
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_crumbling): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:374: L0002: Undeclared variable '_uniform'
+0:376: L0002: Undeclared variable 'param'
+0:378: L0002: Undeclared variable 'param_2'
+0:380: L0001: Typename expected, found 'else'
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[00:36:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[00:36:38] [Render thread/ERROR]: Resource reload future completed exceptionally
+java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
+	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
+	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at mio.Wrapper.main(Wrapper.java:21)
+Caused by: java.lang.RuntimeException: Failed to load required shader programs:
+ - minecraft:pipeline/oit_transmittance_terrain_multidraw
+ - minecraft:pipeline/cutout_terrain
+ - minecraft:pipeline/oit_transmittance_flat_clouds
+ - minecraft:pipeline/oit_transmittance_terrain
+ - minecraft:pipeline/oit_transmittance_entity
+ - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
+ - minecraft:pipeline/oit_transmittance_text
+ - minecraft:pipeline/oit_transmittance_item_glint
+ - minecraft:pipeline/oit_transmittance_debug_points
+ - minecraft:pipeline/oit_transmittance_translucent_block
+ - minecraft:pipeline/oit_transmittance_debug_triangle_fan
+ - minecraft:pipeline/oit_transmittance_item
+ - minecraft:pipeline/oit_transmittance_particle
+ - minecraft:pipeline/translucent_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_shadow
+ - minecraft:pipeline/oit_transmittance_debug_quads
+ - minecraft:pipeline/translucent_terrain
+ - minecraft:pipeline/solid_terrain
+ - minecraft:pipeline/oit_transmittance_entity_cull
+ - minecraft:pipeline/oit_depth_bounds_terrain
+ - minecraft:pipeline/cutout_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_entity_emissive
+ - minecraft:pipeline/solid_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_beacon_beam
+ - minecraft:pipeline/oit_transmittance_clouds
+ - minecraft:pipeline/oit_transmittance_item_glint_special
+ - minecraft:pipeline/oit_transmittance_text_grayscale
+ - minecraft:pipeline/oit_transmittance_text_polygon_offset
+ - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_lines_translucent
+ - minecraft:pipeline/oit_accumulate_terrain
+ - minecraft:pipeline/oit_transmittance_eyes
+ - minecraft:pipeline/oit_transmittance_crumbling
+ - minecraft:pipeline/oit_transmittance_weather
+ - minecraft:pipeline/oit_transmittance_debug_filled_box
+ - minecraft:pipeline/oit_accumulate_terrain_multidraw
+ - minecraft:pipeline/oit_transmittance_breeze_wind
+	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
+	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
+	... 15 more
+[00:36:38] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[00:36:38] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 7a988a11a65d48d9aed37b359da324d7
+[00:36:38] [Download-2/ERROR]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 7a988a11a65d48d9aed37b359da324d7'
+	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
+	at knot//com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:354)
+	at knot//com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:48)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)

@@ -1,0 +1,26 @@
+Initializing MobileGlues ...
+The Open Source License of MobileGlues: 
+  GNU LGPL-2.1 License
+MG_DIR_PATH = /sdcard/MG
+[MobileGlues] Setting: enableAngle                 = false
+[MobileGlues] Setting: ignoreError                 = 0
+[MobileGlues] Setting: enableExtComputeShader      = false
+[MobileGlues] Setting: enableExtTimerQuery         = true
+[MobileGlues] Setting: enableExtDirectStateAccess  = false
+[MobileGlues] Setting: maxGlslCacheSize            = 64
+[MobileGlues] Setting: angleDepthClearFixMode      = 0
+[MobileGlues] Setting: bufferCoherentAsFlush       = 1
+[MobileGlues] Setting: customGLVersion             = 4.0.0
+[MobileGlues] Setting: fsr1Setting                 = 0
+[MobileGlues] Setting: hideMGEnvLevel              = 0
+EGL initialized successfully
+OpenGL ES Version: OpenGL ES 3.2 (320)
+Not Detected GL_EXT_multi_draw_indirect!
+Enable-capability extensions: multisample_compatibility=0 clip_cull_distance=0 depth_clamp=0 sRGB_write_control=1 NV_polygon_mode=0 OES_sample_shading=1
+multidrawMode/multidrawDisableBackends are no longer used. The selection is an order now: multidrawOrder (global, backend names best first, may contain "native") and multidrawOrder<EntryPoint> for per-function exceptions.
+multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
+[MobileGlues] multidrawOrderArrays               = unroll
+[MobileGlues] multidrawOrderElements             = unroll > indirect
+[MobileGlues] multidrawOrderElementsBaseVertex   = basevertex > indirect > compute > unroll
+[MobileGlues] multidrawOrderArraysIndirect       = indirect
+[MobileGlues] multidrawOrderElementsIndirect     = indirect
