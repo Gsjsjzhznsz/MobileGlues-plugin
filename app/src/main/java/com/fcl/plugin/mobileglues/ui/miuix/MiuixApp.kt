@@ -42,7 +42,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.calculateBottomPadding
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
@@ -51,6 +50,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import top.yukonga.miuix.kmp.basic.Icon
+import top.yukonga.miuix.kmp.basic.Text
 import top.yukonga.miuix.kmp.basic.NavigationRail
 import top.yukonga.miuix.kmp.basic.NavigationRailItem
 import com.fcl.plugin.mobileglues.ui.Responsive
@@ -65,8 +66,8 @@ import top.yukonga.miuix.kmp.blur.Backdrop
 import top.yukonga.miuix.kmp.blur.LayerBackdrop
 import top.yukonga.miuix.kmp.blur.layerBackdrop
 import top.yukonga.miuix.kmp.blur.rememberLayerBackdrop
-import com.fcl.plugin.mobileglues.ui.BlurredBar
-import com.fcl.plugin.mobileglues.ui.rememberBlurBackdrop
+import com.fcl.plugin.mobileglues.ui.util.BlurredBar
+import com.fcl.plugin.mobileglues.ui.util.rememberBlurBackdrop
 import top.yukonga.miuix.kmp.theme.ColorSchemeMode
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import top.yukonga.miuix.kmp.theme.ThemeController
@@ -142,8 +143,10 @@ fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
         // - blurBackdrop 供标准底栏的 textureBlur（enableBlur 关闭或设备不支持时为 null，回退实色）；
         // - glassBackdrop 供悬浮底栏液态玻璃，先垫 surface 底色再画内容，防止采样透明像素发黑。
         val blurBackdrop = rememberBlurBackdrop(enableBlur)
+        // colorScheme 是 @Composable 读取，必须先取值再进 draw lambda。
+        val backdropSurface = MiuixTheme.colorScheme.surface
         val glassBackdrop = rememberLayerBackdrop {
-            drawRect(MiuixTheme.colorScheme.surface)
+            drawRect(backdropSurface)
             drawContent()
         }
         Scaffold(

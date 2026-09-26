@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.calculateBottomPadding
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBars
@@ -120,8 +119,10 @@ fun MaterialApp(
         val floatingBar = LocalEnableFloatingBottomBar.current
         val glassBar = LocalEnableFloatingBottomBarGlass.current
         // 悬浮底栏液态玻璃的采集层：先垫 surface 底色再画内容，否则采样到透明像素会发黑。
+        // colorScheme 是 @Composable 读取，必须先取值再进 draw lambda。
+        val backdropColor = MaterialTheme.colorScheme.background
         val glassBackdrop = rememberLayerBackdrop {
-            drawRect(MaterialTheme.colorScheme.background)
+            drawRect(backdropColor)
             drawContent()
         }
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {

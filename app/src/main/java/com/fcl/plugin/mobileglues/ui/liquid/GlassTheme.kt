@@ -56,7 +56,7 @@ fun MgGlassTheme(
         LocalGlassDarkTheme provides darkTheme,
         LocalEnableBlur provides enableBlur,
         LocalEnableFloatingBottomBar provides floatingBar,
-        LocalEnableFloatingBottomBarGlass provides glassBar && Build.VERSION.SDK_INT >= 33,
+        LocalEnableFloatingBottomBarGlass provides (glassBar && Build.VERSION.SDK_INT >= 33),
     ) {
         content(themeMode, keyColor, darkTheme)
     }
