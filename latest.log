@@ -26,101 +26,66 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MobileGlues] multidrawOrderElementsIndirect     = indirect
 [MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
 [MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
-GLSL parse OK (glslver=330)
 [MG] Shader 1 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 2 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 4 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 5 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 11 converted OK (glslver=330 -> essl ver=320)
 Shader 11 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 11 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-GLSL parse OK (glslver=330)
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 12 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 20 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 24 converted OK (glslver=330 -> essl ver=320)
-Shader 24 compilation failed: 
 0:224: L0002: Undeclared variable '_uniform'
 0:226: L0002: Undeclared variable 'param'
 0:228: L0002: Undeclared variable 'param_2'
 0:230: L0001: Typename expected, found 'else'
-[MG] Shader 24 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-GLSL parse OK (glslver=330)
-[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 11 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
+[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 12 converted OK (glslver=330 -> essl ver=320)
+Shader 12 compilation failed: 
+0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[MG] Shader 12 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 22 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 24 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 25 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 27 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 28 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 30 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 33 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 36 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 37 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 39 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 40 converted OK (glslver=330 -> essl ver=320)
 Shader 40 compilation failed: 
 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
 [MG] Shader 40 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 39 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 46 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 47 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 49 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 50 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 52 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 56 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 59 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 62 converted OK (glslver=330 -> essl ver=320)
 Shader 62 compilation failed: 
 0:230: L0002: Undeclared variable '_uniform'
@@ -128,96 +93,70 @@ Shader 62 compilation failed:
 0:234: L0002: Undeclared variable 'param_2'
 0:236: L0001: Typename expected, found 'else'
 [MG] Shader 62 submit record: size=9490 strlen=9490 | driver SHADER_SOURCE_LENGTH=9491 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-GLSL parse OK (glslver=330)
 [MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 63 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 66 converted OK (glslver=330 -> essl ver=320)
 Shader 66 compilation failed: 
 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
 [MG] Shader 66 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 67 converted OK (glslver=330 -> essl ver=320)
 Shader 67 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
 [MG] Shader 67 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 68 converted OK (glslver=330 -> essl ver=320)
 Shader 68 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 68 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
+0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 68 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 69 converted OK (glslver=330 -> essl ver=320)
 Shader 69 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 69 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 69 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 70 converted OK (glslver=330 -> essl ver=320)
 Shader 70 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 70 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 70 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 71 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 74 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 76 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 77 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 80 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 82 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 83 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 85 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 86 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 88 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 89 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 91 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 92 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 94 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
-Shader 95 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 95 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
-[MG] Shader 94 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 96 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 97 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 98 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 99 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 101 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 102 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 105 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 107 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 108 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 110 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 111 converted OK (glslver=330 -> essl ver=320)
-Shader 111 compilation failed: 
+Shader 101 compilation failed: 
 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 111 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 110 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 101 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 102 converted OK (glslver=330 -> essl ver=320)
+Shader 102 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 102 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 105 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 108 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 111 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 112 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 114 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 115 converted OK (glslver=330 -> essl ver=320)
@@ -225,171 +164,129 @@ Shader 115 compilation failed:
 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
 [MG] Shader 115 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 114 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 118 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 122 converted OK (glslver=330 -> essl ver=320)
 Shader 122 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 122 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 123 converted OK (glslver=330 -> essl ver=320)
+Shader 123 compilation failed: 
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 123 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 124 converted OK (glslver=330 -> essl ver=320)
+Shader 124 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
 0:201: L0002: Undeclared variable 'param'
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
-[MG] Shader 122 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 124 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
 [MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 123 converted OK (glslver=330 -> essl ver=320)
-Shader 123 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 123 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 124 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 126 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 125 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
-Shader 127 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 127 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
-[MG] Shader 126 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 128 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 130 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
-Shader 131 compilation failed: 
+Shader 128 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 131 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 130 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 128 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 129 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 132 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 135 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 138 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 140 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 141 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 143 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 144 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 147 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
+Shader 147 compilation failed: 
+0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[MG] Shader 147 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 148 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 150 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 151 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 153 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 155 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 154 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 156 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 157 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 159 converted OK (glslver=330 -> essl ver=320)
-Shader 159 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 159 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 160 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 162 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 163 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 165 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 168 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 169 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 171 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 174 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 175 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 177 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 180 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 184 converted OK (glslver=330 -> essl ver=320)
-Shader 184 compilation failed: 
+Shader 163 compilation failed: 
 0:205: L0002: Undeclared variable '_uniform'
 0:207: L0002: Undeclared variable 'param'
 0:209: L0002: Undeclared variable 'param_2'
 0:211: L0001: Typename expected, found 'else'
-[MG] Shader 184 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 163 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 162 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 167 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 169 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 170 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 173 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 175 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 179 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 182 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 184 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 187 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 188 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 191 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 194 converted OK (glslver=330 -> essl ver=320)
-Shader 194 compilation failed: 
+Shader 191 compilation failed: 
 0:168: L0002: Undeclared variable '_uniform'
 0:170: L0002: Undeclared variable 'param'
 0:172: L0002: Undeclared variable 'param_2'
 0:174: L0001: Typename expected, found 'else'
-[MG] Shader 194 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
+[MG] Shader 191 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
+[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 192 converted OK (glslver=330 -> essl ver=320)
+Shader 192 compilation failed: 
+0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 192 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 195 converted OK (glslver=330 -> essl ver=320)
-Shader 195 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 195 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
-[MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 196 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 201 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 202 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 204 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 207 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 210 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 214 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 216 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 219 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 220 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
-Shader 223 compilation failed: 
+Shader 214 compilation failed: 
 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 223 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 214 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 220 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 221 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 224 converted OK (glslver=330 -> essl ver=320)
 Shader 224 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
@@ -397,154 +294,122 @@ Shader 224 compilation failed:
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
 [MG] Shader 224 submit record: size=8709 strlen=8709 | driver SHADER_SOURCE_LENGTH=8710 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 225 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 227 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 228 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 231 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 234 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 236 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 239 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 240 converted OK (glslver=330 -> essl ver=320)
-Shader 240 compilation failed: 
+[MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 245 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 249 converted OK (glslver=330 -> essl ver=320)
+Shader 249 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
 0:201: L0002: Undeclared variable 'param'
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
-[MG] Shader 240 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-GLSL parse OK (glslver=330)
-[MG] Shader 239 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 241 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 244 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 249 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 249 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 250 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 252 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 256 converted OK (glslver=330 -> essl ver=320)
-Shader 256 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 256 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 259 converted OK (glslver=330 -> essl ver=320)
+Shader 259 compilation failed: 
+0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 259 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 260 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 265 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 266 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 269 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 272 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
-Shader 275 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 275 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 276 converted OK (glslver=330 -> essl ver=320)
-Shader 276 compilation failed: 
+Shader 272 compilation failed: 
 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 276 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 277 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 272 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 273 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 276 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 279 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 280 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 282 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 283 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 284 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 285 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 287 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 288 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 289 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 290 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 293 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 294 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 295 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 298 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 300 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 301 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 303 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 306 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 307 converted OK (glslver=330 -> essl ver=320)
-Shader 307 compilation failed: 
+Shader 300 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 307 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-GLSL parse OK (glslver=330)
-[MG] Shader 306 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 300 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 301 converted OK (glslver=330 -> essl ver=320)
+Shader 301 compilation failed: 
+0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 301 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 305 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 307 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 310 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 311 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 317 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 319 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
-Shader 323 compilation failed: 
+Shader 311 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 323 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 311 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 310 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 312 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 315 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 317 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 318 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 321 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 324 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 326 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 327 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 329 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 330 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 339 converted OK (glslver=330 -> essl ver=320)
-Shader 339 compilation failed: 
+Shader 327 compilation failed: 
 0:162: L0002: Undeclared variable '_uniform'
 0:164: L0002: Undeclared variable 'param'
 0:166: L0002: Undeclared variable 'param_2'
 0:168: L0001: Typename expected, found 'else'
-[MG] Shader 339 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 327 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
+[MG] Shader 326 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 330 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 334 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 337 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 339 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 342 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 345 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
@@ -560,38 +425,28 @@ GLSL parse OK (glslver=330)
 [MG] Shader 361 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 364 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 366 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 369 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 372 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 373 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 375 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 376 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 378 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 381 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 384 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 387 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 388 converted OK (glslver=330 -> essl ver=320)
-Shader 388 compilation failed: 
+Shader 364 compilation failed: 
 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 388 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 387 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 364 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 365 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 371 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 373 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 374 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 376 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 377 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 380 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 383 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 386 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 388 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 389 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 391 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 392 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 394 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 395 converted OK (glslver=330 -> essl ver=320)
@@ -604,16 +459,12 @@ GLSL parse OK (glslver=330)
 [MG] Shader 406 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 407 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 409 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 410 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 412 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 413 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 415 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 416 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 418 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 419 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 421 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
@@ -622,75 +473,64 @@ GLSL parse OK (glslver=330)
 [MG] Shader 427 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 428 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 431 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 433 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 434 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 436 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 437 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 439 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 440 converted OK (glslver=330 -> essl ver=320)
-Shader 440 compilation failed: 
+[MG] Shader 442 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 445 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 448 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 449 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 451 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 454 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 458 converted OK (glslver=330 -> essl ver=320)
+Shader 458 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 458 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 459 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 465 converted OK (glslver=330 -> essl ver=320)
+Shader 465 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 465 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 469 converted OK (glslver=330 -> essl ver=320)
+Shader 469 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 469 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
+Shader 470 compilation failed: 
 0:380: L0002: Undeclared variable '_uniform'
 0:382: L0002: Undeclared variable 'param'
 0:384: L0002: Undeclared variable 'param_2'
 0:386: L0001: Typename expected, found 'else'
-[MG] Shader 440 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[MG] Shader 439 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 441 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 444 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 447 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 449 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 450 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 453 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 456 converted OK (glslver=330 -> essl ver=320)
-Shader 456 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 456 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 459 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 460 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 463 converted OK (glslver=330 -> essl ver=320)
-Shader 463 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 463 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
-Shader 464 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 464 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 465 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+[MG] Shader 470 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
 [MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 471 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 474 converted OK (glslver=330 -> essl ver=320)
-Shader 474 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 474 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 476 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 477 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 478 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 480 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
+Shader 480 compilation failed: 
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 480 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 484 converted OK (glslver=330 -> essl ver=320)
@@ -699,43 +539,39 @@ GLSL parse OK (glslver=330)
 [MG] Shader 489 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 492 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 493 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 495 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
 [MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 498 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 499 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
-Shader 502 compilation failed: 
+Shader 499 compilation failed: 
 0:374: L0002: Undeclared variable '_uniform'
 0:376: L0002: Undeclared variable 'param'
 0:378: L0002: Undeclared variable 'param_2'
 0:380: L0001: Typename expected, found 'else'
-[MG] Shader 502 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 499 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
+[MG] Shader 498 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
-Shader 503 compilation failed: 
+[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 506 converted OK (glslver=330 -> essl ver=320)
+Shader 506 compilation failed: 
+0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 506 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 513 converted OK (glslver=330 -> essl ver=320)
+Shader 513 compilation failed: 
 0:205: L0002: Undeclared variable '_uniform'
 0:207: L0002: Undeclared variable 'param'
 0:209: L0002: Undeclared variable 'param_2'
 0:211: L0001: Typename expected, found 'else'
-[MG] Shader 503 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 504 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 506 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
-GLSL parse OK (glslver=330)
-[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
-Shader 510 compilation failed: 
-0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 510 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 513 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 513 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 514 converted OK (glslver=330 -> essl ver=320)
 Shader 514 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
@@ -743,503 +579,503 @@ Shader 514 compilation failed:
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
 [MG] Shader 514 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 513 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
-Shader 467 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 467 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 469 converted OK (glslver=330 -> essl ver=320)
-Shader 469 compilation failed: 
+[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 342 converted OK (glslver=330 -> essl ver=320)
+Shader 342 compilation failed: 
 0:224: L0002: Undeclared variable '_uniform'
 0:226: L0002: Undeclared variable 'param'
 0:228: L0002: Undeclared variable 'param_2'
 0:230: L0001: Typename expected, found 'else'
-[MG] Shader 469 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 357 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 358 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 504 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 342 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 342 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
 [MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 12 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 344 converted OK (glslver=330 -> essl ver=320)
+Shader 344 compilation failed: 
+0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[MG] Shader 344 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
 [MG] Shader 201 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 202 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 98 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 99 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 49 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 50 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 360 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 361 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 138 converted OK (glslver=330 -> essl ver=320)
-Shader 138 compilation failed: 
+[MG] Shader 252 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 394 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 395 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 207 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 354 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 355 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 80 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 234 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 400 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 401 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 495 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 484 converted OK (glslver=330 -> essl ver=320)
+Shader 484 compilation failed: 
 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 138 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 139 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 458 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 177 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 179 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 107 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 369 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 371 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 424 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 426 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 409 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 411 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 381 converted OK (glslver=330 -> essl ver=320)
-Shader 381 compilation failed: 
+[MG] Shader 484 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 485 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 60 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 348 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 350 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 415 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 417 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
+Shader 502 compilation failed: 
 0:230: L0002: Undeclared variable '_uniform'
 0:232: L0002: Undeclared variable 'param'
 0:234: L0002: Undeclared variable 'param_2'
 0:236: L0001: Typename expected, found 'else'
-[MG] Shader 381 submit record: size=9490 strlen=9490 | driver SHADER_SOURCE_LENGTH=9491 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 383 converted OK (glslver=330 -> essl ver=320)
-Shader 383 compilation failed: 
+[MG] Shader 502 submit record: size=9490 strlen=9490 | driver SHADER_SOURCE_LENGTH=9491 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
+[MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 504 converted OK (glslver=330 -> essl ver=320)
+Shader 504 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 383 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 418 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 419 converted OK (glslver=330 -> essl ver=320)
-Shader 419 compilation failed: 
+[MG] Shader 504 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 269 converted OK (glslver=330 -> essl ver=320)
+Shader 269 compilation failed: 
 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 419 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 420 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 303 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 305 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 372 converted OK (glslver=330 -> essl ver=320)
-Shader 372 compilation failed: 
+[MG] Shader 269 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 270 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 184 converted OK (glslver=330 -> essl ver=320)
+Shader 184 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 184 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 186 converted OK (glslver=330 -> essl ver=320)
+Shader 186 compilation failed: 
 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 372 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 373 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 374 converted OK (glslver=330 -> essl ver=320)
-Shader 374 compilation failed: 
+[MG] Shader 186 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 307 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
+Shader 218 compilation failed: 
 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 374 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 218 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 219 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 293 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 295 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 463 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 427 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 429 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 46 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 48 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
+Shader 258 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 258 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 260 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 261 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
+Shader 292 compilation failed: 
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 292 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 191 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 210 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 380 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 451 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 339 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 424 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 425 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 76 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 77 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 147 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 30 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-Shader 31 compilation failed: 
+[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 179 converted OK (glslver=330 -> essl ver=320)
+Shader 179 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 31 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 82 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 506 converted OK (glslver=330 -> essl ver=320)
-Shader 506 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 506 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 508 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 407 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 408 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 86 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 87 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 311 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 312 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 330 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
-Shader 331 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 331 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 59 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 114 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 431 converted OK (glslver=330 -> essl ver=320)
-Shader 431 compilation failed: 
+[MG] Shader 179 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 180 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 195 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 197 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 175 converted OK (glslver=330 -> essl ver=320)
+Shader 175 compilation failed: 
 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 431 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 432 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 448 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 187 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 189 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 288 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 290 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 306 converted OK (glslver=330 -> essl ver=320)
-Shader 306 compilation failed: 
+[MG] Shader 175 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 177 converted OK (glslver=330 -> essl ver=320)
+Shader 177 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 177 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 334 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 129 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 371 converted OK (glslver=330 -> essl ver=320)
+Shader 371 compilation failed: 
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 371 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 372 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 27 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 29 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 409 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 411 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 357 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 359 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
+Shader 230 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
 0:201: L0002: Undeclared variable 'param'
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
-[MG] Shader 306 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 309 converted OK (glslver=330 -> essl ver=320)
-Shader 309 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 309 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 298 converted OK (glslver=330 -> essl ver=320)
-Shader 298 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 298 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 26 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
-Shader 243 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 243 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 244 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 245 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 487 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 488 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 132 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 133 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 460 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 428 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 429 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 96 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 97 converted OK (glslver=330 -> essl ver=320)
-Shader 97 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 97 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 345 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 436 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 437 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 378 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 230 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 231 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 240 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 241 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 141 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 142 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 157 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 160 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 252 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 180 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
-Shader 199 compilation failed: 
+[MG] Shader 312 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
+Shader 32 compilation failed: 
 0:205: L0002: Undeclared variable '_uniform'
 0:207: L0002: Undeclared variable 'param'
 0:209: L0002: Undeclared variable 'param_2'
 0:211: L0001: Typename expected, found 'else'
-[MG] Shader 199 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 200 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 136 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 492 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 494 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 354 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 356 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 32 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 63 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 72 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 20 converted OK (glslver=330 -> essl ver=320)
-Shader 20 compilation failed: 
+[MG] Shader 71 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 85 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 86 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 486 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 487 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 459 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 365 converted OK (glslver=330 -> essl ver=320)
+Shader 365 compilation failed: 
+0:205: L0002: Undeclared variable '_uniform'
+0:207: L0002: Undeclared variable 'param'
+0:209: L0002: Undeclared variable 'param_2'
+0:211: L0001: Typename expected, found 'else'
+[MG] Shader 365 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 366 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 436 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 438 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 75 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 236 converted OK (glslver=330 -> essl ver=320)
+Shader 236 compilation failed: 
 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 20 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 22 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 214 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
-Shader 215 compilation failed: 
+[MG] Shader 236 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 238 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 35 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 120 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 392 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 393 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 89 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 90 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 148 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 96 converted OK (glslver=330 -> essl ver=320)
+Shader 96 compilation failed: 
 0:168: L0002: Undeclared variable '_uniform'
 0:170: L0002: Undeclared variable 'param'
 0:172: L0002: Undeclared variable 'param_2'
 0:174: L0001: Typename expected, found 'else'
-[MG] Shader 215 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 153 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 219 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 220 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 39 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 204 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 124 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 80 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 91 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 92 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 207 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 285 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 210 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 46 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 47 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 74 converted OK (glslver=330 -> essl ver=320)
-Shader 74 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 74 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 75 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 239 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 300 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 64 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 227 converted OK (glslver=330 -> essl ver=320)
-Shader 227 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 227 submit record: size=8709 strlen=8709 | driver SHADER_SOURCE_LENGTH=8710 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 228 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 478 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
-Shader 479 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 479 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 52 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 480 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 391 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 392 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 453 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 150 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 155 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 156 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 27 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 28 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 282 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 283 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 471 converted OK (glslver=330 -> essl ver=320)
-Shader 471 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 471 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 472 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 318 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 397 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 399 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
-Shader 338 compilation failed: 
-0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 338 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 341 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 352 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 353 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 96 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
 [MG] Shader 169 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 170 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 196 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 197 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 35 converted OK (glslver=330 -> essl ver=320)
-Shader 35 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 35 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 364 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 140 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 141 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 421 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 171 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 88 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 89 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 265 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 266 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
-Shader 336 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 336 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 337 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 495 converted OK (glslver=330 -> essl ver=320)
-Shader 495 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 495 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 497 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 499 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 163 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 327 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 441 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 91 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 92 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 442 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 321 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 238 converted OK (glslver=330 -> essl ver=320)
-Shader 238 compilation failed: 
+[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 125 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 182 converted OK (glslver=330 -> essl ver=320)
+Shader 182 compilation failed: 
+0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[MG] Shader 182 submit record: size=8709 strlen=8709 | driver SHADER_SOURCE_LENGTH=8710 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 111 converted OK (glslver=330 -> essl ver=320)
+Shader 111 compilation failed: 
+0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 111 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 112 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 113 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 377 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 378 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 423 converted OK (glslver=330 -> essl ver=320)
+Shader 423 compilation failed: 
+0:199: L0002: Undeclared variable '_uniform'
+0:201: L0002: Undeclared variable 'param'
+0:203: L0002: Undeclared variable 'param_2'
+0:205: L0001: Typename expected, found 'else'
+[MG] Shader 423 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 282 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 383 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 345 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 153 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 154 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 24 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 25 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 489 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 418 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 419 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 476 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 477 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 187 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 188 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 52 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 82 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 83 converted OK (glslver=330 -> essl ver=320)
+Shader 83 compilation failed: 
+0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 83 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
+Shader 213 compilation failed: 
+0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 213 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 216 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 285 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 228 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 440 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 441 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
+Shader 511 compilation failed: 
+0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 511 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 454 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 49 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 50 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 492 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 493 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 135 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 138 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
+Shader 199 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 199 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 200 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 403 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 405 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
+Shader 468 compilation failed: 
+0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 468 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 471 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 472 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 407 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 408 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 374 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 375 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 42 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 206 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 482 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 329 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 221 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
+Shader 222 compilation failed: 
 0:162: L0002: Undeclared variable '_uniform'
 0:164: L0002: Undeclared variable 'param'
 0:166: L0002: Undeclared variable 'param_2'
 0:168: L0001: Typename expected, found 'else'
-[MG] Shader 238 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 444 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 384 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 489 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 375 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 376 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 225 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 165 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 222 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
+[MG] Shader 108 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 324 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 400 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 401 converted OK (glslver=330 -> essl ver=320)
-Shader 401 compilation failed: 
+[MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 276 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 445 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 388 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 389 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 105 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 36 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 37 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 265 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 266 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 397 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 398 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 448 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 449 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 273 converted OK (glslver=330 -> essl ver=320)
+Shader 273 compilation failed: 
 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 401 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 402 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 273 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 143 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 145 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 57 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 259 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 261 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 415 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 417 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 249 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 251 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 174 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 270 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 216 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 126 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 129 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 133 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 306 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 432 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 159 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 161 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 433 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 435 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 101 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 110 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 113 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 279 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 36 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 38 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 294 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 97 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 99 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 150 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 57 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 387 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 390 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 485 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 403 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 405 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 394 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 396 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-Shader 271 compilation failed: 
+[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 168 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 174 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 251 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 412 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 414 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 360 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
+Shader 278 compilation failed: 
 0:380: L0002: Undeclared variable '_uniform'
 0:382: L0002: Undeclared variable 'param'
 0:384: L0002: Undeclared variable 'param_2'
 0:386: L0001: Typename expected, found 'else'
-[MG] Shader 271 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[MG] Shader 272 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 273 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 120 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 349 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 350 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 450 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 451 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 234 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 235 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 413 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 414 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
-Shader 137 compilation failed: 
+[MG] Shader 278 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
+[MG] Shader 279 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 280 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 318 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 319 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 165 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 225 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 226 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 352 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 353 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 117 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 288 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 289 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
+Shader 363 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 137 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 411 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 305 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 373 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 330 converted OK (glslver=330 -> essl ver=320)
-Shader 330 compilation failed: 
+[MG] Shader 363 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 75 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
+Shader 510 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 330 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 290 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 26 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 510 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
 [MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 72 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 64 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 399 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 337 converted OK (glslver=330 -> essl ver=320)
-Shader 337 compilation failed: 
+[MG] Shader 405 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 515 converted OK (glslver=330 -> essl ver=320)
+Shader 515 compilation failed: 
 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 337 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 400 converted OK (glslver=330 -> essl ver=320)
-Shader 400 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 400 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 396 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 515 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 516 converted OK (glslver=330 -> essl ver=320)
+Shader 516 compilation failed: 
+0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 516 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 517 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 519 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 520 converted OK (glslver=330 -> essl ver=320)
@@ -1253,40 +1089,40 @@ Shader 400 compilation failed:
 [MG] Shader 532 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 534 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 535 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 537 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
-Shader 538 compilation failed: 
-0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 538 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[MG] Shader 537 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 539 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 541 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 542 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 544 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 548 converted OK (glslver=330 -> essl ver=320)
-Shader 548 compilation failed: 
+Shader 535 compilation failed: 
 0:374: L0002: Undeclared variable '_uniform'
 0:376: L0002: Undeclared variable 'param'
 0:378: L0002: Undeclared variable 'param_2'
 0:380: L0001: Typename expected, found 'else'
-[MG] Shader 548 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 549 converted OK (glslver=330 -> essl ver=320)
-Shader 549 compilation failed: 
+[MG] Shader 535 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
+[MG] Shader 534 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 536 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 539 converted OK (glslver=330 -> essl ver=320)
+Shader 539 compilation failed: 
+0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 539 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
+[MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 540 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 542 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 543 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 546 converted OK (glslver=330 -> essl ver=320)
+Shader 546 compilation failed: 
 0:205: L0002: Undeclared variable '_uniform'
 0:207: L0002: Undeclared variable 'param'
 0:209: L0002: Undeclared variable 'param_2'
 0:211: L0001: Typename expected, found 'else'
-[MG] Shader 549 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 546 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
+[MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 549 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 550 converted OK (glslver=330 -> essl ver=320)
-Shader 550 compilation failed: 
+[MG] Shader 552 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 553 converted OK (glslver=330 -> essl ver=320)
+Shader 553 compilation failed: 
 0:199: L0002: Undeclared variable '_uniform'
 0:201: L0002: Undeclared variable 'param'
 0:203: L0002: Undeclared variable 'param_2'
 0:205: L0001: Typename expected, found 'else'
-[MG] Shader 550 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 551 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 553 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
