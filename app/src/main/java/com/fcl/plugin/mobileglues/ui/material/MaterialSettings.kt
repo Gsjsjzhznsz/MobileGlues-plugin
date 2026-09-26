@@ -34,6 +34,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
 import com.fcl.plugin.mobileglues.settings.AngleConfig
 import com.fcl.plugin.mobileglues.settings.DepthClearFixMode
+import com.fcl.plugin.mobileglues.settings.Fsr1Preset
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.MGConfig
@@ -163,6 +164,28 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                 checked = config.fsr1Enabled,
                 onCheckedChange = controller::setFsr1,
             )
+            // FSR1 的两个子设置只在它开着的时候出现：关着摆出来只能徒增困惑。
+            AnimatedVisibility(
+                visible = config.fsr1Enabled,
+                enter = expandVertically() + fadeIn(),
+                exit = shrinkVertically() + fadeOut(),
+            ) {
+                Column {
+                    TextPreferenceRow(
+                        title = stringResource(R.string.option_fsr1_super_resolution),
+                        summary = config.fsr1.label(context).toString(),
+                        onClick = { choice = ChoiceTarget.Fsr1Preset },
+                    )
+                    SliderPreferenceRow(
+                        title = stringResource(R.string.option_fsr1_sharpness),
+                        valueLabel = stringResource(R.string.option_fsr1_sharpness_value, config.fsr1Sharpness),
+                        position = config.fsr1Sharpness,
+                        steps = 0,
+                        onPositionChange = controller::setFsr1Sharpness,
+                        onDragFinished = {},
+                    )
+                }
+            }
         }
 
         PreferenceGroup(title = stringResource(R.string.settings_group_cache)) {
@@ -266,6 +289,14 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
             onDismiss = { choice = null },
         )
 
+        ChoiceTarget.Fsr1Preset -> OptionDialog(
+            title = stringResource(R.string.option_fsr1_super_resolution),
+            options = Fsr1Preset.Presets,
+            selected = config.fsr1,
+            onSelect = controller::selectFsr1Preset,
+            onDismiss = { choice = null },
+        )
+
         null -> Unit
     }
 
@@ -342,4 +373,4 @@ private fun <T> OptionDialog(
     )
 }
 
-private enum class ChoiceTarget { Backend, Angle, NoError, DepthClear, GlVersion }
+private enum class ChoiceTarget { Backend, Angle, NoError, DepthClear, GlVersion, Fsr1Preset }

@@ -35,6 +35,9 @@ internal object MGConfigCodec {
     private const val KEY_GL_VERSION = "customGLVersion"
     private const val KEY_FSR1 = "fsr1Setting"
 
+    /** FSR1 锐化程度（0-100 百分比）。native 缺键回落 90，见 [MGConfig.fsr1Sharpness]。 */
+    private const val KEY_FSR1_SHARPNESS = "fsr1Sharpness"
+
     /**
      * mg-3backends：统一入口 dispatcher 按这个键路由核心库，取值与
      * MOBILEGL_BACKEND_TYPE 环境变量同款名字（dispatcher 侧的容错扫描也认它）。
@@ -54,6 +57,7 @@ internal object MGConfigCodec {
         KEY_DEPTH_CLEAR_FIX,
         KEY_GL_VERSION,
         KEY_FSR1,
+        KEY_FSR1_SHARPNESS,
         KEY_BACKEND,
     ) + MultidrawEntry.entries.flatMap { listOf(it.orderKey, it.legacyModeKey) }
 
@@ -76,6 +80,7 @@ internal object MGConfigCodec {
             extDirectStateAccess = root.boolOrNull(KEY_EXT_DIRECT_STATE_ACCESS)
                 ?: defaults.extDirectStateAccess,
             fsr1 = Fsr1Preset.entries.fromWire(root.intOrNull(KEY_FSR1), defaults.fsr1),
+            fsr1Sharpness = decodeFsr1Sharpness(root),
             backend = RendererBackend.fromWire(root.stringOrNull(KEY_BACKEND)),
         )
     }
@@ -91,9 +96,17 @@ internal object MGConfigCodec {
             addProperty(KEY_DEPTH_CLEAR_FIX, config.depthClearFix.wire)
             addProperty(KEY_GL_VERSION, config.glVersion.wire)
             addProperty(KEY_FSR1, config.fsr1.wire)
+            addProperty(KEY_FSR1_SHARPNESS, config.fsr1Sharpness)
             addProperty(KEY_BACKEND, config.backend.wire)
             encodeMultidraw(config.multidraw)
         }
+
+    /**
+     * 锐化程度：负数/缺键/类型不对 = 「配置没说」回落默认 90，高于 100 夹取——
+     * 与 native（settings.cpp 对 config_get_int 的 -1 缺键哨兵与上界处理）逐条一致。
+     */
+    private fun decodeFsr1Sharpness(root: JsonObject): Int =
+        Fsr1Sharpness.fromDisk(root.intOrNull(KEY_FSR1_SHARPNESS))
 
     private fun decodeMultidraw(root: JsonObject): MultidrawSettings = MultidrawSettings(
         // 与 native 一致：不认识的名字丢弃，重复项保留首次出现，漏掉的项按默认顺序补齐。

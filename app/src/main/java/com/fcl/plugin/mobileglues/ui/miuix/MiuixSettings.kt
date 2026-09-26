@@ -30,6 +30,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
 import com.fcl.plugin.mobileglues.settings.AngleConfig
 import com.fcl.plugin.mobileglues.settings.DepthClearFixMode
+import com.fcl.plugin.mobileglues.settings.Fsr1Preset
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.MGConfig
@@ -180,6 +181,29 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                 checked = config.fsr1Enabled,
                 onCheckedChange = controller::setFsr1,
             )
+            // FSR1 的两个子设置只在它开着的时候出现，行位与 Material 主题一致。
+            AnimatedVisibility(
+                visible = config.fsr1Enabled,
+                enter = expandVertically() + fadeIn(),
+                exit = shrinkVertically() + fadeOut(),
+            ) {
+                Column {
+                    OptionRow(
+                        title = stringResource(R.string.option_fsr1_super_resolution),
+                        options = Fsr1Preset.Presets,
+                        selected = config.fsr1,
+                        onSelect = controller::selectFsr1Preset,
+                    )
+                    MiuixSliderRow(
+                        title = stringResource(R.string.option_fsr1_sharpness),
+                        valueLabel = stringResource(R.string.option_fsr1_sharpness_value, config.fsr1Sharpness),
+                        position = config.fsr1Sharpness,
+                        steps = 0,
+                        onPositionChange = controller::setFsr1Sharpness,
+                        onDragFinished = {},
+                    )
+                }
+            }
         }
 
         MiuixGroup(title = stringResource(R.string.settings_group_cache)) {

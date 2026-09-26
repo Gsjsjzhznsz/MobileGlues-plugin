@@ -22,6 +22,7 @@ import com.fcl.plugin.mobileglues.settings.ConfigLoadResult
 import com.fcl.plugin.mobileglues.settings.ConfigStoreEvent
 import com.fcl.plugin.mobileglues.settings.DepthClearFixMode
 import com.fcl.plugin.mobileglues.settings.Fsr1Preset
+import com.fcl.plugin.mobileglues.settings.Fsr1Sharpness
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
 import com.fcl.plugin.mobileglues.settings.GlslCacheSize
@@ -499,6 +500,25 @@ class AppController(
         } else {
             update { it.copy(fsr1 = Fsr1Preset.Disabled) }
         }
+    }
+
+    /**
+     * FSR1 超分辨率档位。选择器里没有 Disabled，所以任意一次选择都等于「开着」：
+     * 从关闭状态直接挑档位也成立，且与开关同走一条冷静期警告（首次启用 FSR1）。
+     */
+    fun selectFsr1Preset(target: Fsr1Preset) {
+        val current = configStore.config.value ?: return
+        if (target == current.fsr1) return
+        if (current.fsr1Enabled) {
+            update { it.copy(fsr1 = target) }
+        } else {
+            confirmThenUpdate(R.string.warning_fsr1_enable) { it.copy(fsr1 = target) }
+        }
+    }
+
+    /** FSR1 锐化程度（0-100 百分比）。滑块源头已夹取，这里再夹一道作为唯一写入口。 */
+    fun setFsr1Sharpness(percent: Int) {
+        update { it.copy(fsr1Sharpness = Fsr1Sharpness.clamp(percent)) }
     }
 
     /** 滑块档位 → MiB → 配置。关掉缓存只是改配置，不动已有的缓存文件。 */

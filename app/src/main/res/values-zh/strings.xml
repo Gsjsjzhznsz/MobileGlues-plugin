@@ -95,6 +95,15 @@
     <string name="option_ext_timer_query">禁用推荐的 timer_query 扩展</string>
     <string name="option_ext_direct_state_access">启用高级的 direct_state_access 扩展</string>
     <string name="option_enable_fsr1">(实验性) 启用内置的 FSR1</string>
+    <!-- FSR1 子设置：仅在 FSR1 开启时可见。档位名对齐 AMD FSR1 官方倍率（渲染分辨率 = 输出 ÷ 倍率）。 -->
+    <string name="option_fsr1_super_resolution">FSR1 超分辨率</string>
+    <string name="option_fsr1_preset_disabled">禁用</string>
+    <string name="option_fsr1_preset_ultra_quality">超高质量 (1.3x)</string>
+    <string name="option_fsr1_preset_quality">质量优先 (1.5x)</string>
+    <string name="option_fsr1_preset_balanced">平衡 (1.7x)</string>
+    <string name="option_fsr1_preset_performance">性能优先 (2.0x)</string>
+    <string name="option_fsr1_sharpness">FSR1 锐化程度</string>
+    <string name="option_fsr1_sharpness_value">%d%%</string>
 
     <!-- mg-3backends：Air 6.0 渲染后端切换器（单一 pick 行） -->
     <string name="option_renderer_backend">渲染后端</string>

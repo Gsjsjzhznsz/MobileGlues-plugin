@@ -107,6 +107,15 @@
     <string name="option_ext_timer_query">Disable Recommended \'timer_query\' Extension</string>
     <string name="option_ext_direct_state_access">Enable Advanced \'direct_state_access\' Extension</string>
     <string name="option_enable_fsr1" tools:ignore="Typos">(Experimental) Enable built-in FSR1</string>
+    <!-- FSR1 sub-settings: visible only while FSR1 is on. Preset names follow the AMD FSR1 official scaling factors (render = output / factor). -->
+    <string name="option_fsr1_super_resolution">FSR1 super resolution</string>
+    <string name="option_fsr1_preset_disabled">Disabled</string>
+    <string name="option_fsr1_preset_ultra_quality">Ultra Quality (1.3x)</string>
+    <string name="option_fsr1_preset_quality">Quality (1.5x)</string>
+    <string name="option_fsr1_preset_balanced">Balanced (1.7x)</string>
+    <string name="option_fsr1_preset_performance">Performance (2.0x)</string>
+    <string name="option_fsr1_sharpness">FSR1 sharpening</string>
+    <string name="option_fsr1_sharpness_value">%d%%</string>
 
     <!-- mg-3backends: Air 6.0 renderer backend switcher (single pick row) -->
     <string name="option_renderer_backend">Renderer backend</string>

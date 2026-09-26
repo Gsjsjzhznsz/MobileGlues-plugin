@@ -299,15 +299,55 @@ enum class GlVersion(override val wire: Int, private val literal: String?) : Spi
 /**
  * `fsr1Setting`。
  *
- * native 端是 5 档画质预设，界面上目前只提供一个开关；把完整取值建模出来是为了让
- * 「配置里已经是 Balanced」这种情况能被正确识别并原样保留，而不是被开关改写成 1。
+ * native 端是 5 档画质预设：Disabled 之外的四档就是「FSR1 超分辨率」选择器的全部选项，
+ * 档位含义对齐 AMD FSR1 官方倍率（渲染分辨率 = 输出分辨率 ÷ 倍率，见 native
+ * CalculateRenderResolution 的 1.3/1.5/1.7/2.0）。「启用 FSR1」开关打开时默认落在
+ * UltraQuality，开关关闭等于 Disabled——选择器里没有 Disabled，禁用只由开关负责。
  */
-enum class Fsr1Preset(override val wire: Int) : WireValue {
-    Disabled(0),
-    UltraQuality(1),
-    Quality(2),
-    Balanced(3),
-    Performance(4),
+enum class Fsr1Preset(
+    override val wire: Int,
+    @param:StringRes private val labelRes: Int,
+) : SpinnerOption {
+    Disabled(0, R.string.option_fsr1_preset_disabled),
+    UltraQuality(1, R.string.option_fsr1_preset_ultra_quality),
+    Quality(2, R.string.option_fsr1_preset_quality),
+    Balanced(3, R.string.option_fsr1_preset_balanced),
+    Performance(4, R.string.option_fsr1_preset_performance);
+
+    override fun label(context: Context): CharSequence = context.getString(labelRes)
+
+    companion object {
+        /** 超分辨率选择器的选项：Disabled 不在其中，它由「启用 FSR1」开关表达。 */
+        val Presets: List<Fsr1Preset> = entries.filter { it != Disabled }
+    }
+}
+
+/**
+ * `fsr1Sharpness`。FSR1 锐化程度，0-100 的百分比，越大越锐。
+ *
+ * native 端把它换算成 RCAS 的 sharpness stops（指数语义：每 +1 stop 锐度减半）：
+ * stops = (100 - percent) / 100 × 2，即 100% → 0 stops（最锐），0% → 2 stops（几乎不锐）。
+ * 默认 90 正好等于旧版写死的 0.2 stops——对已存在的配置文件这是一个不改变行为的默认。
+ * 缺键时 native 也回落到 90（settings.cpp），两边对「没写就是 90」的理解一致。
+ */
+object Fsr1Sharpness {
+    const val DEFAULT: Int = 90
+    const val MIN: Int = 0
+    const val MAX: Int = 100
+
+    /** 滑块等写入口的夹取：0-100。 */
+    fun clamp(value: Int): Int = value.coerceIn(MIN, MAX)
+
+    /**
+     * 磁盘值 → 配置，与 settings.cpp 逐条对齐。native 的 config_get_int 对缺键返回
+     * -1，负数因此无法与「手改成负」区分，一律按「配置没说」处理 = 默认 90；
+     * 高于 100 则夹到 100。解码永远不抛异常，也不把越界值原样传给渲染器。
+     */
+    fun fromDisk(value: Int?): Int = when {
+        value == null || value < 0 -> DEFAULT
+        value > MAX -> MAX
+        else -> value
+    }
 }
 
 /** `maxGlslCacheSize`。把「关闭」这个用负数表达的状态显式建模出来。 */
@@ -389,7 +429,7 @@ enum class RendererBackend(
  */
 data class MGConfig(
     val backend: RendererBackend = RendererBackend.Default,
-    val angle: AngleConfig = AngleConfig.EnableIfPossible,
+    val angle: AngleConfig = AngleConfig.DisableIfPossible,
     val noError: NoErrorConfig = NoErrorConfig.Auto,
     val multidraw: MultidrawSettings = MultidrawSettings.Default,
     val depthClearFix: DepthClearFixMode = DepthClearFixMode.Disabled,
@@ -400,6 +440,8 @@ data class MGConfig(
     val extTimerQuery: Boolean = true,
     val extDirectStateAccess: Boolean = false,
     val fsr1: Fsr1Preset = Fsr1Preset.Disabled,
+    /** FSR1 锐化程度（fsr1Sharpness），0-100 百分比，见 [Fsr1Sharpness]。 */
+    val fsr1Sharpness: Int = Fsr1Sharpness.DEFAULT,
 ) {
     val fsr1Enabled: Boolean get() = fsr1 != Fsr1Preset.Disabled
 

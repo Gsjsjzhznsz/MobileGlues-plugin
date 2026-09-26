@@ -73,6 +73,7 @@ class MGConfigCodecTest {
             extTimerQuery = false,
             extDirectStateAccess = true,
             fsr1 = Fsr1Preset.Balanced,
+            fsr1Sharpness = 70,
         )
 
         val json = Gson().toJson(encode(config))
@@ -111,6 +112,18 @@ class MGConfigCodecTest {
         assertEquals(MGConfig.Default.angle, decoded.angle)
         assertEquals(MGConfig.Default.noError, decoded.noError)
         assertEquals(MGConfig.Default.fsr1, decoded.fsr1)
+    }
+
+    @Test
+    fun `fsr1Sharpness resolves exactly like native settings dot cpp`() {
+        // 缺键 = 90：native config_get_int 缺键回 -1，那正是旧版渲染器写死的 0.2 RCAS stops。
+        assertEquals(Fsr1Sharpness.DEFAULT, MGConfigCodec.decode(parse("{}")).fsr1Sharpness)
+        // 负数与缺键哨兵 -1 无法区分，同样按「配置没说」处理，而不是夹到 0。
+        assertEquals(Fsr1Sharpness.DEFAULT, MGConfigCodec.decode(parse("""{"fsr1Sharpness":-8}""")).fsr1Sharpness)
+        // 高于 100 夹到 100：渲染器端同样只保护上界。
+        assertEquals(100, MGConfigCodec.decode(parse("""{"fsr1Sharpness":250}""")).fsr1Sharpness)
+        // 区间内原样保留。
+        assertEquals(30, MGConfigCodec.decode(parse("""{"fsr1Sharpness":30}""")).fsr1Sharpness)
     }
 
     @Test
@@ -205,7 +218,9 @@ class MGConfigCodecTest {
     fun `the defaults are the same ones the previous implementation wrote`() {
         val encoded = encode(MGConfig.Default)
 
-        assertEquals(1, encoded.get("enableANGLE").asInt)
+        // mg-3backends：恢复 ANGLE 选项后缺省档与 native 缺文件行为对齐（settings.cpp
+        // 对缺键/无文件一律 DisableIfPossible）。ANGLE 依赖 Vulkan 1.2 探测，不默认推开。
+        assertEquals(0, encoded.get("enableANGLE").asInt)
         assertEquals(0, encoded.get("enableNoError").asInt)
         assertEquals(1, encoded.get("enableExtTimerQuery").asInt)
         assertEquals(0, encoded.get("enableExtComputeShader").asInt)
