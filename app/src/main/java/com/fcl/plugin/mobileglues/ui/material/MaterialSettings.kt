@@ -32,7 +32,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
-import com.fcl.plugin.mobileglues.settings.AngleConfig
 import com.fcl.plugin.mobileglues.settings.DepthClearFixMode
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
@@ -143,11 +142,7 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                 summary = config.backend.label(context).toString(),
                 onClick = { choice = ChoiceTarget.Backend },
             )
-            TextPreferenceRow(
-                title = stringResource(R.string.option_angle),
-                summary = config.angle.label(context).toString(),
-                onClick = { choice = ChoiceTarget.Angle },
-            )
+            // mg-3backends：ES 后端落地后 ANGLE 驱动选项整体移除，配置里固定写 0。
             TextPreferenceRow(
                 title = stringResource(R.string.option_no_error),
                 summary = config.noError.label(context).toString(),
@@ -231,14 +226,6 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
             selected = config.backend,
             labelOf = { it.label(context) },
             onSelect = controller::selectBackend,
-            onDismiss = { choice = null },
-        )
-
-        ChoiceTarget.Angle -> OptionDialog(
-            title = stringResource(R.string.option_angle),
-            options = AngleConfig.entries,
-            selected = config.angle,
-            onSelect = controller::selectAngle,
             onDismiss = { choice = null },
         )
 
@@ -342,4 +329,4 @@ private fun <T> OptionDialog(
     )
 }
 
-private enum class ChoiceTarget { Backend, Angle, NoError, DepthClear, GlVersion }
+private enum class ChoiceTarget { Backend, NoError, DepthClear, GlVersion }

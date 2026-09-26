@@ -53,8 +53,8 @@ class MGConfigCodecTest {
 
     @Test
     fun `every field survives a round trip`() {
+        // mg-3backends：angle 不再参与往返——选项已删除，decode 恒归一化为 DisableIfPossible。
         val config = MGConfig(
-            angle = AngleConfig.ForceDisable,
             noError = NoErrorConfig.IgnoreShaderProgramFramebuffer,
             multidraw = MultidrawSettings(
                 globalOrder = MultidrawOrderItem.normalize(
@@ -89,7 +89,8 @@ class MGConfigCodecTest {
 
         assertEquals(1, encoded.get("hideMGEnvLevel").asInt)
         assertEquals(7, encoded.get("somethingFromTheFuture").asInt)
-        assertEquals(3, encoded.get("enableANGLE").asInt)
+        // mg-3backends：enableANGLE 是 App 拥有的键，但选项已删除——旧档位一律归一化为 0。
+        assertEquals(0, encoded.get("enableANGLE").asInt)
     }
 
     @Test
@@ -100,6 +101,20 @@ class MGConfigCodecTest {
         assertNull(foreign.get("enableANGLE"))
         assertNull(foreign.get("maxGlslCacheSize"))
         assertEquals(1, foreign.get("hideMGEnvLevel").asInt)
+    }
+
+    @Test
+    fun `a legacy enableANGLE value is always normalized to disabled`() {
+        // mg-3backends：「启用 ANGLE 作为 OpenGL ES 驱动」已随 ES 后端的加入而删除；
+        // 无论历史配置写过什么档位（含启动器手工写入的 ForceEnable），读到的都是 0。
+        assertEquals(
+            AngleConfig.DisableIfPossible,
+            MGConfigCodec.decode(parse("""{"enableANGLE":3}""")).angle,
+        )
+        assertEquals(
+            0,
+            encode(MGConfigCodec.decode(parse("""{"enableANGLE":3}"""))).get("enableANGLE").asInt,
+        )
     }
 
     @Test
@@ -205,7 +220,7 @@ class MGConfigCodecTest {
     fun `the defaults are the same ones the previous implementation wrote`() {
         val encoded = encode(MGConfig.Default)
 
-        assertEquals(1, encoded.get("enableANGLE").asInt)
+        assertEquals(0, encoded.get("enableANGLE").asInt) // mg-3backends：ANGLE 选项已删除，默认恒为 DisableIfPossible。
         assertEquals(0, encoded.get("enableNoError").asInt)
         assertEquals(1, encoded.get("enableExtTimerQuery").asInt)
         assertEquals(0, encoded.get("enableExtComputeShader").asInt)

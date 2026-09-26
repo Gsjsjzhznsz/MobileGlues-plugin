@@ -28,7 +28,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fcl.plugin.mobileglues.R
-import com.fcl.plugin.mobileglues.settings.AngleConfig
 import com.fcl.plugin.mobileglues.settings.DepthClearFixMode
 import com.fcl.plugin.mobileglues.settings.GlVersion
 import com.fcl.plugin.mobileglues.settings.GlslCacheScale
@@ -157,12 +156,7 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                 labelOf = { it.label(context) },
                 onSelect = controller::selectBackend,
             )
-            OptionRow(
-                title = stringResource(R.string.option_angle),
-                options = AngleConfig.entries,
-                selected = config.angle,
-                onSelect = controller::selectAngle,
-            )
+            // mg-3backends：ES 后端落地后 ANGLE 驱动选项整体移除，配置里固定写 0。
             OptionRow(
                 title = stringResource(R.string.option_no_error),
                 options = NoErrorConfig.entries,

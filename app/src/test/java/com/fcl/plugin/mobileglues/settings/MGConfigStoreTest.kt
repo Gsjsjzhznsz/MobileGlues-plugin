@@ -96,17 +96,17 @@ class MGConfigStoreTest {
         assertNull("损坏之后 store 必须回到未加载状态", store.config.value)
 
         // 用户选了「取消」：后续任何写入尝试都不能碰原文件。
-        store.update { it.copy(angle = AngleConfig.ForceEnable) }
+        store.update { it.copy(fsr1 = Fsr1Preset.Quality) }
         store.flush()
         assertEquals(broken, configFile.readText())
     }
 
     @Test
     fun `forget stops the store from writing anything`() = runTest(dispatcher) {
-        configFile.writeText("""{"enableANGLE":2}""")
+        configFile.writeText("""{"enableNoError":2}""")
         val store = newStore()
         store.load()
-        store.update { it.copy(angle = AngleConfig.ForceEnable) }
+        store.update { it.copy(fsr1 = Fsr1Preset.Quality) }
 
         // 用户在外部删掉了 MG 目录，界面退回启动页。
         store.forget()
@@ -118,15 +118,17 @@ class MGConfigStoreTest {
 
     @Test
     fun `an edit is written and unknown keys survive it`() = runTest(dispatcher) {
-        configFile.writeText("""{"enableANGLE":0,"hideMGEnvLevel":1}""")
+        configFile.writeText("""{"enableANGLE":3,"hideMGEnvLevel":1}""")
         val store = newStore()
         store.load()
 
-        store.update { it.copy(angle = AngleConfig.ForceEnable, glslCache = GlslCacheSize.Disabled) }
+        store.update { it.copy(fsr1 = Fsr1Preset.Quality, glslCache = GlslCacheSize.Disabled) }
         store.flush()
 
         val root = readConfig()
-        assertEquals(3, root.get("enableANGLE").asInt)
+        // mg-3backends：ANGLE 选项已删除——旧文件里的 ForceEnable 被归一化回 0。
+        assertEquals(0, root.get("enableANGLE").asInt)
+        assertEquals(2, root.get("fsr1Setting").asInt)
         assertEquals(-1, root.get("maxGlslCacheSize").asInt)
         assertEquals(1, root.get("hideMGEnvLevel").asInt)
     }
@@ -134,16 +136,16 @@ class MGConfigStoreTest {
     @Test
     fun `reloading does not clobber an edit that has not reached the disk yet`() =
         runTest(dispatcher) {
-            configFile.writeText("""{"enableANGLE":0}""")
+            configFile.writeText("""{"fsr1Setting":0}""")
             val store = newStore()
             store.load()
-            store.update { it.copy(angle = AngleConfig.ForceEnable) }
+            store.update { it.copy(fsr1 = Fsr1Preset.Balanced) }
 
             // Activity 重建（旋转屏幕）会在去抖窗口内再 load 一次。
             assertTrue(store.load() is ConfigLoadResult.Loaded)
 
-            assertEquals(AngleConfig.ForceEnable, store.config.value?.angle)
-            assertEquals(3, readConfig().get("enableANGLE").asInt)
+            assertEquals(Fsr1Preset.Balanced, store.config.value?.fsr1)
+            assertEquals(3, readConfig().get("fsr1Setting").asInt)
         }
 
     @Test
@@ -202,7 +204,7 @@ class MGConfigStoreTest {
     fun `update is ignored while the store is not loaded`() = runTest(dispatcher) {
         val store = newStore()
 
-        store.update { it.copy(angle = AngleConfig.ForceEnable) }
+        store.update { it.copy(fsr1 = Fsr1Preset.Quality) }
         store.flush()
 
         assertNull(store.config.value)

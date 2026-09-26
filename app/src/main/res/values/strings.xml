@@ -23,7 +23,6 @@
     <string name="option_glsl_cache_size_mib" translatable="false">%1$.1f MiB</string>
     <string name="option_glsl_cache_size_kib" translatable="false">%1$.0f KiB</string>
     <string name="option_glsl_cache_delete_failed">Could not delete the GLSL cache: %s</string>
-    <string name="option_angle">Use ANGLE as OpenGL ES driver</string>
     <string name="option_angle_disable_if_possible">Prefer Disabled</string>
     <string name="option_angle_enable_if_possible">Prefer Enabled</string>
     <string name="option_angle_disable">Disable</string>
@@ -154,9 +153,8 @@
 
     <string name="dialog_title_warning">Warning</string>
     <string name="warning_ext_cs_enable">Enabling the incomplete ARB_compute_shader extension may cause issues with some shaders and mods. Are you sure you want to continue?</string>
-    <string name="warning_adreno_740_angle">Enabling ANGLE on Adreno 740 devices is highly likely to cause severe rendering issues. Are you sure you want to continue?</string>
     <string name="warning_enabling_angle_clear_workaround">Enabling the ANGLE Depth Clear Workaround fixes the issue of the handheld items being obscured in vanilla Minecraft 1.21.5+, but may cause performance degradation. Are you sure you want to continue?</string>
-    <string name="warning_fsr1_enable">Enabling the built-in FSR1 may cause image corruption on some drivers.\nIf your device is equipped with an Adreno GPU, please enable ANGLE to ensure correct rendering.\nIt is known that enabling this feature together with ANGLE can cause performance degradation, so please enable with caution.</string>
+    <string name="warning_fsr1_enable">Enabling FSR1 renders the game at a lower resolution and upscales it with sharpening on presentation. Quality and performance may vary across drivers, so please enable with caution.</string>
 
     <string name="menu_item_reset">Revoke authorization or reset MobileGlues</string>
     <string name="reset_option_revoke">Revoke authorization only</string>
@@ -201,7 +199,6 @@ Please note, this action is <b><font color="@colorError">irreversible</font></b>
     <string name="home_device_unknown">Unknown</string>
     <string name="home_ram_value" translatable="false">%1$.1f GB</string>
     <string name="home_config_hint">Tap to adjust renderer settings</string>
-    <string name="home_summary_angle">ANGLE %1$s</string>
     <string name="home_summary_cache">Cache %1$s</string>
 
     <string name="auth_choose_title">Storage access</string>
