@@ -2,8 +2,8 @@
 invoke redirectStdio
 invoke setLogPipeReady
 invoke setFCLNativeWindow
-invoke setEventPipe
 Log pipe ready.
+invoke setEventPipe
 ==================== Start Minecraft ====================
 Renderer: MobileGlues
 Device: Xiaomi xaga 22041216C
@@ -56,23 +56,23 @@ sodium-shadowy-path-blocks-fabric-8.0.0 | sspb | 8.0.0 | FABRIC
 Env: PATH=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin:/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
 Env: FCL_VERSION_CODE=1335
 Env: POJAV_RENDERER=opengles3
-Env: SDL_OPENGL_LIBRARY=/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64/libmobileglues.so
+Env: SDL_OPENGL_LIBRARY=/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64/libmobileglues.so
 Env: POJAV_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Env: MG_COUNT_LAUNCH=1
 Env: FORCE_VSYNC=false
-Env: DALVIK_JAVAVM=-5476376626380572496
+Env: DALVIK_JAVAVM=-5476376654165278096
 Env: JAVA_HOME=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25
 Env: MOD_ANDROID_RUNTIME=/data/user/0/com.tungsten.fcl/app_runtime_mod
 Env: VULKAN_DRIVER_SYSTEM=1
 Env: POJAVEXEC_EGL=libmobileglues.so
 Env: TMPDIR=/data/user/0/com.tungsten.fcl/cache
 Env: LIBGL_ES=3
-Env: DALVIK_APPLICATION=0x3886
+Env: DALVIK_APPLICATION=0x374e
 Env: LIBGL_EGL=libmobileglues.so
 Env: FCL_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
-Env: SDL_EGL_LIBRARY=/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64/libmobileglues.so
+Env: SDL_EGL_LIBRARY=/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64/libmobileglues.so
 Env: DRIVER_PATH=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
-Env: LD_LIBRARY_PATH=/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: LD_LIBRARY_PATH=/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Env: ALSOFT_DRIVERS=opensl
 Env: HOME=/storage/emulated/0/FCL/log
 Env: INST_FABRIC=1
@@ -122,9 +122,9 @@ DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjaas
 DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjimage.so
 DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libextnet.so
 DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjsound.so
-DLOPEN: loading /data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
-DLOPEN: loading /data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64/libmobileglues.so
 Working directory: /storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized
+DLOPEN: loading /data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
+DLOPEN: loading /data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64/libmobileglues.so
 ==================== Minecraft Arguments ====================
 Java argument: /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin/java
 Java argument: -Djava.awt.headless=false
@@ -170,8 +170,8 @@ Java argument: -Dext.net.resolvPath=/data/user/0/com.tungsten.fcl/app_runtime/ja
 Java argument: -Djava.io.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher
 Java argument: -Dos.name=Linux
 Java argument: -Dos.version=Android-15
-Java argument: -Dorg.lwjgl.opengl.libname=/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64/libmobileglues.so
-Java argument: -Dorg.lwjgl.egl.libname=/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.opengl.libname=/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.egl.libname=/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64/libmobileglues.so
 Java argument: -Dorg.lwjgl.openal.libname=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
 Java argument: -Dorg.lwjgl.freetype.libname=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a/libfreetype.so
 Java argument: -Dorg.lwjgl.librarypath=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a
@@ -194,7 +194,7 @@ Java argument: -XX:StackShadowPages=32
 Java argument: --enable-native-access=ALL-UNNAMED
 Java argument: --add-exports
 Java argument: java.base/jdk.internal.misc=ALL-UNNAMED
-Java argument: -Djava.library.path=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/jli:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server:/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~vRUa0Yy9uuU2t-d1DHyPiA==/com.fcl.plugin.mobileglues-TB5BolyJaiRfDm3Jan6KUQ==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Java argument: -Djava.library.path=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/jli:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server:/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~v7VVp56T7ElB4ObTQjZBaw==/com.fcl.plugin.mobileglues-djUAA5QS9Jc1kCgGs_79YQ==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Java argument: -Djna.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/jna
 Java argument: -Dorg.lwjgl.system.SharedLibraryExtractPath=/data/user/0/com.tungsten.fcl/cache/fclauncher/lwjgl
 Java argument: -Dio.netty.native.workdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/netty
@@ -230,7 +230,7 @@ Minecraft argument: --width
 Minecraft argument: 2360
 Minecraft argument: --height
 Minecraft argument: 1080
-Successfully initialized exit hook, stub: 0x79b058f800SDL_Hook: Successfully initialized SDL hooks, stubs: InitSubSystem=0x79b058d370 GetWindowFromEvent=0x79b0593ca0 GetWindowFromID=0x79b058ce60 LoadFunction=0x79b058dac0 CreateWindow=0x79b058d490 CreateWindowWithProps=0x79b058cef0 LoadObject=0x79b058aca0 UnloadObject=0x79b058d910 DestroyWindow=0x79b058c290
+Successfully initialized exit hook, stub: 0x740840d7d0SDL_Hook: Successfully initialized SDL hooks, stubs: InitSubSystem=0x7408405790 GetWindowFromEvent=0x7408406480 GetWindowFromID=0x74084055e0 LoadFunction=0x7408406510 CreateWindow=0x7408405ca0 CreateWindowWithProps=0x74084054c0 LoadObject=0x7408403ed0 UnloadObject=0x7408406000 DestroyWindow=0x74084048f0
 Hook success
 Done processing args
 Found JLI lib
@@ -242,12 +242,12 @@ WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.github.caciocav
 WARNING: Please consider reporting this to the maintainers of class com.github.caciocavallosilano.cacio.agent.CTCJavaAgent
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [MioLibPatcher/INFO]: MioPatcher is running!
-[11:46:57] [main/INFO]: Loading Minecraft 26.3 with Fabric Loader 0.19.5
-[11:46:58] [main/INFO]: Dependencies overridden for minecraft, polytone
-[11:46:59] [main/WARN]: Warnings were found!
+[17:26:09] [main/INFO]: Loading Minecraft 26.3 with Fabric Loader 0.19.5
+[17:26:10] [main/INFO]: Dependencies overridden for minecraft, polytone
+[17:26:10] [main/WARN]: Warnings were found!
  - 'Minecraft' (minecraft) 26.3 建议安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本，但没有安装它！
 	 - 为了最佳体验，您应该安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本。
-[11:46:59] [main/INFO]: Loading 121 mods:
+[17:26:10] [main/INFO]: Loading 121 mods:
 	- animatica 0.6.2+26.3
 	- betterblockentities 1.3.9+mc26.3
 	- bettergrass 1.8.8+fabric.26.3
@@ -372,72 +372,68 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 	- sodium-extra 0.9.4+mc26.3
 	   \-- me_flashyreese_mods_greenlight-api 0.1.0+mc26.3
 	- sspb 8.0.0
-[11:47:00] [main/INFO]: No flag found, running a usual copy
-[11:47:01] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-fabric-26.2-26.3-1.11.13.jar)
+[17:26:10] [main/INFO]: No flag found, running a usual copy
+[17:26:10] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-fabric-26.2-26.3-1.11.13.jar)
 [MioLibPatcher/INFO]: Patch target class: oshi/hardware/platform/linux/LinuxCentralProcessor
 [MioLibPatcher/INFO]: Patch target class: oshi/hardware/CentralProcessor$ProcessorIdentifier
-[11:47:03] [CrashAssistantApp process logger/ERROR]: Error changing dalvik-cache ownership : Permission denied
-[11:47:04] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[11:47:05] [CrashAssistantApp process logger/ERROR]: CrashAssistantApp failed to start with exit code: 134
+[17:26:11] [CrashAssistantApp process logger/ERROR]: Error changing dalvik-cache ownership : Permission denied
+[17:26:12] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[17:26:12] [CrashAssistantApp process logger/ERROR]: CrashAssistantApp failed to start with exit code: 134
 Crash Assistant won't work.
 This won't cause any issues to the main game process, just Crash Assistant won't popup after crash.
 Please report to https://github.com/KostromDan/Crash-Assistant/issues
-[11:47:06] [main/WARN]: Reference map 'entityculling.refmap.mixins.json' for entityculling.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
-[11:47:08] [main/WARN]: Ixeris is not supported on Android!
-[11:47:08] [main/WARN]: Reference map 'ixeris.mixins.refmap.json' for ixeris.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:09] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
-[11:47:09] [main/INFO]: Option 'mixin.world.chunk_ticking.random_block_ticking' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.world.chunk_ticking.random_block_ticking=false'.
-[11:47:09] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
-[11:47:09] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
-[11:47:09] [main/INFO]: Loaded configuration file for Lithium: 170 options available, 0 override(s) found.
-[11:47:09] [main/WARN]: Reference map 'mixintrace-refmap.json' for mixintrace.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:09] [main/INFO]: Loaded configuration file for ModernFix 5.27.20-build.1: 67 options available, 4 override(s) found
-[11:47:09] [main/WARN]: Option 'mixin.feature.measure_time' overriden (by user configuration) to 'false'
-[11:47:09] [main/WARN]: Option 'mixin.feature.snapshot_easter_egg' overriden (by user configuration) to 'false'
-[11:47:09] [main/WARN]: Option 'mixin.feature.branding' overriden (by user configuration) to 'false'
-[11:47:09] [main/WARN]: Option 'mixin.feature.remove_telemetry' overriden (by user configuration) to 'false'
-[11:47:09] [main/INFO]: Applying Nashorn fix
-[11:47:09] [main/INFO]: Configuring Minecraft's max.bg.threads option with 5 threads
-[11:47:09] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:09] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-common.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:09] [main/WARN]: Reference map 'reeses-sodium-options.refmap.json' for reeses-sodium-options.mixins.json could not be read. If this is a development environment you can ignore this message
-[11:47:09] [main/INFO]: Loaded configuration file for Sodium: 37 options available, 1 override(s) found
-[11:47:09] [main/INFO]: Loaded configuration file for Sodium Extra: 26 options available, 0 override(s) found
-[11:47:16] [main/WARN]: Error loading class: dev/zelo/renderscale/RenderScale (java.lang.ClassNotFoundException: dev/zelo/renderscale/RenderScale)
-[11:47:16] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
-[11:47:17] [main/INFO]: Searching for graphics cards...
-[11:47:17] [main/WARN]: Could not find any graphics adapters! Probably the device is not on a bus we can probe, or there are no devices supporting 3D acceleration.
-[11:47:17] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
-[11:47:17] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
-[11:47:18] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[17:26:12] [main/WARN]: Reference map 'entityculling.refmap.mixins.json' for entityculling.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Ixeris is not supported on Android!
+[17:26:13] [main/WARN]: Reference map 'ixeris.mixins.refmap.json' for ixeris.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
+[17:26:13] [main/INFO]: Option 'mixin.world.chunk_ticking.random_block_ticking' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.world.chunk_ticking.random_block_ticking=false'.
+[17:26:13] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
+[17:26:13] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
+[17:26:13] [main/INFO]: Loaded configuration file for Lithium: 170 options available, 0 override(s) found.
+[17:26:13] [main/WARN]: Reference map 'mixintrace-refmap.json' for mixintrace.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/INFO]: Loaded configuration file for ModernFix 5.27.20-build.1: 67 options available, 4 override(s) found
+[17:26:13] [main/WARN]: Option 'mixin.feature.measure_time' overriden (by user configuration) to 'false'
+[17:26:13] [main/WARN]: Option 'mixin.feature.snapshot_easter_egg' overriden (by user configuration) to 'false'
+[17:26:13] [main/WARN]: Option 'mixin.feature.branding' overriden (by user configuration) to 'false'
+[17:26:13] [main/WARN]: Option 'mixin.feature.remove_telemetry' overriden (by user configuration) to 'false'
+[17:26:13] [main/INFO]: Applying Nashorn fix
+[17:26:13] [main/INFO]: Configuring Minecraft's max.bg.threads option with 5 threads
+[17:26:13] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/WARN]: Reference map 'reeses-sodium-options.refmap.json' for reeses-sodium-options.mixins.json could not be read. If this is a development environment you can ignore this message
+[17:26:13] [main/INFO]: Loaded configuration file for Sodium: 37 options available, 1 override(s) found
+[17:26:13] [main/INFO]: Loaded configuration file for Sodium Extra: 26 options available, 0 override(s) found
+[17:26:15] [main/WARN]: Error loading class: dev/zelo/renderscale/RenderScale (java.lang.ClassNotFoundException: dev/zelo/renderscale/RenderScale)
+[17:26:15] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[17:26:15] [main/INFO]: Searching for graphics cards...
+[17:26:15] [main/WARN]: Could not find any graphics adapters! Probably the device is not on a bus we can probe, or there are no devices supporting 3D acceleration.
+[17:26:15] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
+[17:26:15] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
+[17:26:15] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
 [MioLibPatcher/INFO]: Patch target class: org/lwjgl/system/Library
 Registered forkAndExec
 Installing LWJGL dlopen() hook
 EGLBridge: LWJGL-side Vulkan loader requested the Vulkan handle
 OSMDroid: loading vulkan regularly...
-OSMDroid: loaded vulkan, ptr=0x6bc3f225ff2a4abf
-[11:47:28] [main/WARN]: Did not find udev library in operating system. Some features may not work.
-[11:47:28] [Datafixer Bootstrap #0/INFO]: 307 Datafixer optimizations took 1550 milliseconds
-[11:47:28] [main/WARN]: File not found or not readable: /proc/stat
-[11:47:28] [main/WARN]: File not found or not readable: /etc/os-release
-[11:47:28] [main/WARN]: File not found or not readable: /etc/lsb-release
-[11:47:28] [main/WARN]: File not found or not readable: /proc/version
-[11:47:29] [main/INFO]: ModernFix reached bootstrap stage (34.00 s after launch)
-[11:47:38] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
-[11:48:03] [Render thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
-[11:48:04] [Render thread/INFO]: Setting user: yiqiu4178
+OSMDroid: loaded vulkan, ptr=0x96e4d0a78b13ca01
+[17:26:21] [main/WARN]: Did not find udev library in operating system. Some features may not work.
+[17:26:22] [Datafixer Bootstrap #0/INFO]: 307 Datafixer optimizations took 1602 milliseconds
+[17:26:22] [main/WARN]: File not found or not readable: /proc/stat
+[17:26:22] [main/WARN]: File not found or not readable: /etc/os-release
+[17:26:22] [main/WARN]: File not found or not readable: /etc/lsb-release
+[17:26:22] [main/WARN]: File not found or not readable: /proc/version
+[17:26:23] [main/INFO]: ModernFix reached bootstrap stage (15.17 s after launch)
+[17:26:33] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[17:27:03] [Render thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[17:27:03] [Render thread/INFO]: Setting user: yiqiu4178
 [MioLibPatcher/INFO]: Patch target class: io/netty/util/internal/PlatformDependent
-[11:48:06] [Render thread/INFO]: Building config cache from user defined config file...
-[11:48:06] [Render thread/INFO]: Collecting API Entrypoint's...
-[11:48:06] [Render thread/INFO]: Registering alt renderers via each collected entrypoint...
-[11:48:06] [Render thread/INFO]: [BetterGrassify] [FAST] Gamers can finally touch grass!?
-[11:48:07] [Download-2/ERROR]: Failed to fetch user properties
+[17:27:07] [Download-2/ERROR]: Failed to fetch user properties
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at knot//com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:70)
 	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:168)
@@ -453,31 +449,35 @@ Caused by: MinecraftClientHttpException[type=HTTP_ERROR, status=401, response=Er
 	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:65)
 	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:118)
 	... 5 more
-[11:48:08] [Render thread/INFO]: [ETF]: Modifying ETF Render State constructor because: for EMF
-[11:48:08] [Render thread/INFO]: Loading Entity Model Features, did you know if you turn off the lights and whisper 'OptiFine' 3 times you will lose 20fps.
-[11:48:08] [Render thread/INFO]: [ETF]: 6 new ETF Random Properties registered by entity_model_features
-[11:48:09] [Render thread/INFO]: Loading Entity Texture Features, 0% Opti, 100% Fine.
-[11:48:09] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
-[11:48:10] [Render thread/INFO]: [FastQuit] Initialized
-[11:48:15] [Render thread/INFO]: Config service: org.redlance.dima_dencep.mods.rrls.fabric.config.FabricConfigImpl
-[11:48:15] [Render thread/INFO]: [SSPB] Broken dirt path lighting is best dirt path lighting lol
-[11:48:16] [Render thread/INFO]: [STDOUT]: [TRender] Initializing Client...
-[11:48:16] [Render thread/INFO]: Initializing mods (entrypoint yumi:init)...
-[11:48:16] [Render thread/INFO]: [LambDynLights] Initializing LambDynamicLights...
-[11:48:16] [Render thread/INFO]: [LambDynLights] Configuration loaded.
-[11:48:19] [Render thread/INFO]: Backend library: LWJGL version 3.4.1-snapshot
+[17:27:07] [Render thread/INFO]: Building config cache from user defined config file...
+[17:27:07] [Render thread/INFO]: Collecting API Entrypoint's...
+[17:27:07] [Render thread/INFO]: Registering alt renderers via each collected entrypoint...
+[17:27:07] [Render thread/INFO]: [BetterGrassify] [FAST] Gamers can finally touch grass!?
+[17:27:08] [Render thread/INFO]: [ETF]: Modifying ETF Render State constructor because: for EMF
+[17:27:08] [Render thread/INFO]: Loading Entity Model Features, allegedly compatible with the OptiFine format.
+[17:27:08] [Render thread/INFO]: [ETF]: 6 new ETF Random Properties registered by entity_model_features
+[17:27:08] [Render thread/INFO]: Loading Entity Texture Features, breaking your resource packs since 17 Jan 2022.
+[17:27:08] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[17:27:08] [Render thread/INFO]: [FastQuit] Initialized
+[17:27:14] [Render thread/INFO]: Config service: org.redlance.dima_dencep.mods.rrls.fabric.config.FabricConfigImpl
+[17:27:14] [Render thread/INFO]: [SSPB] Broken dirt path lighting is best dirt path lighting lol
+[17:27:14] [Render thread/INFO]: [STDOUT]: [TRender] Initializing Client...
+[17:27:14] [Render thread/INFO]: Initializing mods (entrypoint yumi:init)...
+[17:27:14] [Render thread/INFO]: [LambDynLights] Initializing LambDynamicLights...
+[17:27:14] [Render thread/INFO]: [LambDynLights] Configuration loaded.
+[17:27:18] [Render thread/INFO]: Backend library: LWJGL version 3.4.1-snapshot
 SDL dlsym proxy for SDL_InitSubSystem
-[11:48:19] [Render thread/INFO]: SDL [SYSTEM]: App name: Minecraft
-[11:48:19] [Render thread/INFO]: SDL [SYSTEM]: App version: 26.3
-[11:48:19] [Render thread/INFO]: SDL [SYSTEM]: App ID: com.mojang.minecraft
-[11:48:19] [Render thread/INFO]: SDL [SYSTEM]: SDL revision: 
+[17:27:18] [Render thread/INFO]: SDL [SYSTEM]: App name: Minecraft
+[17:27:18] [Render thread/INFO]: SDL [SYSTEM]: App version: 26.3
+[17:27:18] [Render thread/INFO]: SDL [SYSTEM]: App ID: com.mojang.minecraft
+[17:27:18] [Render thread/INFO]: SDL [SYSTEM]: SDL revision: 
 SDL dlsym proxy for SDL_CreateWindow
 SDL dlsym proxy for SDL_CreateWindowWithProperties
 SDL dlsym proxy for SDL_GetWindowFromID
 SDL dlsym proxy for SDL_DestroyWindow
-[11:48:20] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required features from FeatureSet [Minecraft base required], missing: [VkPhysicalDeviceSynchronization2Features.synchronization2, VkPhysicalDeviceDynamicRenderingFeatures.dynamicRendering, VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.vertexAttributeInstanceRateDivisor]
-[11:48:20] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required extensions from FeatureSet [Minecraft base required], missing: [VK_KHR_dynamic_rendering, VK_KHR_push_descriptor, VK_KHR_synchronization2, VK_EXT_vertex_attribute_divisor]
-[11:48:20] [Render thread/WARN]: Device [Mali-G610 MC6] does not support Vulkan 1.2
+[17:27:18] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required features from FeatureSet [Minecraft base required], missing: [VkPhysicalDeviceSynchronization2Features.synchronization2, VkPhysicalDeviceDynamicRenderingFeatures.dynamicRendering, VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.vertexAttributeInstanceRateDivisor]
+[17:27:18] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required extensions from FeatureSet [Minecraft base required], missing: [VK_KHR_dynamic_rendering, VK_KHR_push_descriptor, VK_KHR_synchronization2, VK_EXT_vertex_attribute_divisor]
+[17:27:18] [Render thread/WARN]: Device [Mali-G610 MC6] does not support Vulkan 1.2
 Initializing MobileGlues ...
 The Open Source License of MobileGlues: 
   GNU LGPL-2.1 License
@@ -491,7 +491,8 @@ MG_DIR_PATH = /sdcard/MG
 [MobileGlues] Setting: angleDepthClearFixMode      = 0
 [MobileGlues] Setting: bufferCoherentAsFlush       = 1
 [MobileGlues] Setting: customGLVersion             = 4.0.0
-[MobileGlues] Setting: fsr1Setting                 = 0
+[MobileGlues] Setting: fsr1Setting                 = 4
+[MobileGlues] Setting: fsr1Sharpness               = 90
 [MobileGlues] Setting: hideMGEnvLevel              = 0
 EGL initialized successfully
 OpenGL ES Version: OpenGL ES 3.2 (320)
@@ -504,102 +505,78 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MobileGlues] multidrawOrderElementsBaseVertex   = basevertex > indirect > compute > unroll
 [MobileGlues] multidrawOrderArraysIndirect       = indirect
 [MobileGlues] multidrawOrderElementsIndirect     = indirect
-[11:48:20] [Render thread/INFO]: SDL [APPLICATION]: pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
-SDL_Hook: reusing primary window 0x7a30715860
-[11:48:21] [Render thread/INFO]: Debug functionality is disabled.
-[11:48:21] [Render thread/INFO]: DSA support not detected.
-[11:48:21] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
-[11:48:21] [Render thread/INFO]: Initializing ImmediatelyFast 1.17.1+26.3 on Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten) with OpenGL 4.0.0 MobileGlues 2.0.16
-[11:48:21] [Render thread/INFO]: Using graphics backend OpenGL, using drivers: 4.0.0 MobileGlues 2.0.16
-[11:48:21] [Render thread/INFO]: Using graphics device: Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten)
-[11:48:21] [Render thread/INFO]: Using graphics device extensions: GL_ARB_buffer_storage, GL_ARB_vertex_attrib_binding
-SDL_Hook: reusing primary window 0x7a30715860
-[11:48:21] [Render thread/INFO]: Created window using SDL video driver: android
-[11:48:21] [Render thread/ERROR]: Couldn't leave fullscreen: That operation is not supported
-[11:48:21] [Render thread/WARN]: Failed to set window icon: That operation is not supported
+[17:27:19] [Render thread/INFO]: SDL [APPLICATION]: pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
+SDL_Hook: reusing primary window 0x72f85e1000
+[17:27:20] [Render thread/INFO]: Debug functionality is disabled.
+[17:27:20] [Render thread/INFO]: DSA support not detected.
+[17:27:20] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[17:27:20] [Render thread/INFO]: Initializing ImmediatelyFast 1.17.1+26.3 on Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten) with OpenGL 4.0.0 MobileGlues 2.0.17
+[17:27:20] [Render thread/INFO]: Using graphics backend OpenGL, using drivers: 4.0.0 MobileGlues 2.0.17
+[17:27:20] [Render thread/INFO]: Using graphics device: Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten)
+[17:27:20] [Render thread/INFO]: Using graphics device extensions: GL_ARB_buffer_storage, GL_ARB_vertex_attrib_binding
+SDL_Hook: reusing primary window 0x72f85e1000
+[17:27:20] [Render thread/INFO]: Created window using SDL video driver: android
+[17:27:20] [Render thread/ERROR]: Couldn't leave fullscreen: That operation is not supported
+[17:27:20] [Render thread/WARN]: Failed to set window icon: That operation is not supported
 SDL dlsym proxy for SDL_GetWindowFromEvent
 [MioLibPatcher/INFO]: Patch target class: org/lwjgl/openal/ALC10
 [MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
 [MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
-[11:48:24] [Render thread/INFO]: Hardware information:
-[11:48:25] [Render thread/INFO]: CPU: 8x MT6895Z/TCZA
-[11:48:25] [Render thread/INFO]: GPU: Mali-G610 MC6 | OpenGL ES 3.2 (Supports OpenGL 4.0.0 MobileGlues 2.0.16)
-[11:48:25] [Render thread/INFO]: OS: Linux (Android-15)
-[11:48:26] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 1f9146bd4f9c4cfe9dc8843a6fb42621
-[11:48:26] [Download-2/ERROR]: Failed to fetch Realms feature flags
-com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 1f9146bd4f9c4cfe9dc8843a6fb42621'
+[17:27:24] [Render thread/INFO]: Hardware information:
+[17:27:25] [Render thread/INFO]: CPU: 8x MT6895Z/TCZA
+[17:27:25] [Render thread/INFO]: GPU: Mali-G610 MC6 | OpenGL ES 3.2 (Supports OpenGL 4.0.0 MobileGlues 2.0.17)
+[17:27:25] [Render thread/INFO]: OS: Linux (Android-15)
+[MG] glsl_for_es converter rev 2.0.17.0 -- 26.3 fixes: uniform-decl boundary guard + OIT out-array unroll
+[17:27:26] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: b9c27209a665456e8317a7fe57975527
+[17:27:26] [Download-2/ERROR]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: b9c27209a665456e8317a7fe57975527'
 	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
 	at knot//com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:204)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-[MG] Shader 1 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 2 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 4 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 5 converted OK (glslver=330 -> essl ver=320)
-[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/Narrator
-[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/NarratorLinux
-[11:48:28] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
+GLSL parse OK (glslver=450)
+[MG] Shader 2 converted OK (glslver=450 -> essl ver=320)
+GLSL parse OK (glslver=450)
+[MG] Shader 3 converted OK (glslver=450 -> essl ver=320)
+[MG] Shader 5 converted OK (glslver=450 -> essl ver=320)
+GLSL parse OK (glslver=450)
+[MG] Shader 6 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
-[11:48:31] [Render thread/INFO]: Thread[#3,Render thread,5,main]
-[11:48:31] [Render thread/INFO]: OpenGL Vendor: Swung0x48, BZLZHH, Tungsten
-[11:48:31] [Render thread/INFO]: OpenGL Renderer: Mali-G610 MC6 | OpenGL ES 3.2
-[11:48:31] [Render thread/INFO]: OpenGL Version: 4.0.0 MobileGlues 2.0.16
-[MioLibPatcher/INFO]: Patch target class: net/caffeinemc/mods/sodium/client/compatibility/checks/PostLaunchChecks
-[11:48:31] [Worker-ResourceReload-2/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
-[11:48:31] [Render thread/INFO]: Cached all modded block culling states
-[11:48:33] [Worker-ResourceReload-2/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
 [MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 11 converted OK (glslver=330 -> essl ver=320)
-Shader 11 compilation failed: 
-0:224: L0002: Undeclared variable '_uniform'
-0:226: L0002: Undeclared variable 'param'
-0:228: L0002: Undeclared variable 'param_2'
-0:230: L0001: Typename expected, found 'else'
-[MG] Shader 11 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:224: L0002: Undeclared variable '_uniform'
-0:226: L0002: Undeclared variable 'param'
-0:228: L0002: Undeclared variable 'param_2'
-0:230: L0001: Typename expected, found 'else'
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 12 converted OK (glslver=330 -> essl ver=320)
-Shader 12 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 12 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
+[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/Narrator
+[MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/NarratorLinux
+[17:27:28] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
 [MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
+[17:27:30] [Render thread/INFO]: Thread[#3,Render thread,5,main]
+[17:27:30] [Render thread/INFO]: OpenGL Vendor: Swung0x48, BZLZHH, Tungsten
+[17:27:30] [Render thread/INFO]: OpenGL Renderer: Mali-G610 MC6 | OpenGL ES 3.2
+[17:27:30] [Render thread/INFO]: OpenGL Version: 4.0.0 MobileGlues 2.0.17
+[MioLibPatcher/INFO]: Patch target class: net/caffeinemc/mods/sodium/client/compatibility/checks/PostLaunchChecks
+[17:27:30] [Worker-ResourceReload-5/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
+[17:27:30] [Render thread/INFO]: Cached all modded block culling states
 [MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
+[17:27:32] [Worker-ResourceReload-5/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
 [MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 20 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 22 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 24 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 25 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 27 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 26 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 28 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 30 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 29 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 33 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 36 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 35 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 37 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 39 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 38 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 40 converted OK (glslver=330 -> essl ver=320)
-Shader 40 compilation failed: 
-0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 40 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 39 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
@@ -615,53 +592,15 @@ Shader 40 compilation failed:
 [MG] Shader 59 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 62 converted OK (glslver=330 -> essl ver=320)
-Shader 62 compilation failed: 
-0:230: L0002: Undeclared variable '_uniform'
-0:232: L0002: Undeclared variable 'param'
-0:234: L0002: Undeclared variable 'param_2'
-0:236: L0001: Typename expected, found 'else'
-[MG] Shader 62 submit record: size=9490 strlen=9490 | driver SHADER_SOURCE_LENGTH=9491 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:230: L0002: Undeclared variable '_uniform'
-0:232: L0002: Undeclared variable 'param'
-0:234: L0002: Undeclared variable 'param_2'
-0:236: L0001: Typename expected, found 'else'
-[MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 63 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 66 converted OK (glslver=330 -> essl ver=320)
-Shader 66 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 66 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 64 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 67 converted OK (glslver=330 -> essl ver=320)
-Shader 67 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 67 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 68 converted OK (glslver=330 -> essl ver=320)
-Shader 68 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 68 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 69 converted OK (glslver=330 -> essl ver=320)
-Shader 69 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 69 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 70 converted OK (glslver=330 -> essl ver=320)
-Shader 70 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 70 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:33] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 71 converted OK (glslver=330 -> essl ver=320)
+[17:27:33] [Worker-ResourceReload-5/INFO]: Found unifont_pua-17.0.01.hex, loading
 [MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 74 converted OK (glslver=330 -> essl ver=320)
-[11:48:33] [Worker-ResourceReload-2/INFO]: Found unifont_pua-17.0.01.hex, loading
 [MG] Shader 76 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 77 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
@@ -680,113 +619,47 @@ Shader 70 compilation failed:
 [MG] Shader 98 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 101 converted OK (glslver=330 -> essl ver=320)
-Shader 101 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 101 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 102 converted OK (glslver=330 -> essl ver=320)
-Shader 102 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 102 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/block): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 105 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 108 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 107 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 111 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 110 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 112 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 114 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 113 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 115 converted OK (glslver=330 -> essl ver=320)
-Shader 115 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 115 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 114 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 118 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 122 converted OK (glslver=330 -> essl ver=320)
-Shader 122 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 122 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 123 converted OK (glslver=330 -> essl ver=320)
-Shader 123 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 123 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 124 converted OK (glslver=330 -> essl ver=320)
-Shader 124 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 124 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 125 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 128 converted OK (glslver=330 -> essl ver=320)
-Shader 128 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 128 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_entity_shadow): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 129 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 130 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 132 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 133 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 135 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 136 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 138 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 139 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 140 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 141 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 142 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 143 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 144 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 147 converted OK (glslver=330 -> essl ver=320)
-Shader 147 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 147 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
+[MG] Shader 145 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 148 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 150 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 151 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 153 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 154 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 156 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 155 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 157 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 159 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 160 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 162 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 161 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 163 converted OK (glslver=330 -> essl ver=320)
-Shader 163 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 163 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 162 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 167 converted OK (glslver=330 -> essl ver=320)
@@ -806,43 +679,21 @@ Shader 163 compilation failed:
 [MG] Shader 188 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 191 converted OK (glslver=330 -> essl ver=320)
-Shader 191 compilation failed: 
-0:168: L0002: Undeclared variable '_uniform'
-0:170: L0002: Undeclared variable 'param'
-0:172: L0002: Undeclared variable 'param_2'
-0:174: L0001: Typename expected, found 'else'
-[MG] Shader 191 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:168: L0002: Undeclared variable '_uniform'
-0:170: L0002: Undeclared variable 'param'
-0:172: L0002: Undeclared variable 'param_2'
-0:174: L0001: Typename expected, found 'else'
-[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 192 converted OK (glslver=330 -> essl ver=320)
-Shader 192 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 192 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 195 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 194 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 196 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 197 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 201 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 200 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 202 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 204 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 203 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 207 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 206 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 210 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 209 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 212 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 214 converted OK (glslver=330 -> essl ver=320)
-Shader 214 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 214 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
@@ -850,57 +701,29 @@ Shader 214 compilation failed:
 [MG] Shader 221 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 224 converted OK (glslver=330 -> essl ver=320)
-Shader 224 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 224 submit record: size=8709 strlen=8709 | driver SHADER_SOURCE_LENGTH=8710 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 225 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 226 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 227 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 228 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 231 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 234 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 235 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 236 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 238 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 239 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 240 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 241 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 244 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 245 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 249 converted OK (glslver=330 -> essl ver=320)
-Shader 249 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 249 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:34] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
+[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 250 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 252 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 251 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 254 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 256 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 259 converted OK (glslver=330 -> essl ver=320)
-Shader 259 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 259 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_beacon_beam): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 260 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
@@ -910,41 +733,25 @@ Shader 259 compilation failed:
 [MG] Shader 269 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 272 converted OK (glslver=330 -> essl ver=320)
-Shader 272 compilation failed: 
-0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 272 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 273 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 276 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 277 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 279 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 280 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 282 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 283 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 284 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 285 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 287 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 288 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 289 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 290 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 293 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 294 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 295 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 300 converted OK (glslver=330 -> essl ver=320)
-Shader 300 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 300 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 298 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 301 converted OK (glslver=330 -> essl ver=320)
-Shader 301 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 301 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 305 converted OK (glslver=330 -> essl ver=320)
@@ -952,63 +759,41 @@ Shader 301 compilation failed:
 [MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 310 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 311 converted OK (glslver=330 -> essl ver=320)
-Shader 311 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 311 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 310 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 312 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 315 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 317 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 318 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 319 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 321 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 324 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 326 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 327 converted OK (glslver=330 -> essl ver=320)
-Shader 327 compilation failed: 
-0:162: L0002: Undeclared variable '_uniform'
-0:164: L0002: Undeclared variable 'param'
-0:166: L0002: Undeclared variable 'param_2'
-0:168: L0001: Typename expected, found 'else'
-[MG] Shader 327 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:162: L0002: Undeclared variable '_uniform'
-0:164: L0002: Undeclared variable 'param'
-0:166: L0002: Undeclared variable 'param_2'
-0:168: L0001: Typename expected, found 'else'
+[MG] Shader 325 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 326 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 330 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 329 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 334 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 337 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 339 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 342 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 341 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 345 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 344 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 348 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 347 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 349 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 351 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 350 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 352 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 354 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 353 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 355 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 357 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 356 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 358 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 360 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 359 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 361 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 364 converted OK (glslver=330 -> essl ver=320)
-Shader 364 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 364 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_lines): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 365 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
@@ -1072,1051 +857,121 @@ Shader 364 compilation failed:
 [MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 458 converted OK (glslver=330 -> essl ver=320)
-Shader 458 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 458 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 459 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 460 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 462 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 465 converted OK (glslver=330 -> essl ver=320)
-Shader 465 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 465 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_crumbling): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 463 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 469 converted OK (glslver=330 -> essl ver=320)
-Shader 469 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 469 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
-Shader 470 compilation failed: 
-0:380: L0002: Undeclared variable '_uniform'
-0:382: L0002: Undeclared variable 'param'
-0:384: L0002: Undeclared variable 'param_2'
-0:386: L0001: Typename expected, found 'else'
-[MG] Shader 470 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:380: L0002: Undeclared variable '_uniform'
-0:382: L0002: Undeclared variable 'param'
-0:384: L0002: Undeclared variable 'param_2'
-0:386: L0001: Typename expected, found 'else'
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 471 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 472 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 474 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 476 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 477 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 480 converted OK (glslver=330 -> essl ver=320)
-Shader 480 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 480 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
+[MG] Shader 478 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 482 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 484 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 486 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 485 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 487 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 489 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 488 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 492 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 491 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 493 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 495 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 494 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 498 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 497 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 499 converted OK (glslver=330 -> essl ver=320)
-Shader 499 compilation failed: 
-0:374: L0002: Undeclared variable '_uniform'
-0:376: L0002: Undeclared variable 'param'
-0:378: L0002: Undeclared variable 'param_2'
-0:380: L0001: Typename expected, found 'else'
-[MG] Shader 499 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:374: L0002: Undeclared variable '_uniform'
-0:376: L0002: Undeclared variable 'param'
-0:378: L0002: Undeclared variable 'param_2'
-0:380: L0001: Typename expected, found 'else'
-[MG] Shader 498 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 506 converted OK (glslver=330 -> essl ver=320)
-Shader 506 compilation failed: 
-0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 506 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 508 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 513 converted OK (glslver=330 -> essl ver=320)
-Shader 513 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 513 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
+[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 514 converted OK (glslver=330 -> essl ver=320)
-Shader 514 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 514 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:35] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[11:48:37] [Render thread/ERROR]: Resource reload future completed exceptionally
-java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
-	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
-	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
-	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
-	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
-	at knot//net.minecraft.client.main.Main.main(Main.java:292)
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at mio.Wrapper.main(Wrapper.java:21)
-Caused by: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
-	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
-	... 15 more
-[11:48:37] [Render thread/INFO]: Caught error loading resourcepacks, removing all selected resourcepacks
-java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
-	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
-	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
-	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
-	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
-	at knot//net.minecraft.client.main.Main.main(Main.java:292)
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at mio.Wrapper.main(Wrapper.java:21)
-Caused by: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
-	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
-	... 15 more
-[11:48:37] [Render thread/INFO]: [EMF]: Clearing data for reload.
-[11:48:37] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
-[11:48:37] [Worker-Main-4/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
-[11:48:37] [Worker-Main-4/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
-[11:48:37] [Worker-Main-4/INFO]: Found unifont_pua-17.0.01.hex, loading
-[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 342 converted OK (glslver=330 -> essl ver=320)
-Shader 342 compilation failed: 
-0:224: L0002: Undeclared variable '_uniform'
-0:226: L0002: Undeclared variable 'param'
-0:228: L0002: Undeclared variable 'param_2'
-0:230: L0001: Typename expected, found 'else'
-[MG] Shader 342 submit record: size=9363 strlen=9363 | driver SHADER_SOURCE_LENGTH=9364 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[11:48:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:224: L0002: Undeclared variable '_uniform'
-0:226: L0002: Undeclared variable 'param'
-0:228: L0002: Undeclared variable 'param_2'
-0:230: L0001: Typename expected, found 'else'
-[MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 344 converted OK (glslver=330 -> essl ver=320)
-Shader 344 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 344 submit record: size=8836 strlen=8836 | driver SHADER_SOURCE_LENGTH=8837 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:37] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 201 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 202 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 252 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 394 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 395 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 207 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 354 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 355 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 80 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 18 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 234 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 400 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 401 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 507 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 495 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 484 converted OK (glslver=330 -> essl ver=320)
-Shader 484 compilation failed: 
-0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 484 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 485 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 60 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 348 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 350 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 255 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 415 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 417 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
-Shader 502 compilation failed: 
-0:230: L0002: Undeclared variable '_uniform'
-0:232: L0002: Undeclared variable 'param'
-0:234: L0002: Undeclared variable 'param_2'
-0:236: L0001: Typename expected, found 'else'
-[MG] Shader 502 submit record: size=9490 strlen=9490 | driver SHADER_SOURCE_LENGTH=9491 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _197[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:230: L0002: Undeclared variable '_uniform'
-0:232: L0002: Undeclared variable 'param'
-0:234: L0002: Undeclared variable 'param_2'
-0:236: L0001: Typename expected, found 'else'
-[MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 504 converted OK (glslver=330 -> essl ver=320)
-Shader 504 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 504 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 269 converted OK (glslver=330 -> essl ver=320)
-Shader 269 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 269 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 270 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 184 converted OK (glslver=330 -> essl ver=320)
-Shader 184 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 184 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 186 converted OK (glslver=330 -> essl ver=320)
-Shader 186 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 186 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 307 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
-Shader 218 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 218 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 219 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 293 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 295 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 463 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 427 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 429 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 21 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 46 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 48 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 258 converted OK (glslver=330 -> essl ver=320)
-Shader 258 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 258 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/block): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 260 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 261 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
-Shader 292 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 292 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 210 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 380 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 451 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 339 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 424 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 425 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 76 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 77 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 179 converted OK (glslver=330 -> essl ver=320)
-Shader 179 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 179 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 180 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 195 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 197 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 175 converted OK (glslver=330 -> essl ver=320)
-Shader 175 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 175 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 177 converted OK (glslver=330 -> essl ver=320)
-Shader 177 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 177 submit record: size=4928 strlen=4928 | driver SHADER_SOURCE_LENGTH=4929 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_entity_shadow): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 333 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 334 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 129 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 371 converted OK (glslver=330 -> essl ver=320)
-Shader 371 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 371 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 372 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 27 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 29 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 409 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 411 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 357 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 359 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
-Shader 230 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 230 submit record: size=8735 strlen=8735 | driver SHADER_SOURCE_LENGTH=8736 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 231 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 240 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 241 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 246 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 141 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 142 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 157 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 312 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
-Shader 32 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 32 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 63 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 71 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 85 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 86 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 486 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 487 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 459 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 365 converted OK (glslver=330 -> essl ver=320)
-Shader 365 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 365 submit record: size=8862 strlen=8862 | driver SHADER_SOURCE_LENGTH=8863 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 366 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 436 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 438 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 75 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 236 converted OK (glslver=330 -> essl ver=320)
-Shader 236 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 236 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 237 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 238 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 35 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 120 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 392 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 393 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 89 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 90 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 148 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 96 converted OK (glslver=330 -> essl ver=320)
-Shader 96 compilation failed: 
-0:168: L0002: Undeclared variable '_uniform'
-0:170: L0002: Undeclared variable 'param'
-0:172: L0002: Undeclared variable 'param_2'
-0:174: L0001: Typename expected, found 'else'
-[MG] Shader 96 submit record: size=6977 strlen=6977 | driver SHADER_SOURCE_LENGTH=6978 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:168: L0002: Undeclared variable '_uniform'
-0:170: L0002: Undeclared variable 'param'
-0:172: L0002: Undeclared variable 'param_2'
-0:174: L0001: Typename expected, found 'else'
-[MG] Shader 169 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 170 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 91 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 92 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 442 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 125 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 182 converted OK (glslver=330 -> essl ver=320)
-Shader 182 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 182 submit record: size=8709 strlen=8709 | driver SHADER_SOURCE_LENGTH=8710 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 111 converted OK (glslver=330 -> essl ver=320)
-Shader 111 compilation failed: 
-0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 111 submit record: size=5103 strlen=5103 | driver SHADER_SOURCE_LENGTH=5104 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:120: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 112 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 113 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 377 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 378 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 423 converted OK (glslver=330 -> essl ver=320)
-Shader 423 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 423 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 282 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 383 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 345 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 153 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 154 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 24 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 25 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 489 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 418 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 419 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 476 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 477 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 187 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 188 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 52 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 82 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 83 converted OK (glslver=330 -> essl ver=320)
-Shader 83 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 83 submit record: size=4821 strlen=4821 | driver SHADER_SOURCE_LENGTH=4822 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_beacon_beam): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 213 converted OK (glslver=330 -> essl ver=320)
-Shader 213 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 213 submit record: size=4899 strlen=4899 | driver SHADER_SOURCE_LENGTH=4900 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/item): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 216 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 285 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 228 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 440 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 441 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
-Shader 511 compilation failed: 
-0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 511 submit record: size=5158 strlen=5158 | driver SHADER_SOURCE_LENGTH=5159 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/clouds): 0:123: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 454 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 15 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 243 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 49 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 50 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 297 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 492 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 493 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 135 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 138 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
-Shader 199 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 199 submit record: size=5006 strlen=5006 | driver SHADER_SOURCE_LENGTH=5007 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 200 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 403 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 405 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 468 converted OK (glslver=330 -> essl ver=320)
-Shader 468 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 468 submit record: size=5001 strlen=5001 | driver SHADER_SOURCE_LENGTH=5002 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/text): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 471 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 472 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 501 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 407 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 408 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 374 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 375 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 42 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 206 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 482 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 329 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 221 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 222 converted OK (glslver=330 -> essl ver=320)
-Shader 222 compilation failed: 
-0:162: L0002: Undeclared variable '_uniform'
-0:164: L0002: Undeclared variable 'param'
-0:166: L0002: Undeclared variable 'param_2'
-0:168: L0001: Typename expected, found 'else'
-[MG] Shader 222 submit record: size=6850 strlen=6850 | driver SHADER_SOURCE_LENGTH=6851 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _191[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:162: L0002: Undeclared variable '_uniform'
-0:164: L0002: Undeclared variable 'param'
-0:166: L0002: Undeclared variable 'param_2'
-0:168: L0001: Typename expected, found 'else'
-[MG] Shader 108 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 324 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 276 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 445 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 388 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 389 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 105 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 36 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 37 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 265 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 266 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 397 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 398 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 448 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 449 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 273 converted OK (glslver=330 -> essl ver=320)
-Shader 273 compilation failed: 
-0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 273 submit record: size=4757 strlen=4757 | driver SHADER_SOURCE_LENGTH=4758 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_lines): 0:116: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 143 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 145 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 133 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 306 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 432 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 159 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 161 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 433 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 435 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 336 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 97 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 99 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 150 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 57 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 387 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 168 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 174 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 251 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 412 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 414 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 360 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
-Shader 278 compilation failed: 
-0:380: L0002: Undeclared variable '_uniform'
-0:382: L0002: Undeclared variable 'param'
-0:384: L0002: Undeclared variable 'param_2'
-0:386: L0001: Typename expected, found 'else'
-[MG] Shader 278 submit record: size=15790 strlen=15790 | driver SHADER_SOURCE_LENGTH=15791 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:380: L0002: Undeclared variable '_uniform'
-0:382: L0002: Undeclared variable 'param'
-0:384: L0002: Undeclared variable 'param_2'
-0:386: L0001: Typename expected, found 'else'
-[MG] Shader 279 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 280 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 318 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 319 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 165 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 225 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 226 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 352 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 353 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 117 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 288 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 289 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 483 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 291 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 363 converted OK (glslver=330 -> essl ver=320)
-Shader 363 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 363 submit record: size=4975 strlen=4975 | driver SHADER_SOURCE_LENGTH=4976 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/rendertype_crumbling): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 75 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 183 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 510 converted OK (glslver=330 -> essl ver=320)
-Shader 510 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 510 submit record: size=4965 strlen=4965 | driver SHADER_SOURCE_LENGTH=4966 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/particle): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 198 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 405 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 515 converted OK (glslver=330 -> essl ver=320)
-Shader 515 compilation failed: 
-0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 515 submit record: size=5027 strlen=5027 | driver SHADER_SOURCE_LENGTH=5028 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:118: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 516 converted OK (glslver=330 -> essl ver=320)
-Shader 516 compilation failed: 
-0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 516 submit record: size=4439 strlen=4439 | driver SHADER_SOURCE_LENGTH=4440 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:38] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/position_color): 0:103: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 84 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 517 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 519 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 518 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 520 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 522 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 521 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 523 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 525 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 524 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 526 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 528 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 527 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 529 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 531 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 530 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 532 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 534 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 533 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 535 converted OK (glslver=330 -> essl ver=320)
-Shader 535 compilation failed: 
-0:374: L0002: Undeclared variable '_uniform'
-0:376: L0002: Undeclared variable 'param'
-0:378: L0002: Undeclared variable 'param_2'
-0:380: L0001: Typename expected, found 'else'
-[MG] Shader 535 submit record: size=15663 strlen=15663 | driver SHADER_SOURCE_LENGTH=15664 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _241[4] = vec2[](vec2(0'
-[11:48:39] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:374: L0002: Undeclared variable '_uniform'
-0:376: L0002: Undeclared variable 'param'
-0:378: L0002: Undeclared variable 'param_2'
-0:380: L0001: Typename expected, found 'else'
-[MG] Shader 534 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 536 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 539 converted OK (glslver=330 -> essl ver=320)
-Shader 539 compilation failed: 
-0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 539 submit record: size=5065 strlen=5065 | driver SHADER_SOURCE_LENGTH=5066 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_00' head(readback)='#version 320 es.precision highp float;.precision highp int;..layout( std140) uniform _uniform_0'
-[11:48:39] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/entity): 0:119: S0015: Outputs declared as arrays may only be indexed by a constant integral expression.
-[MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 540 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 541 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 542 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 543 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 546 converted OK (glslver=330 -> essl ver=320)
-Shader 546 compilation failed: 
-0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
-[MG] Shader 546 submit record: size=8784 strlen=8784 | driver SHADER_SOURCE_LENGTH=8785 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:39] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:205: L0002: Undeclared variable '_uniform'
-0:207: L0002: Undeclared variable 'param'
-0:209: L0002: Undeclared variable 'param_2'
-0:211: L0001: Typename expected, found 'else'
+[MG] Shader 544 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 549 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 548 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 550 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 552 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 551 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 553 converted OK (glslver=330 -> essl ver=320)
-Shader 553 compilation failed: 
-0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[MG] Shader 553 submit record: size=8657 strlen=8657 | driver SHADER_SOURCE_LENGTH=8658 readback=95 head(submit)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0.' head(readback)='#version 320 es.precision highp float;.precision highp int;..const vec2 _208[4] = vec2[](vec2(0'
-[11:48:39] [Render thread/ERROR]: Couldn't compile fragment shader for pipeline (minecraft:core/terrain): 0:199: L0002: Undeclared variable '_uniform'
-0:201: L0002: Undeclared variable 'param'
-0:203: L0002: Undeclared variable 'param_2'
-0:205: L0001: Typename expected, found 'else'
-[11:48:39] [Render thread/ERROR]: Resource reload future completed exceptionally
-java.util.concurrent.CompletionException: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323)
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:503)
-	at knot//net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$3(SimpleReloadInstance.java:59)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
-	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:147)
-	at knot//net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:127)
-	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
-	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:967)
-	at knot//net.minecraft.client.main.Main.main(Main.java:292)
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at mio.Wrapper.main(Wrapper.java:21)
-Caused by: java.lang.RuntimeException: Failed to load required shader programs:
- - minecraft:pipeline/oit_transmittance_terrain_multidraw
- - minecraft:pipeline/cutout_terrain
- - minecraft:pipeline/oit_transmittance_flat_clouds
- - minecraft:pipeline/oit_transmittance_terrain
- - minecraft:pipeline/oit_transmittance_entity
- - minecraft:pipeline/oit_transmittance_text_grayscale_polygon_offset
- - minecraft:pipeline/oit_transmittance_text
- - minecraft:pipeline/oit_transmittance_item_glint
- - minecraft:pipeline/oit_transmittance_debug_points
- - minecraft:pipeline/oit_transmittance_translucent_block
- - minecraft:pipeline/oit_transmittance_debug_triangle_fan
- - minecraft:pipeline/oit_transmittance_item
- - minecraft:pipeline/oit_transmittance_particle
- - minecraft:pipeline/translucent_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_shadow
- - minecraft:pipeline/oit_transmittance_debug_quads
- - minecraft:pipeline/translucent_terrain
- - minecraft:pipeline/solid_terrain
- - minecraft:pipeline/oit_transmittance_entity_cull
- - minecraft:pipeline/oit_depth_bounds_terrain
- - minecraft:pipeline/cutout_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_entity_emissive
- - minecraft:pipeline/solid_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_beacon_beam
- - minecraft:pipeline/oit_transmittance_clouds
- - minecraft:pipeline/oit_transmittance_item_glint_special
- - minecraft:pipeline/oit_transmittance_text_grayscale
- - minecraft:pipeline/oit_transmittance_text_polygon_offset
- - minecraft:pipeline/oit_depth_bounds_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_lines_translucent
- - minecraft:pipeline/oit_accumulate_terrain
- - minecraft:pipeline/oit_transmittance_eyes
- - minecraft:pipeline/oit_transmittance_crumbling
- - minecraft:pipeline/oit_transmittance_weather
- - minecraft:pipeline/oit_transmittance_debug_filled_box
- - minecraft:pipeline/oit_accumulate_terrain_multidraw
- - minecraft:pipeline/oit_transmittance_breeze_wind
-	at knot//net.minecraft.client.renderer.ShaderManager.apply(ShaderManager.java:198)
-	at knot//net.minecraft.client.renderer.ShaderManager.lambda$reload$3(ShaderManager.java:86)
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:739)
-	... 15 more
-[11:48:39] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
-[11:48:40] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 1f9146bd4f9c4cfe9dc8843a6fb42621
-[11:48:40] [Download-2/ERROR]: Couldn't connect to realms
-com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 1f9146bd4f9c4cfe9dc8843a6fb42621'
+[MG] Shader 554 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 556 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 557 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 559 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 560 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 562 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 563 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 565 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 566 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 568 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 569 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 571 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 572 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 574 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 575 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 577 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 578 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 580 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 581 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 583 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 584 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 586 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 587 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 589 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 590 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 592 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 593 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 595 converted OK (glslver=330 -> essl ver=320)
+[MG] Shader 596 converted OK (glslver=330 -> essl ver=320)
+[17:27:36] [Render thread/INFO]: OpenAL initialized on device OpenSL
+[17:27:36] [Render thread/INFO]: Sound engine started
+[17:27:36] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/blocks.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[17:27:36] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17:27:37] [Render thread/INFO]: 35727 cache(s) were cleared!
+[17:27:37] [Render thread/INFO]: Geometry registry populated! Task successfully completed
+[17:27:37] [Render thread/INFO]: [ETF]: reloading ETF data.
+[17:27:37] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[17:27:37] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[17:27:38] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[17:27:38] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: b9c27209a665456e8317a7fe57975527
+[17:27:38] [Download-2/ERROR]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: b9c27209a665456e8317a7fe57975527'
 	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
 	at knot//com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:354)
 	at knot//com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:48)
@@ -2124,3 +979,10 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
+[17:27:39] [Render thread/INFO]: Overlay is removed!
+[17:27:55] [CullThread/INFO]: [STDOUT]: Shutting down culling task!
+[17:27:55] [Render thread/INFO]: Stopping!
+[17:27:55] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[17:27:55] [Render thread/INFO]: [FastQuit] Exiting FastQuit.
+
+OpenJDK exited with code : 0
