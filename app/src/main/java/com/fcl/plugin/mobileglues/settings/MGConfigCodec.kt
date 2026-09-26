@@ -60,10 +60,10 @@ internal object MGConfigCodec {
     fun decode(root: JsonObject): MGConfig {
         val defaults = MGConfig.Default
         return MGConfig(
-            // mg-3backends：ANGLE 驱动选项已删除（ES 后端取代之）。文件里的旧档位
-            // 一律不再读取——无论历史配置写过什么，这里都归一化为 DisableIfPossible，
-            // 落盘后 enableANGLE 恒为 0，游戏进程里的 ANGLE 从此关闭。
-            angle = AngleConfig.DisableIfPossible,
+            // 缺键的回落必须与渲染器一致：native 的 config_get_int 对缺键回 -1，越界
+            // 一律按 DisableIfPossible 跑。这里若回落到 App 自己的默认（尽可能启用），
+            // 界面就会宣称一个游戏里并不成立的档位——老版本遗留的 config.json 正是这样。
+            angle = AngleConfig.entries.fromWire(root.intOrNull(KEY_ANGLE), AngleConfig.DisableIfPossible),
             noError = NoErrorConfig.entries.fromWire(root.intOrNull(KEY_NO_ERROR), defaults.noError),
             multidraw = decodeMultidraw(root),
             depthClearFix = DepthClearFixMode.entries

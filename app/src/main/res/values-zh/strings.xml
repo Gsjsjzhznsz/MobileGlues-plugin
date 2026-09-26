@@ -16,6 +16,7 @@
     <string name="option_glsl_cache_off">关闭</string>
     <string name="option_glsl_cache_delete">删除已缓存的着色器（%1$s）</string>
     <string name="option_glsl_cache_delete_failed">删除 GLSL 缓存失败：%s</string>
+    <string name="option_angle">启用 ANGLE 作为 OpenGL ES 驱动</string>
     <string name="option_angle_disable_if_possible">尽可能不启用</string>
     <string name="option_angle_enable_if_possible">尽可能启用</string>
     <string name="option_angle_disable">不启用</string>
@@ -139,8 +140,9 @@
 
     <string name="dialog_title_warning">警告</string>
     <string name="warning_ext_cs_enable">启用不完整的 ARB_compute_shader 扩展可能会导致部分光影、Mods 错误，是否继续？</string>
+    <string name="warning_adreno_740_angle">在 Adreno 740 设备上启用 ANGLE 极有可能导致严重渲染错误，是否继续？</string>
     <string name="warning_enabling_angle_clear_workaround">启用 ANGLE Depth Clear 修复会修复 ANGLE 在 Minecraft 1.21.5+ 原版中的手持物品被遮挡的问题，但会导致性能下降，是否继续？</string>
-    <string name="warning_fsr1_enable">启用 FSR1 后游戏会以较低分辨率渲染，并在呈现时放大、锐化。不同驱动下的画质与性能表现可能有差异，请谨慎启用。</string>
+    <string name="warning_fsr1_enable">启用内置的 FSR1 可能会在部分驱动下造成图像损坏。\n如果您的设备搭载了 Adreno GPU，请启用 ANGLE以确保渲染正常。\n已知此功能与 ANGLE 同时启用会导致性能下降，请谨慎启用。</string>
 
     <string name="menu_item_reset">撤销授权或重置 MobileGlues</string>
     <string name="reset_option_revoke">仅撤销授权</string>
@@ -185,6 +187,7 @@
     <string name="home_device_ram">内存</string>
     <string name="home_device_unknown">未知</string>
     <string name="home_config_hint">点击调整渲染器设置</string>
+    <string name="home_summary_angle">ANGLE %1$s</string>
     <string name="home_summary_cache">缓存 %1$s</string>
 
     <string name="auth_choose_title">存储授权</string>

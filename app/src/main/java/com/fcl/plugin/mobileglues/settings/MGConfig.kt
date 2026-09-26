@@ -389,12 +389,7 @@ enum class RendererBackend(
  */
 data class MGConfig(
     val backend: RendererBackend = RendererBackend.Default,
-    /**
-     * mg-3backends：「启用 ANGLE 作为 OpenGL ES 驱动」选项已删除，ES 后端取代之。
-     * 字段保留是为了 wire 格式稳定（enableANGLE 恒写 0 = DisableIfPossible），
-     * 解析时也不再读文件里的旧值（见 [MGConfigCodec.decode]）。
-     */
-    val angle: AngleConfig = AngleConfig.DisableIfPossible,
+    val angle: AngleConfig = AngleConfig.EnableIfPossible,
     val noError: NoErrorConfig = NoErrorConfig.Auto,
     val multidraw: MultidrawSettings = MultidrawSettings.Default,
     val depthClearFix: DepthClearFixMode = DepthClearFixMode.Disabled,

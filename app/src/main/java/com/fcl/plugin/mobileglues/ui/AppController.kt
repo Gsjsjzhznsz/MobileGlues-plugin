@@ -415,8 +415,22 @@ class AppController(
         }
     }
 
-    // mg-3backends：selectAngle 已随「启用 ANGLE 作为 OpenGL ES 驱动」选项一起移除——
-    // ES 后端落地后 ANGLE 不再是可选驱动；配置里的 enableANGLE 固定写 0（见 MGConfigCodec）。
+    fun selectAngle(target: AngleConfig) {
+        val current = configStore.config.value ?: return
+        if (target == current.angle) return
+        scope.launch {
+            val approved = target != AngleConfig.ForceEnable ||
+                !DeviceInfoProvider.isAdreno740(context) ||
+                confirm(R.string.warning_adreno_740_angle)
+            if (!approved) return@launch
+            update { it.copy(angle = target) }
+            // 换了驱动，之前那份排序是在另一个驱动上量出来的。只有用户自己调过或跑过分
+            // 才值得说这句——默认顺序本来就不是量出来的，换驱动也谈不上过期。
+            if (current.multidraw != MultidrawSettings.Default) {
+                mutableBenchOutdated.tryEmit(Unit)
+            }
+        }
+    }
 
     /**
      * ANGLE 模式变了，而手上这份 MultiDraw 排序是在旧驱动上定的。
@@ -938,12 +952,13 @@ class AppController(
     // ---- 首页配置摘要 ----
 
     /**
-     * 「缓存 32 MiB」式的一行只读摘要。
+     * 「ANGLE 尽可能启用 · 缓存 32 MiB」式的一行只读摘要。
      *
-     * mg-3backends：ANGLE 摘要段已随「启用 ANGLE 作为 OpenGL ES 驱动」选项一起删除；
+     * 取值本身（「尽可能启用」「不启用」）离开设置页就没有意义了，所以这里带上是谁的取值；
      * GL 版本只在被自定义过的时候才出现——默认那一档说了等于没说。
      */
     fun configSummary(config: MGConfig): String = listOfNotNull(
+        context.getString(R.string.home_summary_angle, config.angle.label(context)),
         config.glVersion.takeIf { it != GlVersion.Default }?.label(context)?.toString(),
         context.getString(
             R.string.home_summary_cache,
