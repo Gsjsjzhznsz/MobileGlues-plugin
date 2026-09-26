@@ -104,6 +104,7 @@
     <string name="option_fsr1_preset_performance">性能优先 (2.0x)</string>
     <string name="option_fsr1_sharpness">FSR1 锐化程度</string>
     <string name="option_fsr1_sharpness_value">%d%%</string>
+    <string name="fsr1_backend_unsupported_hint">当前后端「Vulkan 直连」尚未支持 FSR1（见路线图）。请把渲染后端切换为 OpenGL 4.0 或 GLES 再使用。</string>
 
     <!-- mg-3backends：Air 6.0 渲染后端切换器（单一 pick 行） -->
     <string name="option_renderer_backend">渲染后端</string>

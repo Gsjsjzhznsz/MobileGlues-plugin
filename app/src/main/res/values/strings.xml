@@ -116,6 +116,7 @@
     <string name="option_fsr1_preset_performance">Performance (2.0x)</string>
     <string name="option_fsr1_sharpness">FSR1 sharpening</string>
     <string name="option_fsr1_sharpness_value">%d%%</string>
+    <string name="fsr1_backend_unsupported_hint">The current backend \"Vulkan (direct)\" does not support FSR1 yet (see roadmap). Switch the renderer backend to OpenGL 4.0 or GLES to use it.</string>
 
     <!-- mg-3backends: Air 6.0 renderer backend switcher (single pick row) -->
     <string name="option_renderer_backend">Renderer backend</string>

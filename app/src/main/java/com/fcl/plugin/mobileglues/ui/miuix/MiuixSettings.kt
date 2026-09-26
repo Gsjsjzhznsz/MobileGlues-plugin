@@ -208,6 +208,16 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                         onPositionChange = controller::setFsr1Sharpness,
                         onDragFinished = {},
                     )
+                    // 与 Material 主题同款提示：FSR1 只落在 GLES 家族后端，
+                    // Vulkan 直连是路线图上的未完成项，别让开关静默无效。
+                    if (config.backend == RendererBackend.DirectVulkan) {
+                        Text(
+                            text = stringResource(R.string.fsr1_backend_unsupported_hint),
+                            style = MiuixTheme.textStyles.body2,
+                            color = MiuixTheme.colorScheme.error,
+                            modifier = Modifier.padding(horizontal = MiuixScreenPadding, vertical = 8.dp),
+                        )
+                    }
                 }
             }
         }

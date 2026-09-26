@@ -190,6 +190,17 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                         onPositionChange = controller::setFsr1Sharpness,
                         onDragFinished = {},
                     )
+                    // FSR1 目前只落在 GLES 家族后端（DirectGLES / MobileGlues）；
+                    // Vulkan 直连是路线图上的未完成项。开着开关却毫无动静是最伤
+                    // 体验的组合，这里在设置页把它挑明。
+                    if (config.backend == RendererBackend.DirectVulkan) {
+                        Text(
+                            text = stringResource(R.string.fsr1_backend_unsupported_hint),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(horizontal = ScreenPadding, vertical = 8.dp),
+                        )
+                    }
                 }
             }
         }
