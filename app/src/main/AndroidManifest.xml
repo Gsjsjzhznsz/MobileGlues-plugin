@@ -13,6 +13,15 @@
         android:maxSdkVersion="29" />
 
     <!--
+      miuix-blur 声明 minSdk 33（库内部用了高版本 API），但本项目 minSdk 26。
+      所有模糊调用点都已经有 isRenderEffectSupported() 运行时门控
+      （ui/util/BlurExt.kt，与 KernelSU 同一套方案）：API 不足时返回 null，
+      调用方回退实色顶栏/底栏，不会触达库的高版本代码路径，故强制合并。
+    -->
+    <uses-sdk tools:overrideLibrary="top.yukonga.miuix.kmp.blur" />
+
+
+    <!--
       ANGLE 随启动器分发，不在本 App 里。跑分要在与游戏相同的驱动上测，就得先看看
       装了哪些启动器、它们的 native 库目录里有没有 ANGLE——Android 11 起，没在这里
       点名的包，PackageManager 一律当作不存在。名单与 AngleProvider 的保持一致。
