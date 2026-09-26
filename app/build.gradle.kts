@@ -146,6 +146,7 @@ dependencies {
     implementation(libs.miuix.ui)
     implementation(libs.miuix.blur)
     implementation(libs.miuix.preference)
+    implementation(libs.miuix.icons)
     // 协程和 lifecycleScope 以前是从 appcompat 传递依赖里蹭来的，这里显式声明。
     implementation(libs.coroutines.android)
     implementation(libs.lifecycle.runtime.ktx)

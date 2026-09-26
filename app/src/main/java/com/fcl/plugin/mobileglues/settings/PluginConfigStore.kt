@@ -156,6 +156,57 @@ class PluginConfigStore(context: Context) {
         mutableFloatingBottomBarGlass.value = enabled
     }
 
+    private val mutablePageScale =
+        MutableStateFlow(prefs.getFloat(KEY_PAGE_SCALE, 1f).coerceIn(0.8f, 1.1f))
+
+    /** 全局界面缩放（KernelSU/BandQQ PageScale 同款 80% ~ 110%，作用于密度）。 */
+    val pageScale: StateFlow<Float> = mutablePageScale.asStateFlow()
+
+    fun setPageScale(scale: Float) {
+        val clamped = scale.coerceIn(0.8f, 1.1f)
+        prefs.edit { putFloat(KEY_PAGE_SCALE, clamped) }
+        mutablePageScale.value = clamped
+    }
+
+    private val mutableMotionSpeed =
+        MutableStateFlow(prefs.getFloat(KEY_MOTION_SPEED, 1f).coerceIn(0.5f, 2f))
+
+    /** 动画速度倍率（BandQQ UiMotion 同款 0.5x ~ 2.0x，越大越快）。 */
+    val motionSpeed: StateFlow<Float> = mutableMotionSpeed.asStateFlow()
+
+    fun setMotionSpeed(speed: Float) {
+        val clamped = speed.coerceIn(0.5f, 2f)
+        prefs.edit { putFloat(KEY_MOTION_SPEED, clamped) }
+        mutableMotionSpeed.value = clamped
+    }
+
+    private val mutableMotionStagger =
+        MutableStateFlow(prefs.getInt(KEY_MOTION_STAGGER, 100).coerceIn(0, 200))
+
+    /** 列表级联入场的逐项间隔（ms，BandQQ UiMotion 同款 0 ~ 200）。 */
+    val motionStagger: StateFlow<Int> = mutableMotionStagger.asStateFlow()
+
+    fun setMotionStagger(stagger: Int) {
+        val clamped = stagger.coerceIn(0, 200)
+        prefs.edit { putInt(KEY_MOTION_STAGGER, clamped) }
+        mutableMotionStagger.value = clamped
+    }
+
+    private val mutablePredictiveBack =
+        MutableStateFlow(prefs.getBoolean(KEY_PREDICTIVE_BACK, true))
+
+    /**
+     * 预测性返回手势（BandQQ v2.6.0 同款）：开启后返回手势期间子页面跟手
+     * 位移/缩放/淡出（HyperOS 返回预览风格）。Manifest 里 enableOnBackInvokedCallback
+     * 已静态开启，因此本开关只控制 App 内的跟手动画，切换即时生效、无需重启。
+     */
+    val predictiveBack: StateFlow<Boolean> = mutablePredictiveBack.asStateFlow()
+
+    fun setPredictiveBack(enabled: Boolean) {
+        prefs.edit { putBoolean(KEY_PREDICTIVE_BACK, enabled) }
+        mutablePredictiveBack.value = enabled
+    }
+
     private val mutableAuthMethod =
         MutableStateFlow(AuthMethod.ofKey(prefs.getString(KEY_AUTH_METHOD, null)))
 
@@ -269,5 +320,9 @@ class PluginConfigStore(context: Context) {
         const val KEY_ENABLE_BLUR = "enable_blur"
         const val KEY_FLOATING_BOTTOM_BAR = "floating_bottom_bar"
         const val KEY_FLOATING_BOTTOM_BAR_GLASS = "floating_bottom_bar_glass"
+        const val KEY_PAGE_SCALE = "page_scale"
+        const val KEY_MOTION_SPEED = "motion_speed"
+        const val KEY_MOTION_STAGGER = "motion_stagger"
+        const val KEY_PREDICTIVE_BACK = "predictive_back"
     }
 }

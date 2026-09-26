@@ -38,6 +38,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.fcl.plugin.mobileglues.ui.LocalMotionSpeed
+import com.fcl.plugin.mobileglues.ui.LocalMotionStagger
+import kotlin.math.roundToInt
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -346,13 +349,19 @@ private fun BenchmarkNudge(onClick: () -> Unit) {
 /** 进场动画：淡入 + 上移，靠 [delayMillis] 排出先后。 */
 @Composable
 private fun EnterUp(visible: Boolean, delayMillis: Int, content: @Composable () -> Unit) {
+    // 时长/延迟跟随「动画速度」与「动画延迟」设置（BandQQ UiMotion 同款语义）：
+    // delayMillis 是 stagger=100ms、1x 速度下的基准间隔，按设置线性缩放。
+    val speed = LocalMotionSpeed.current.coerceIn(0.5f, 2f)
+    val stagger = LocalMotionStagger.current.coerceIn(0, 300)
+    val delay = (delayMillis * stagger / 100f / speed).roundToInt()
+    val duration = (420 / speed).roundToInt()
     AnimatedVisibility(
         visible = visible,
-        enter = fadeIn(tween(durationMillis = 420, delayMillis = delayMillis)) +
+        enter = fadeIn(tween(durationMillis = duration, delayMillis = delay)) +
             slideInVertically(
                 animationSpec = tween(
-                    durationMillis = 420,
-                    delayMillis = delayMillis,
+                    durationMillis = duration,
+                    delayMillis = delay,
                     easing = FastOutSlowInEasing,
                 ),
             ) { it / 3 },

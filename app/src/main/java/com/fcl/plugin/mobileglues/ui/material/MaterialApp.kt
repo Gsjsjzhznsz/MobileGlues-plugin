@@ -1,6 +1,6 @@
 package com.fcl.plugin.mobileglues.ui.material
 
-import androidx.activity.compose.BackHandler
+import androidx.activity.compose.PredictiveBackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ContentTransform
@@ -13,6 +13,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -22,6 +23,8 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -34,6 +37,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.material3.NavigationRail
 import androidx.compose.material3.NavigationRailItem
 import com.fcl.plugin.mobileglues.ui.Responsive
+import com.fcl.plugin.mobileglues.ui.LocalMotionSpeed
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -46,13 +50,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.CancellationException
+import kotlin.math.roundToInt
 import top.yukonga.miuix.kmp.blur.Backdrop
 import top.yukonga.miuix.kmp.blur.layerBackdrop
 import top.yukonga.miuix.kmp.blur.rememberLayerBackdrop
@@ -108,13 +116,41 @@ fun MaterialApp(
             }
         }
 
-        // 子页面吃掉返回键；没有子页面时交还系统（退出应用）。
-        BackHandler(enabled = subPage != null) { controller.navigateBack() }
+        // ===== 预测性返回（BandQQ v2.6.0 同款，与 Miuix 皮肤同一份语义）=====
+        // 手势期间子页面跟手位移/缩放/淡出，提交才真正关闭，取消则回弹。
+        // 必须无条件调用（enabled 参数控制）；开关关闭时 progress 不再写入，
+        // 行为退化为离散返回但返回本身始终可用。
+        val predictiveBack by controller.pluginConfig.predictiveBack.collectAsStateWithLifecycle()
+        var backProgress by remember { mutableFloatStateOf(0f) }
+        PredictiveBackHandler(enabled = subPage != null) { progress ->
+            try {
+                progress.collect { if (predictiveBack) backProgress = it.progress }
+                backProgress = 0f
+                controller.navigateBack()
+            } catch (e: CancellationException) {
+                // 手势取消：回弹（进度归零后按文档要求重新抛出）
+                backProgress = 0f
+                throw e
+            }
+        }
+        // 手势变换：位移到右侧 30% + 轻微缩放 + 淡出（HyperOS 返回预览风格）
+        val predictiveTransform = Modifier.graphicsLayer {
+            val p = backProgress
+            if (p > 0f) {
+                translationX = p * size.width * 0.3f
+                val s = 1f - 0.08f * p
+                scaleX = s
+                scaleY = s
+                alpha = 1f - 0.3f * p
+            }
+        }
 
         // 垂直方向紧张（通常就是手机横屏）时，导航从底部让到侧边：底栏在横屏吃掉的是
         // 本来就稀缺的高度，而左侧的宽度反而有富余。判断的是高度而不是朝向，理由见
         // Responsive。
         val heightCompact = Responsive.isHeightCompact()
+        // 推入/切页过场时长跟随「动画速度」设置（速度越快时长越短，BandQQ 同款）
+        val motionSpeed = LocalMotionSpeed.current.coerceIn(0.5f, 2f)
         val enableBlur = LocalEnableBlur.current
         val floatingBar = LocalEnableFloatingBottomBar.current
         val glassBar = LocalEnableFloatingBottomBarGlass.current
@@ -136,13 +172,18 @@ fun MaterialApp(
                         enter = slideInVertically { it } + fadeIn(),
                         exit = slideOutVertically { it } + fadeOut(),
                     ) {
-                        MaterialBottomBar(
-                            current = tab,
-                            onSelect = controller::navigateTab,
-                            backdrop = glassBackdrop,
-                            floatingBar = floatingBar,
-                            glassBar = glassBar,
-                        )
+                        // BandQQ 同款：bottomBar slot 的约束是松的，悬浮栏按内容取宽，
+                        // 不套满宽 Box + BottomCenter 对齐就会贴着左边（“底栏不居中”的根因）。
+                        Box(modifier = Modifier.fillMaxWidth()) {
+                            MaterialBottomBar(
+                                modifier = Modifier.align(Alignment.BottomCenter),
+                                current = tab,
+                                onSelect = controller::navigateTab,
+                                backdrop = glassBackdrop,
+                                floatingBar = floatingBar,
+                                glassBar = glassBar,
+                            )
+                        }
                     }
                 },
             ) { innerPadding ->
@@ -163,12 +204,12 @@ fun MaterialApp(
                     val pageState = rememberSaveableStateHolder()
                     AnimatedContent(
                         targetState = subPage ?: tab,
-                        transitionSpec = { pageTransition(initialState, targetState) },
+                        transitionSpec = { pageTransition(initialState, targetState, motionSpeed) },
                         modifier = Modifier.fillMaxSize(),
                         label = "page",
                     ) { destination ->
                         pageState.SaveableStateProvider(destination) {
-                            Column(modifier = Modifier.fillMaxSize()) {
+                            Column(modifier = Modifier.fillMaxSize().then(predictiveTransform)) {
                                 when (destination) {
                                     AppTab.Home -> MaterialHomePage(controller)
                                     AppTab.Settings -> MaterialSettingsPage(controller)
@@ -193,8 +234,12 @@ fun MaterialApp(
 }
 
 @Composable
-private fun MaterialNavigationBar(current: AppTab, onSelect: (AppTab) -> Unit) {
-    NavigationBar(modifier = Modifier.fillMaxWidth()) {
+private fun MaterialNavigationBar(
+    modifier: Modifier = Modifier,
+    current: AppTab,
+    onSelect: (AppTab) -> Unit,
+) {
+    NavigationBar(modifier = modifier.fillMaxWidth()) {
         NavigationDestinations.forEach { (destination, icon, label) ->
             NavigationBarItem(
                 selected = current == destination,
@@ -214,6 +259,7 @@ private fun MaterialNavigationBar(current: AppTab, onSelect: (AppTab) -> Unit) {
  */
 @Composable
 private fun MaterialBottomBar(
+    modifier: Modifier = Modifier,
     current: AppTab,
     onSelect: (AppTab) -> Unit,
     backdrop: Backdrop,
@@ -221,13 +267,13 @@ private fun MaterialBottomBar(
     glassBar: Boolean,
 ) {
     if (!floatingBar) {
-        MaterialNavigationBar(current = current, onSelect = onSelect)
+        MaterialNavigationBar(modifier = modifier, current = current, onSelect = onSelect)
         return
     }
     val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
         .let { inset -> if (inset != 0.dp) 8.dp + inset else 28.dp }
     FloatingBottomBar(
-        modifier = Modifier
+        modifier = modifier
             .pointerInput(Unit) { detectTapGestures { } }
             .padding(start = 28.dp, end = 28.dp, bottom = bottomPadding),
         selectedIndex = current.ordinal,
@@ -293,10 +339,10 @@ private val NavigationDestinations = listOf(
  * 过场动画：同级切页是「淡入淡出 + 顺着方向的小位移」，进出子页面是「从右侧推入」。
  * 方向取自底部导航的顺序，所以位移方向和用户的手指方向一致。
  */
-private fun pageTransition(from: Any, to: Any): ContentTransform {
-    val fadeInSpec = tween<Float>(durationMillis = 260, easing = FastOutSlowInEasing)
-    val fadeOutSpec = tween<Float>(durationMillis = 180, easing = FastOutSlowInEasing)
-    val slide = tween<IntOffset>(durationMillis = 320, easing = FastOutSlowInEasing)
+private fun pageTransition(from: Any, to: Any, motionSpeed: Float = 1f): ContentTransform {
+    val fadeInSpec = tween<Float>((260 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
+    val fadeOutSpec = tween<Float>((180 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
+    val slide = tween<IntOffset>((320 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
 
     // 位移是屏宽的几分之一：进出子页面推得多一点，同级切页只要一点点。
     val (enterFraction, exitFraction) = when {

@@ -1,6 +1,6 @@
 package com.fcl.plugin.mobileglues.ui.miuix
 
-import androidx.activity.compose.BackHandler
+import androidx.activity.compose.PredictiveBackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ContentTransform
@@ -21,9 +21,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -32,6 +35,7 @@ import com.fcl.plugin.mobileglues.settings.ThemeMode
 import com.fcl.plugin.mobileglues.ui.AppController
 import com.fcl.plugin.mobileglues.ui.AppSubPage
 import com.fcl.plugin.mobileglues.ui.AppTab
+import com.fcl.plugin.mobileglues.ui.LocalMotionSpeed
 import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBar
 import com.fcl.plugin.mobileglues.ui.component.FloatingBottomBarItem
 import com.fcl.plugin.mobileglues.ui.liquid.FALLBACK_KEY_COLOR
@@ -76,6 +80,8 @@ import top.yukonga.miuix.kmp.theme.lightColorScheme
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import kotlinx.coroutines.CancellationException
+import kotlin.math.roundToInt
 
 /**
  * Miuix 皮肤的外壳。
@@ -131,11 +137,40 @@ fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
             }
         }
 
-        BackHandler(enabled = subPage != null) { controller.navigateBack() }
+        // ===== 预测性返回（BandQQ v2.6.0 同款）=====
+        // 手势期间子页面跟手位移/缩放/淡出，提交才真正关闭，取消则回弹。
+        // 必须无条件调用（enabled 参数控制），避免条件组合改变 handler 优先级；
+        // 开关关闭时 progress 不再写入，行为退化为离散返回但返回本身始终可用。
+        val predictiveBack by controller.pluginConfig.predictiveBack.collectAsStateWithLifecycle()
+        var backProgress by remember { mutableFloatStateOf(0f) }
+        PredictiveBackHandler(enabled = subPage != null) { progress ->
+            try {
+                progress.collect { if (predictiveBack) backProgress = it.progress }
+                backProgress = 0f
+                controller.navigateBack()
+            } catch (e: CancellationException) {
+                // 手势取消：回弹（进度归零后按文档要求重新抛出）
+                backProgress = 0f
+                throw e
+            }
+        }
+        // 手势变换：位移到右侧 30% + 轻微缩放 + 淡出（HyperOS 返回预览风格）
+        val predictiveTransform = Modifier.graphicsLayer {
+            val p = backProgress
+            if (p > 0f) {
+                translationX = p * size.width * 0.3f
+                val s = 1f - 0.08f * p
+                scaleX = s
+                scaleY = s
+                alpha = 1f - 0.3f * p
+            }
+        }
 
         // 垂直方向紧张（通常是手机横屏）时导航让到侧边，理由与 Material 皮肤相同：
         // 底栏吃掉的是横屏下最稀缺的高度。判断的是高度而不是朝向，见 Responsive。
         val heightCompact = Responsive.isHeightCompact()
+        // 推入/切页过场时长跟随「动画速度」设置（速度越快时长越短，BandQQ 同款）
+        val motionSpeed = LocalMotionSpeed.current.coerceIn(0.5f, 2f)
         val enableBlur = LocalEnableBlur.current
         val floatingBar = LocalEnableFloatingBottomBar.current
         val glassBar = LocalEnableFloatingBottomBarGlass.current
@@ -161,14 +196,19 @@ fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
                     enter = slideInVertically { it } + fadeIn(),
                     exit = slideOutVertically { it } + fadeOut(),
                 ) {
-                    MiuixBottomBar(
-                        current = tab,
-                        onSelect = controller::navigateTab,
-                        backdrop = glassBackdrop,
-                        blurBackdrop = blurBackdrop,
-                        floatingBar = floatingBar,
-                        glassBar = glassBar,
-                    )
+                    // BandQQ 同款：bottomBar slot 的约束是松的，悬浮栏按内容取宽，
+                    // 不套满宽 Box + BottomCenter 对齐就会贴着左边（“底栏不居中”的根因）。
+                    Box(modifier = Modifier.fillMaxWidth()) {
+                        MiuixBottomBar(
+                            modifier = Modifier.align(Alignment.BottomCenter),
+                            current = tab,
+                            onSelect = controller::navigateTab,
+                            backdrop = glassBackdrop,
+                            blurBackdrop = blurBackdrop,
+                            floatingBar = floatingBar,
+                            glassBar = glassBar,
+                        )
+                    }
                 }
             },
         ) { innerPadding ->
@@ -196,12 +236,12 @@ fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
                 val pageState = rememberSaveableStateHolder()
                 AnimatedContent(
                     targetState = subPage ?: tab,
-                    transitionSpec = { miuixPageTransition(initialState, targetState) },
+                    transitionSpec = { miuixPageTransition(initialState, targetState, motionSpeed) },
                     modifier = Modifier.fillMaxSize(),
                     label = "page",
                 ) { destination ->
                     pageState.SaveableStateProvider(destination) {
-                        Column(modifier = Modifier.fillMaxSize()) {
+                        Column(modifier = Modifier.fillMaxSize().then(predictiveTransform)) {
                             when (destination) {
                                 AppTab.Home -> MiuixHomePage(controller)
                                 AppTab.Settings -> MiuixSettingsPage(controller)
@@ -226,11 +266,12 @@ fun MiuixApp(controller: AppController, themeMode: ThemeMode, keyColor: Int) {
 
 @Composable
 private fun MiuixNavigationBar(
+    modifier: Modifier = Modifier,
     current: AppTab,
     onSelect: (AppTab) -> Unit,
     containerColor: Color = MiuixTheme.colorScheme.surface,
 ) {
-    NavigationBar(color = containerColor) {
+    NavigationBar(modifier = modifier, color = containerColor) {
         NavigationBarItem(
             selected = current == AppTab.Home,
             onClick = { onSelect(AppTab.Home) },
@@ -261,6 +302,7 @@ private fun MiuixNavigationBar(
  */
 @Composable
 private fun MiuixBottomBar(
+    modifier: Modifier = Modifier,
     current: AppTab,
     onSelect: (AppTab) -> Unit,
     backdrop: Backdrop,
@@ -273,20 +315,21 @@ private fun MiuixBottomBar(
         if (blurBackdrop != null) {
             BlurredBar(backdrop = blurBackdrop) {
                 MiuixNavigationBar(
+                    modifier = modifier,
                     current = current,
                     onSelect = onSelect,
                     containerColor = Color.Transparent,
                 )
             }
         } else {
-            MiuixNavigationBar(current = current, onSelect = onSelect)
+            MiuixNavigationBar(modifier = modifier, current = current, onSelect = onSelect)
         }
         return
     }
     val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
         .let { inset -> if (inset != 0.dp) 8.dp + inset else 28.dp }
     FloatingBottomBar(
-        modifier = Modifier
+        modifier = modifier
             .pointerInput(Unit) { detectTapGestures { } }
             .padding(start = 28.dp, end = 28.dp, bottom = bottomPadding),
         selectedIndex = current.ordinal,
@@ -360,11 +403,11 @@ private fun MiuixNavigationRail(current: AppTab, onSelect: (AppTab) -> Unit) {
     }
 }
 
-/** 与 MD3 皮肤同样的过场语义：同级切页小位移，进出子页面从右侧推入。 */
-private fun miuixPageTransition(from: Any, to: Any): ContentTransform {
-    val fadeInSpec = tween<Float>(durationMillis = 260, easing = FastOutSlowInEasing)
-    val fadeOutSpec = tween<Float>(durationMillis = 180, easing = FastOutSlowInEasing)
-    val slide = tween<IntOffset>(durationMillis = 320, easing = FastOutSlowInEasing)
+/** 与 MD3 皮肤同样的过场语义：同级切页小位移，进出子页面从右侧推入；时长跟随动画速度。 */
+private fun miuixPageTransition(from: Any, to: Any, motionSpeed: Float = 1f): ContentTransform {
+    val fadeInSpec = tween<Float>((260 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
+    val fadeOutSpec = tween<Float>((180 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
+    val slide = tween<IntOffset>((320 / motionSpeed).roundToInt(), easing = FastOutSlowInEasing)
 
     val (enterFraction, exitFraction) = when {
         to is AppSubPage -> 3 to -10
