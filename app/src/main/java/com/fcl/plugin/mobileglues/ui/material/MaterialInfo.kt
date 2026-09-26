@@ -86,10 +86,6 @@ fun MaterialInfoPage(controller: AppController) {
                 title = stringResource(R.string.info_privacy),
                 onClick = { controller.openSubPage(AppSubPage.Privacy) },
             )
-            TextPreferenceRow(
-                title = stringResource(R.string.theme_title),
-                onClick = { controller.openSubPage(AppSubPage.Theme) },
-            )
         }
 
         PreferenceGroup(title = stringResource(R.string.info_danger_zone)) {

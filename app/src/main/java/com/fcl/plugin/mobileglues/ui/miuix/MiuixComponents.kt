@@ -206,7 +206,7 @@ fun MiuixSliderRow(
             value = position.toFloat(),
             onValueChange = { onPositionChange(it.roundToInt()) },
             onValueChangeFinished = onDragFinished,
-            valueRange = 0f..steps.toFloat(),
+            valueRange = 0f..steps.coerceAtLeast(1).toFloat(),
             modifier = Modifier.fillMaxWidth(),
         )
     }

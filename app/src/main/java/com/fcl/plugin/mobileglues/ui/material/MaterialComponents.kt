@@ -343,7 +343,7 @@ fun SliderPreferenceRow(
             value = position.toFloat(),
             onValueChange = { onPositionChange(it.roundToInt()) },
             onValueChangeFinished = onDragFinished,
-            valueRange = 0f..steps.toFloat(),
+            valueRange = 0f..steps.coerceAtLeast(1).toFloat(),
             // 档位太密，画刻度点只会糊成一条线：连续拖动、落点取整。
             steps = 0,
         )

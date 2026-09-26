@@ -43,6 +43,7 @@ import com.fcl.plugin.mobileglues.settings.RendererBackend
 import com.fcl.plugin.mobileglues.settings.SpinnerOption
 import com.fcl.plugin.mobileglues.settings.UiStyle
 import com.fcl.plugin.mobileglues.ui.AppController
+import com.fcl.plugin.mobileglues.ui.AppSubPage
 import com.fcl.plugin.mobileglues.ui.SettingsLoadState
 
 /**
@@ -76,6 +77,11 @@ fun MaterialSettingsPage(controller: AppController) {
                 ),
                 selectedIndex = uiStyle.ordinal,
                 onSelect = { controller.pluginConfig.setUiStyle(UiStyle.entries[it]) },
+            )
+            // 主题设置紧挨着界面风格：两者都是外观类选项，用户找的就是这一带。
+            TextPreferenceRow(
+                title = stringResource(R.string.theme_title),
+                onClick = { controller.openSubPage(AppSubPage.Theme) },
             )
         }
 
@@ -180,7 +186,7 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                         title = stringResource(R.string.option_fsr1_sharpness),
                         valueLabel = stringResource(R.string.option_fsr1_sharpness_value, config.fsr1Sharpness),
                         position = config.fsr1Sharpness,
-                        steps = 0,
+                        steps = 100,
                         onPositionChange = controller::setFsr1Sharpness,
                         onDragFinished = {},
                     )

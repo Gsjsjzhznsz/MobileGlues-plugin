@@ -80,10 +80,6 @@ fun MiuixInfoPage(controller: AppController) {
                 title = stringResource(R.string.info_privacy),
                 onClick = { controller.openSubPage(AppSubPage.Privacy) },
             )
-            MiuixArrowRow(
-                title = stringResource(R.string.theme_title),
-                onClick = { controller.openSubPage(AppSubPage.Theme) },
-            )
         }
 
         MiuixGroup(title = stringResource(R.string.info_danger_zone)) {
