@@ -42,9 +42,9 @@ import top.yukonga.miuix.kmp.basic.BasicComponent
 import top.yukonga.miuix.kmp.basic.BasicComponentColors
 import top.yukonga.miuix.kmp.basic.BasicComponentDefaults
 import top.yukonga.miuix.kmp.basic.Card
-import top.yukonga.miuix.kmp.extra.SuperArrow
-import top.yukonga.miuix.kmp.extra.SuperDropdown
-import top.yukonga.miuix.kmp.extra.SuperSwitch
+import top.yukonga.miuix.kmp.preference.ArrowPreference
+import top.yukonga.miuix.kmp.preference.WindowDropdownPreference
+import top.yukonga.miuix.kmp.preference.SwitchPreference
 import top.yukonga.miuix.kmp.basic.CardDefaults
 import top.yukonga.miuix.kmp.basic.Icon
 import top.yukonga.miuix.kmp.basic.InfiniteProgressIndicator
@@ -124,7 +124,7 @@ fun MiuixArrowRow(
     titleColor: Color? = null,
     onClick: () -> Unit,
 ) {
-    SuperArrow(
+    ArrowPreference(
         title = title,
         titleColor = titleColors(titleColor),
         summary = summary,
@@ -142,7 +142,7 @@ fun MiuixSwitchRow(
     summary: String? = null,
     enabled: Boolean = true,
 ) {
-    SuperSwitch(
+    SwitchPreference(
         title = title,
         summary = summary,
         checked = checked,
@@ -160,7 +160,7 @@ fun MiuixDropdownRow(
     onSelect: (Int) -> Unit,
     enabled: Boolean = true,
 ) {
-    SuperDropdown(
+    WindowDropdownPreference(
         title = title,
         items = options,
         selectedIndex = selectedIndex,

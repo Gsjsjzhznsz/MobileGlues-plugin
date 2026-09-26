@@ -56,7 +56,7 @@ import top.yukonga.miuix.kmp.basic.SmallTitle
 import top.yukonga.miuix.kmp.basic.Surface
 import top.yukonga.miuix.kmp.basic.Text
 import top.yukonga.miuix.kmp.basic.TextButton
-import top.yukonga.miuix.kmp.extra.SuperDialog
+import top.yukonga.miuix.kmp.window.WindowDialog
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import java.util.Locale
 
@@ -279,7 +279,7 @@ private fun MiuixAngleSourceDialog(controller: AppController) {
     val prompt by controller.angleSourcePrompt.collectAsStateWithLifecycle()
     val last = rememberLastNonNull(prompt)
 
-    SuperDialog(
+    WindowDialog(
         show = prompt != null,
         title = stringResource(R.string.md_angle_title),
         onDismissRequest = controller::dismissAngleSourcePrompt,
@@ -372,7 +372,7 @@ fun MiuixMultidrawBenchDialogs(controller: AppController) {
     // 退场动画期间内容要从上一份非空值里取。
     val lastState = rememberLastNonNull(state)
 
-    SuperDialog(
+    WindowDialog(
         show = state is AppController.BenchState.Running,
         title = stringResource(R.string.md_bench_running_title),
         onDismissRequest = null,
@@ -418,7 +418,7 @@ fun MiuixMultidrawBenchDialogs(controller: AppController) {
     }
 
     val doneState = lastState as? AppController.BenchState.Done
-    SuperDialog(
+    WindowDialog(
         show = state is AppController.BenchState.Done,
         title = stringResource(R.string.md_bench_result_title),
         onDismissRequest = controller::dismissBench,
@@ -507,7 +507,7 @@ fun MiuixMultidrawBenchDialogs(controller: AppController) {
     }
 
     val failedState = lastState as? AppController.BenchState.Failed
-    SuperDialog(
+    WindowDialog(
         show = state is AppController.BenchState.Failed,
         title = stringResource(R.string.md_bench_result_title),
         onDismissRequest = controller::dismissBench,

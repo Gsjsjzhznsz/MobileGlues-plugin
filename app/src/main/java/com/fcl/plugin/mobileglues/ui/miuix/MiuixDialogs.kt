@@ -45,7 +45,7 @@ import top.yukonga.miuix.kmp.basic.Card
 import top.yukonga.miuix.kmp.basic.InfiniteProgressIndicator
 import top.yukonga.miuix.kmp.basic.Text
 import top.yukonga.miuix.kmp.basic.TextButton
-import top.yukonga.miuix.kmp.extra.SuperDialog
+import top.yukonga.miuix.kmp.window.WindowDialog
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import androidx.compose.ui.graphics.toArgb
 
@@ -218,7 +218,7 @@ fun MiuixDialogHost(controller: AppController) {
  */
 @Composable
 private fun MiuixPrivacyConsentDialog(onAccept: () -> Unit, onDecline: () -> Unit) {
-    SuperDialog(
+    WindowDialog(
         show = true,
         title = stringResource(R.string.privacy_consent_title),
         onDismissRequest = null,
@@ -293,7 +293,7 @@ private fun MiuixConfirmDialog(request: ConfirmRequest?) {
         remember(current) { AnnotatedString(current.message) }
     }
 
-    SuperDialog(
+    WindowDialog(
         show = request != null,
         title = stringResource(current.titleRes),
         onDismissRequest = { request?.resolve(false) },
@@ -344,7 +344,7 @@ private fun MiuixMessageDialog(
     onDismiss: (() -> Unit)? = null,
     cancelable: Boolean = true,
 ) {
-    SuperDialog(
+    WindowDialog(
         show = show,
         title = title,
         onDismissRequest = if (cancelable) ({ onDismiss?.invoke() }) else null,
@@ -382,7 +382,7 @@ private fun MiuixAuthMethodDialog(
     onSelect: (AuthMethod) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    SuperDialog(
+    WindowDialog(
         show = show,
         title = stringResource(R.string.auth_choose_title),
         summary = stringResource(R.string.auth_choose_msg),
@@ -427,7 +427,7 @@ private fun MiuixLinkChoiceDialog(
     onSelect: (LinkEntry) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    SuperDialog(
+    WindowDialog(
         show = show,
         title = title,
         summary = message,
@@ -470,7 +470,7 @@ private fun MiuixResetDialog(
     onRemove: () -> Unit,
     onDismiss: () -> Unit,
 ) {
-    SuperDialog(
+    WindowDialog(
         show = show,
         title = stringResource(R.string.menu_item_reset),
         onDismissRequest = onDismiss,
@@ -535,7 +535,7 @@ private fun AuthMethodOption(
 /** 不可取消的进度对话框。 */
 @Composable
 private fun MiuixProgressDialog(show: Boolean, text: String) {
-    SuperDialog(show = show, onDismissRequest = null) {
+    WindowDialog(show = show, onDismissRequest = null) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
