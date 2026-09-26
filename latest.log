@@ -1,431 +1,213 @@
-Initializing MobileGlues ...
-The Open Source License of MobileGlues: 
-  GNU LGPL-2.1 License
-MG_DIR_PATH = /sdcard/MG
-[MobileGlues] Setting: enableAngle                 = false
-[MobileGlues] Setting: ignoreError                 = 0
-[MobileGlues] Setting: enableExtComputeShader      = false
-[MobileGlues] Setting: enableExtTimerQuery         = true
-[MobileGlues] Setting: enableExtDirectStateAccess  = false
-[MobileGlues] Setting: maxGlslCacheSize            = 64
-[MobileGlues] Setting: angleDepthClearFixMode      = 0
-[MobileGlues] Setting: bufferCoherentAsFlush       = 1
-[MobileGlues] Setting: customGLVersion             = 4.0.0
-[MobileGlues] Setting: fsr1Setting                 = 4
-[MobileGlues] Setting: fsr1Sharpness               = 90
-[MobileGlues] Setting: hideMGEnvLevel              = 0
-EGL initialized successfully
-OpenGL ES Version: OpenGL ES 3.2 (320)
-Not Detected GL_EXT_multi_draw_indirect!
-Enable-capability extensions: multisample_compatibility=0 clip_cull_distance=0 depth_clamp=0 sRGB_write_control=1 NV_polygon_mode=0 OES_sample_shading=1
-multidrawMode/multidrawDisableBackends are no longer used. The selection is an order now: multidrawOrder (global, backend names best first, may contain "native") and multidrawOrder<EntryPoint> for per-function exceptions.
-multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
-[MobileGlues] multidrawOrderArrays               = unroll
-[MobileGlues] multidrawOrderElements             = unroll > indirect
-[MobileGlues] multidrawOrderElementsBaseVertex   = basevertex > indirect > compute > unroll
-[MobileGlues] multidrawOrderArraysIndirect       = indirect
-[MobileGlues] multidrawOrderElementsIndirect     = indirect
-[MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
-[MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
-[MG] glsl_for_es converter rev 2.0.17.0 -- 26.3 fixes: uniform-decl boundary guard + OIT out-array unroll
-GLSL parse OK (glslver=450)
-[MG] Shader 2 converted OK (glslver=450 -> essl ver=320)
-GLSL parse OK (glslver=450)
-[MG] Shader 3 converted OK (glslver=450 -> essl ver=320)
-[MG] Shader 5 converted OK (glslver=450 -> essl ver=320)
-GLSL parse OK (glslver=450)
-[MG] Shader 6 converted OK (glslver=450 -> essl ver=320)
-[MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 11 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 20 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 22 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 23 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 25 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 26 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 28 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 29 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 35 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 37 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 38 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 40 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 41 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 43 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 44 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 46 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 47 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 49 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 50 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 52 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 56 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 59 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 62 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 64 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 65 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 67 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 68 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 70 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 71 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 73 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 74 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 76 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 77 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 79 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 80 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 82 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 83 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 85 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 86 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 88 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 89 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 91 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 92 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 94 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 95 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 97 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 98 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 100 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 101 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 103 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 104 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 106 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 107 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 109 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 110 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 112 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 113 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 115 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 116 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 118 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 119 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 121 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 122 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 124 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 125 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 127 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 128 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 130 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 131 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 133 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 134 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 136 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 137 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 139 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 140 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 142 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 143 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 145 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 146 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 148 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 149 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 151 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 152 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 154 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 155 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 157 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 160 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 161 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 163 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 167 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 169 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 170 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 172 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 173 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 175 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 176 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 178 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 179 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 181 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 182 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 184 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 185 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 187 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 188 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 190 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 191 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 193 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 194 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 196 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 197 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 199 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 200 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 202 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 203 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 205 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 206 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 208 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 209 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 211 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 212 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 214 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 215 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 217 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 218 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 220 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 221 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 223 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 224 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 226 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 227 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 235 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 236 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 238 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 239 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 241 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 242 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 244 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 245 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 247 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 248 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 250 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 251 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 253 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 254 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 256 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 257 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 259 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 260 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 262 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 263 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 265 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 266 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 268 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 269 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 271 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 272 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 274 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 275 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 277 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 278 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 280 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 281 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 283 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 284 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 286 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 287 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 289 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 290 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 292 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 293 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 295 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 296 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 298 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 299 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 301 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 302 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 304 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 305 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 307 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 308 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 310 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 311 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 313 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 314 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 316 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 317 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 319 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 320 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 322 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 323 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 325 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 326 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 328 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 329 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 331 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 332 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 334 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 335 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 337 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 338 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 340 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 341 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 343 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 344 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 346 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 347 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 349 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 350 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 352 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 353 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 355 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 356 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 358 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 359 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 361 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 362 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 364 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 365 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 367 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 368 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 370 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 371 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 373 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 374 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 376 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 377 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 379 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 380 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 382 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 383 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 385 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 386 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 388 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 389 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 391 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 392 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 394 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 395 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 397 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 398 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 400 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 401 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 403 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 404 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 406 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 407 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 409 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 410 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 412 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 413 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 415 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 416 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 418 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 419 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 421 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 422 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 424 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 425 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 427 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 428 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 430 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 431 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 433 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 434 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 436 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 437 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 439 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 440 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 442 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 443 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 445 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 446 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 448 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 449 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 451 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 452 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 454 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 455 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 457 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 458 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 460 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 461 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 463 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 464 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 466 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 467 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 469 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 470 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 472 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 473 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 475 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 476 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 478 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 479 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 481 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 482 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 484 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 485 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 487 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 488 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 490 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 491 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 493 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 494 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 496 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 497 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 499 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 500 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 502 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 503 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 505 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 506 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 508 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 509 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 511 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 512 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 514 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 515 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 517 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 518 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 520 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 521 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 523 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 524 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 526 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 527 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 529 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 530 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 532 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 533 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 535 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 536 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 538 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 539 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 541 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 542 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 544 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 545 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 547 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 548 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 550 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 551 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 553 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 554 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 556 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 557 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 559 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 560 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 562 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 563 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 565 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 566 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 568 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 569 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 571 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 572 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 574 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 575 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 577 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 578 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 580 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 581 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 583 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 584 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 586 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 587 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 589 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 590 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 592 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 593 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 595 converted OK (glslver=330 -> essl ver=320)
-[MG] Shader 596 converted OK (glslver=330 -> essl ver=320)
+[19:34:46] [Android Thread-20/INFO]: Initializing MobileGL...
+[19:34:46] [Android Thread-20/INFO]: Config: Active backend type set to DirectVulkan
+[19:34:46] [Android Thread-20/INFO]: Config loaded
+[19:34:46] [Android Thread-20/INFO]: MobileGL Backend Info:
+[19:34:46] [Android Thread-20/INFO]:   Renderer Name: Magma
+[19:34:46] [Android Thread-20/INFO]:   Backend Name: Direct (Vulkan)
+[19:34:46] [Android Thread-20/INFO]:   Target OpenGL Version: 4.6
+[19:34:46] [Android Thread-20/INFO]:   Target GLSL Version: 4.6
+[19:34:46] [Android Thread-20/INFO]:   OpenGL Extensions:
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL30
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL31
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL32
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL33
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL40
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL41
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL42
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL43
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL44
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL45
+[19:34:46] [Android Thread-20/INFO]:     - OpenGL46
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_draw_buffers_blend
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_compute_shader
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shader_storage_buffer_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shader_image_load_store
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_clear_buffer_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_program_interface_query
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_framebuffer_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_draw_indirect
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_multi_draw_indirect
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_indirect_parameters
+[19:34:46] [Android Thread-20/INFO]:     - GL_EXT_framebuffer_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_depth_texture
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_buffer_storage
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_storage
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_storage_multisample
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_multisample
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_clear_texture
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_direct_state_access
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shader_draw_parameters
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_gpu_shader_int64
+[19:34:46] [Android Thread-20/INFO]:     - GL_KHR_debug
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_gpu_shader5
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_multi_bind
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shading_language_420pack
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_vertex_attrib_binding
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shader_image_size
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_explicit_attrib_location
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_uniform_buffer_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_stencil_texturing
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_view
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_draw_elements_base_vertex
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_sync
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_shader_atomic_counters
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_instanced_arrays
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_vertex_array_object
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_sampler_objects
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_map_buffer_range
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_copy_buffer
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_copy_image
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_swizzle
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_vertex_type_2_10_10_10_rev
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_rg
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_depth_buffer_float
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_texture_float
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_viewport_array
+[19:34:46] [Android Thread-20/INFO]:     - GL_ARB_get_program_binary
+[19:34:46] [Android Thread-20/INFO]:     - GL_KHR_parallel_shader_compile
+[19:34:47] [Android Thread-20/INFO]: MobileGL initialized
+[19:34:47] [Android Thread-20/INFO]: Got 13 Vulkan instance extensions: 
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_surface (r.25)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_surface_protected_capabilities (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_android_surface (r.6)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_swapchain_colorspace (r.4)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_get_surface_capabilities2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_GOOGLE_surfaceless_query (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_surface_maintenance1 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_debug_report (r.10)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_device_group_creation (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_fence_capabilities (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_memory_capabilities (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_semaphore_capabilities (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_get_physical_device_properties2 (r.2)
+[19:34:47] [Android Thread-20/INFO]: Validation layers not available.
+[19:34:47] [Android Thread-20/INFO]: Validation layers not requested.
+[19:34:47] [Android Thread-20/INFO]: Enabling 2 Vulkan instance extensions:
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_surface
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_android_surface
+[19:34:47] [Android Thread-20/INFO]: Found 1 physical device(s).
+[19:34:47] [Android Thread-20/INFO]:     Mali-G610 MC6 (Vulkan 1.1.177, INTEGRATED_GPU)
+[19:34:47] [Android Thread-20/INFO]: Got 71 Vulkan device extensions: 
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_incremental_present (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shared_presentable_image (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_GOOGLE_display_timing (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_swapchain_maintenance1 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_16bit_storage (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_8bit_storage (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_bind_memory2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_buffer_device_address (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_create_renderpass2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_dedicated_allocation (r.3)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_depth_stencil_resolve (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_descriptor_update_template (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_device_group (r.4)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_draw_indirect_count (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_driver_properties (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_fence (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_fence_fd (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_memory (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_memory_fd (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_semaphore (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_external_semaphore_fd (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_get_memory_requirements2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_image_format_list (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_imageless_framebuffer (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_maintenance1 (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_maintenance2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_maintenance3 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_multiview (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_relaxed_block_layout (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_sampler_mirror_clamp_to_edge (r.3)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_sampler_ycbcr_conversion (r.14)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_separate_depth_stencil_layouts (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shader_draw_parameters (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shader_float16_int8 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shader_float_controls (r.4)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shader_non_semantic_info (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_shader_subgroup_extended_types (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_spirv_1_4 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_storage_buffer_storage_class (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_timeline_semaphore (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_uniform_buffer_standard_layout (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_variable_pointers (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_vulkan_memory_model (r.3)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_astc_decode_mode (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_calibrated_timestamps (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_descriptor_indexing (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_fragment_density_map (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_fragment_density_map2 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_global_priority (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_host_query_reset (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_image_robustness (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_index_type_uint8 (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_inline_uniform_block (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_line_rasterization (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_provoking_vertex (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_queue_family_foreign (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_device_memory_report (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_sampler_filter_minmax (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_scalar_block_layout (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_separate_stencil_usage (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_subgroup_size_control (r.2)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_texture_compression_astc_hdr (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_shader_subgroup_ballot (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_shader_subgroup_vote (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_transform_feedback (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_external_memory_dma_buf (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_image_drm_format_modifier (r.1)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_custom_border_color (r.12)
+[19:34:47] [Android Thread-20/INFO]:     VK_ANDROID_external_memory_android_hardware_buffer (r.3)
+[19:34:47] [Android Thread-20/INFO]:     VK_KHR_swapchain (r.70)
+[19:34:47] [Android Thread-20/INFO]:     VK_EXT_4444_formats (r.1)
+[19:34:47] [Android Thread-20/INFO]: Required extension found: VK_KHR_swapchain
+[19:34:47] [Android Thread-20/INFO]:     Picked physical device. (Reason: First suitable device)
+[19:34:47] [Android Thread-20/INFO]: Picked physical device 0.
+[19:34:47] [Android Thread-20/INFO]: Vulkan: multiViewport UNAVAILABLE; rasterizable viewports=1 (device limit 1, GL state width 16)
+[19:34:47] [Android Thread-20/WARN]: Vulkan: the device does not support the multiViewport feature; gl_ViewportIndex will always select viewport 0 and per-viewport scissor/depth-range state past index 0 cannot be rasterized (the state itself is still stored and queryable)
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_KHR_draw_indirect_count
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_KHR_shader_draw_parameters
+[19:34:47] [Android Thread-20/INFO]: VK_KHR_image_format_list enabled: true
+[19:34:47] [Android Thread-20/INFO]: VK_KHR_draw_indirect_count enabled: true
+[19:34:47] [Android Thread-20/INFO]: Vulkan: update-after-bind descriptor layouts enabled
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_EXT_index_type_uint8
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_EXT_custom_border_color (maxCustomBorderColorSamplers=4294967295)
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_EXT_subgroup_size_control (computeFullSubgroups)
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_EXT_transform_feedback
+[19:34:47] [Android Thread-20/INFO]: Enabled optional device extension: VK_EXT_provoking_vertex (transformFeedbackPreservesProvokingVertex=false)
+[19:34:47] [Android Thread-20/WARN]: VK_EXT_vertex_attribute_divisor is unavailable; a glVertexAttribDivisor other than 1 will advance its attribute once per instance
+[19:34:47] [Android Thread-20/INFO]: Device feature support: robustBufferAccess=true geometryShader=true independentBlend=true logicOp=false shaderClipDistance=false shaderCullDistance=false wideLines=false shaderInt64=false vertexStoresAtomics=false fragmentStoresAtomics=true storageImageExtendedFormats=true storageImageReadWithoutFormat=true storageImageWriteWithoutFormat=true drawIndirectFirstInstance=true multiDrawIndirect=true
+[19:34:47] [Android Thread-20/INFO]: Device feature enabled: robustBufferAccess=true geometryShader=true independentBlend=true logicOp=false shaderClipDistance=false shaderCullDistance=false wideLines=false shaderInt64=false vertexStoresAtomics=false fragmentStoresAtomics=true storageImageExtendedFormats=true storageImageReadWithoutFormat=true storageImageWriteWithoutFormat=true drawIndirectFirstInstance=true multiDrawIndirect=true shaderDrawParameters=true
+[19:34:47] [Android Thread-20/INFO]: Multi-draw dispatch tier: indirect (VK_EXT_multi_draw=false, multiDrawIndirect=true, mode=auto)
+[19:34:47] [Android Thread-20/INFO]: index type uint8 enabled: true
+[19:34:47] [Android Thread-20/INFO]: Logical device created.
+[19:34:47] [Android Thread-20/INFO]: Queues got successfully.
+[19:34:47] [Android Thread-20/INFO]: Timer queries supported (timestampValidBits=64, timestampPeriod=76.923080 ns/tick)
+[19:34:47] [Android Thread-20/WARN]: PRIMITIVES_GENERATED probe did not run (vkGetQueryPoolResults(triangles) failed); XFB-inactive draws keep the stream query
+[19:34:47] [Android Thread-20/INFO]: Command pool created
+[19:34:47] [Android Thread-20/INFO]: MaxFramesInFlight: configured request=3
+[19:34:47] [Android Thread-20/INFO]: MaxFramesInFlight: using 3 (surface minImageCount=4, maxImageCount=64)
+[19:34:47] [Android Thread-20/INFO]: CreateFrameContexts completed
+[19:34:47] [Android Thread-20/INFO]: DirectVulkan: using 256 program descriptor bindings
+[19:34:47] [Android Thread-20/INFO]: Got 5 surface formats:
+[19:34:47] [Android Thread-20/INFO]: Picked surface format: [VK_FORMAT_R8G8B8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR]
+[19:34:47] [Android Thread-20/INFO]: Got 4 present modes:
+[19:34:47] [Android Thread-20/INFO]: Picked present mode: VK_PRESENT_MODE_MAILBOX_KHR
+[19:34:47] [Android Thread-20/INFO]: Set minImageCount = 4
+[19:34:47] [Android Thread-20/INFO]: Swapchain currentTransform = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+[19:34:47] [Android Thread-20/INFO]: Swapchain imageUsage = 0x13 (supportedUsageFlags = 0x9f)
+[19:34:47] [Android Thread-20/INFO]: Set swapchain preTransform = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+[19:34:47] [Android Thread-20/INFO]: Swapchain image views created
+[19:34:48] [Android Thread-20/INFO]: Swapchain created, extent = 2360x1080, swapchain imageCount = 4
+[19:34:48] [Android Thread-20/INFO]: Vulkan shader subgroup support: detected=true advertised=true size=16 stages=0x30 operations=0xff
+[19:34:48] [Android Thread-20/INFO]: DirectVulkan: clamped GL_MAX_COMPUTE_SHADER_STORAGE_BLOCKS from 500000 to 256
+[19:34:48] [Android Thread-20/INFO]: DirectVulkan: clamped GL_MAX_COMBINED_SHADER_STORAGE_BLOCKS from 500000 to 256
+[19:34:48] [Android Thread-20/INFO]: DirectVulkan: clamped GL_MAX_SHADER_STORAGE_BUFFER_BINDINGS from 500000 to 256
+[19:34:48] [Android Thread-20/INFO]: DirectVulkan: clamped GL_MAX_TEXTURE_BUFFER_SIZE from 268435456 to 134217728
+[19:34:48] [Android Thread-20/ERROR]: NormalizePixelFormat: outFormat: unhandled internalFormat: GL_STENCIL_INDEX8
+[19:34:48] [Android Thread-20/ERROR]: NormalizePixelFormat: outType: unhandled internalFormat: GL_STENCIL_INDEX8
+[19:34:49] [Android Thread-20/WARN]: Stub function: glDebugMessageControl(...)
+[19:34:49] [Android Thread-20/WARN]: Stub function: glDebugMessageCallback(...)
+[19:34:59] [Android Thread-20/WARN]: GetOrCreateRenderPass: depth/stencil attachment id=9 starts with undefined layout and partial/no clear; using DONT_CARE for uncleared aspects
+[19:35:04] [Android Thread-20/WARN]: GetOrCreateRenderPass: color attachment textureId=27 starts with undefined layout and no clear; using LOAD_OP_DONT_CARE
+[19:35:16] [Android Thread-20/INFO]: VulkanRenderer shut down completed
+[19:35:16] [Android Thread-20/INFO]: MobileGL closing...
