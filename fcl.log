@@ -1,0 +1,125 @@
+[18:20:03] [com.tungsten.fcl.activity.SplashActivity.initState/INFO] Using DNS servers for game: [8.8.8.8, 8.8.4.4, 223.5.5.5, 119.29.29.29]
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[18:20:04] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[], baseDirectory=/storage/emulated/0/Android/data/com.tungsten.fcl/files/.minecraft]] gets fired
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[18:20:04] [com.tungsten.fclcore.auth.authlibinjector.AuthlibInjectorDownloader.checkUpdate/INFO] Checking update of authlib-injector
+[18:20:04] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[Fabulously Optimized], baseDirectory=/storage/emulated/0/FCL/.minecraft]] gets fired
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[18:20:04] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[Fabulously Optimized], baseDirectory=/storage/emulated/0/FCL/.minecraft]] gets fired
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:57)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:162)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.upgrade.UpdateChecker.check(UpdateChecker.java:55)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:56)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:56)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:161)
+[18:20:04] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:57)
+[18:20:06] [com.tungsten.fcl.game.LauncherHelper.launch/INFO] Launching game version: Fabulously Optimized
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StagesHintTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$64@ed5ccc9
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@50ef4d0
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@692c93
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@21c2d82
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@e4df0cd
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$59@768d664
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$58@be607f7
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkGameState(LauncherHelper.java:568)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkGameState(LauncherHelper.java:568)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$58@be607f7
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:178)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameLibrariesTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:178)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@57049ea
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameAssetDownloadTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:166)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameAssetIndexDownloadTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.DefaultDependencyManager.checkGameCompletionAsync(DefaultDependencyManager.java:83)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.DefaultDependencyManager.checkGameCompletionAsync(DefaultDependencyManager.java:83)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.mod.modrinth.ModrinthCompletionTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.DefaultDependencyManager.checkPatchCompletionAsync(DefaultDependencyManager.java:102)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameAssetIndexDownloadTask
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: 下载整合包相关文件
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:166)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.DefaultDependencyManager.checkPatchCompletionAsync(DefaultDependencyManager.java:102)
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@57049ea
+[18:20:06] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameLibrariesTask
+[18:20:07] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:161)
+[18:20:07] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:162)
+[18:20:07] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.upgrade.UpdateChecker.check(UpdateChecker.java:55)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: 检查资源文件完整性
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$59@768d664
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@e4df0cd
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@21c2d82
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameVerificationFixTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameVerificationFixTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@692c93
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.logIn(LauncherHelper.java:633)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.logIn(LauncherHelper.java:633)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@50ef4d0
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:266)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$26@c1d349c
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$25@49c0f
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$24@261fd6e
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$23@9429ce9
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$21@c2a7170
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$20@94837b3
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$19@b71f122
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:202)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:202)
+[18:20:09] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$11(LauncherHelper.java:246)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$11(LauncherHelper.java:246)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$19@b71f122
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkPathValid(LauncherHelper.java:378)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkPathValid(LauncherHelper.java:378)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$20@94837b3
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkRenderer(LauncherHelper.java:410)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkRenderer(LauncherHelper.java:410)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$21@c2a7170
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkNativeLibPlugin(LauncherHelper.java:448)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkNativeLibPlugin(LauncherHelper.java:448)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$23@9429ce9
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkModLoader(LauncherHelper.java:479)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkModLoader(LauncherHelper.java:479)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$24@261fd6e
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkMod(LauncherHelper.java:507)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$13@1f27e2a
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$13@1f27e2a
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkMod(LauncherHelper.java:507)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$25@49c0f
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$26@c1d349c
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:266)
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$64@ed5ccc9
+[18:20:10] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StagesHintTask
+[18:20:10] [com.tungsten.fcl.game.LauncherHelper.lambda$launch0$19/INFO] Start JVMActivity!
+[18:20:11] [com.tungsten.fcl.activity.JVMActivity.onSurfaceTextureAvailable/INFO] surface ready, start jvm now!
+[18:20:50] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: loading SDL3
+[18:20:50] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: loading SDL2
+[18:20:50] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: setting up SDL JNI
+[18:20:50] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: binding SDL surface
+[18:20:50] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: SDL support enabled!
