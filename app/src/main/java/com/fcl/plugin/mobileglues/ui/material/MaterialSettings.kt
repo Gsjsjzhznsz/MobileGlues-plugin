@@ -192,7 +192,9 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                     )
                     // FSR1 目前只落在 GLES 家族后端（DirectGLES / MobileGlues）；
                     // Vulkan 直连是路线图上的未完成项。开着开关却毫无动静是最伤
-                    // 体验的组合，这里在设置页把它挑明。
+                    // 体验的组合，这里在设置页把它挑明，并给出一键修复：切到
+                    // MobileGlues（GLES）核心 —— FSR1 在那里已完整落地，FSR1
+                    // 的档位/锐化设置原样保留，切过去即生效。
                     if (config.backend == RendererBackend.DirectVulkan) {
                         Text(
                             text = stringResource(R.string.fsr1_backend_unsupported_hint),
@@ -200,6 +202,12 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                             color = MaterialTheme.colorScheme.error,
                             modifier = Modifier.padding(horizontal = ScreenPadding, vertical = 8.dp),
                         )
+                        Button(
+                            onClick = { controller.selectBackend(RendererBackend.MobileGlues) },
+                            modifier = Modifier.padding(horizontal = ScreenPadding, vertical = 4.dp),
+                        ) {
+                            Text(stringResource(R.string.fsr1_backend_switch_action))
+                        }
                     }
                 }
             }

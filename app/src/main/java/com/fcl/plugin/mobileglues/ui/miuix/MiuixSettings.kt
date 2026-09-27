@@ -46,6 +46,7 @@ import top.yukonga.miuix.kmp.basic.ButtonDefaults
 import top.yukonga.miuix.kmp.basic.Card
 import top.yukonga.miuix.kmp.basic.TabRowWithContour
 import top.yukonga.miuix.kmp.basic.Text
+import top.yukonga.miuix.kmp.basic.TextButton
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import top.yukonga.miuix.kmp.utils.scrollEndHaptic
 
@@ -208,14 +209,21 @@ private fun ConfigSections(controller: AppController, config: MGConfig) {
                         onPositionChange = controller::setFsr1Sharpness,
                         onDragFinished = {},
                     )
-                    // 与 Material 主题同款提示：FSR1 只落在 GLES 家族后端，
-                    // Vulkan 直连是路线图上的未完成项，别让开关静默无效。
+                    // 与 Material 主题同款提示 + 一键修复：FSR1 只落在 GLES
+                    // 家族后端，Vulkan 直连尚未支持；按钮直接切到 MobileGlues
+                    // （GLES）核心，FSR1 设置原样保留，切过去即生效。
                     if (config.backend == RendererBackend.DirectVulkan) {
                         Text(
                             text = stringResource(R.string.fsr1_backend_unsupported_hint),
                             style = MiuixTheme.textStyles.body2,
                             color = MiuixTheme.colorScheme.error,
                             modifier = Modifier.padding(horizontal = MiuixScreenPadding, vertical = 8.dp),
+                        )
+                        TextButton(
+                            text = stringResource(R.string.fsr1_backend_switch_action),
+                            onClick = { controller.selectBackend(RendererBackend.MobileGlues) },
+                            modifier = Modifier.fillMaxWidth().padding(horizontal = MiuixScreenPadding, vertical = 4.dp),
+                            colors = ButtonDefaults.textButtonColorsPrimary(),
                         )
                     }
                 }
