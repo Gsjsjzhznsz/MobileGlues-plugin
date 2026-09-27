@@ -89,6 +89,28 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 
 ---
 
+## Task 3（2026-09-27）—— 第六轮闪屏报告：证据僵局定性与打破（本轮无代码改动，属刻意决定）
+
+### 用户输入
+"还是闪屏"。Task 2 修复版报告第六次症状不变。
+
+### 本轮核实（全部有据）
+1. **Task 2 APK 确实构建成功且可交付**：CI run 36318313366（host 83c03f2）success，产物 `MobileGlues-plugin_2026-09-27_83c03f2…zip`（10MB，未过期）。三仓库本地=远端（host 83c03f2 / MobileGlues 3634c4d / MobileGL 1cb70fa），推送链无断点。main 分支的两个失败 CI（5aeb4cc、55fe420）与本分支无关。
+2. **用户手里没有新证据**：仓库根三份日志 diff 为 0（b026f05 旧件，时间戳 18:20 会话，latest.log 止步 Shader #596）。无任何 Task 2 遥测行（present context / present skipped / surface identity 均为 Task 1/2 新增，旧构建不含）→ **用户尚未运行过带判定遥测的构建，或未回传其日志**。
+3. **已构建代码的第七次静态审计（本轮，逐行）**：三 swap 入口（SwapBuffers / WithDamageKHR / WithDamageEXT）全部汇入 presentSurface 单漏斗；门控（fsrInitialized 检查 → ConsumePresentDirty）与三置脏点（bind-0 重定向 framebuffer.cpp:191、blit 重写 dst 分支 :495、viewport 重定向分支 FSR1.cpp:828）齐备；ApplyFSR 的 EASU→targetFBO / RCAS→真 FB0（GLES 裸 bind 0，绕过前端重定向，注释明确）结构正确；CheckResolutionChange 仅信 swap 时 surface query，viewport 钩子明确不读尺寸（Zalith 永久窗口>surface 案例注释在案）。**结论：漏斗内无可再盲修的洞**。
+
+### 僵局定性
+六轮修复对症状零影响 + 旧日志游戏期零 FSR 行 + 新遥测从未运行 ⇒ 现存两大假设（①第二上下文共面同一 surface 交替呈现；②surface/上下文身份在 swap 轴上交替）**只能靠 83c03f2 构建的内置遥测区分**，第七次盲修的期望收益为负。本轮刻意零代码改动。
+
+### 打破僵局所需（转交用户的两个动作）
+1. 安装 **83c03f2 构建**（Actions run 36318313366 → Artifacts → 文件名含 83c03f2；装错旧包是当前无法排除的头号假阴性源）。
+2. 开 FSR（preset 4）进游戏，**让闪屏持续 ≥30 秒**后退出，回传 latest.log + latest_game.log（照旧传仓库根）。判定表沿用 Task 2 版：present context 交替 ⇒ 双上下文；surface identity 翻转 ⇒ surface 轴；干净无行 ⇒ 症状重新定性（非 FSR 机制 / 未装新包）。
+
+### 推送与状态
+- 本轮仅 worklog 更新（本节），随下一轮代码一起推送；三仓库无代码变更。
+
+---
+
 ## Task 2（2026-09-27）—— FSR 闪屏根因定案：多上下文无条件 ApplyFSR + present 时惰性初始化；per-context 交换门控修复
 
 ### 用户输入
