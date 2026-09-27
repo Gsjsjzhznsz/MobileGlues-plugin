@@ -8,7 +8,7 @@ MG_DIR_PATH = /sdcard/MG
 [MobileGlues] Setting: enableExtComputeShader      = false
 [MobileGlues] Setting: enableExtTimerQuery         = true
 [MobileGlues] Setting: enableExtDirectStateAccess  = false
-[MobileGlues] Setting: maxGlslCacheSize            = 65
+[MobileGlues] Setting: maxGlslCacheSize            = 64
 [MobileGlues] Setting: angleDepthClearFixMode      = 0
 [MobileGlues] Setting: bufferCoherentAsFlush       = 1
 [MobileGlues] Setting: customGLVersion             = 4.0.0
@@ -18,7 +18,7 @@ MG_DIR_PATH = /sdcard/MG
 EGL initialized successfully
 OpenGL ES Version: OpenGL ES 3.2 (320)
 Not Detected GL_EXT_multi_draw_indirect!
-Enable-capability extensions: multisample_compatibility=0 clip_cull_distance=1 depth_clamp=0 sRGB_write_control=1 NV_polygon_mode=0 OES_sample_shading=1
+Enable-capability extensions: multisample_compatibility=0 clip_cull_distance=0 depth_clamp=0 sRGB_write_control=1 NV_polygon_mode=0 OES_sample_shading=1
 multidrawMode/multidrawDisableBackends are no longer used. The selection is an order now: multidrawOrder (global, backend names best first, may contain "native") and multidrawOrder<EntryPoint> for per-function exceptions.
 multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MobileGlues] multidrawOrderArrays               = unroll
@@ -26,13 +26,13 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MobileGlues] multidrawOrderElementsBaseVertex   = basevertex > indirect > compute > unroll
 [MobileGlues] multidrawOrderArraysIndirect       = indirect
 [MobileGlues] multidrawOrderElementsIndirect     = indirect
-[MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2284x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
-[MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2284x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
+[MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
+[MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
 [MG] Shader 2 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 3 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 5 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 6 converted OK (glslver=450 -> essl ver=320)
-[MG] FSR1 ready: preset 4, sharpening 90%, surface 1280x720 (init #3, ctx 0x7b879ad2e0)
+[MG] FSR1 ready: preset 4, sharpening 90%, surface 1280x720 (init #3, ctx 0x7408ab5170)
 [MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
@@ -40,10 +40,13 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MG] FSR1 redirect active: framebuffer 0 -> render 640x360 (surface 1280x720)
 [MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.280x0.333, view 2284x1080): -> 0,0 2284x1080 draw 0,0 640x360
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.280x0.333, view 2284x1080): -> 0,0 2284x1080 draw 0,0 640x360
-[MG] FSR1 targets recreated #1: render 1142x540, surface 2284x1080
-[MG] FSR1 surface latched: 2284x1080 -> render 1142x540
+[MG] FSR1 window-units latch rejected (air Task 82): 2360x1080 is not a window viewport (surface 1280x720, latch 0x0) -- intermediate render pass kept out of the upscale geometry
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
+[MG] FSR1 present context #1: 0x7408ab5170
+[MG] FSR1 surface identity #1: surface 0x7408ab50e0 now 2360x1080
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
+[MG] FSR1 targets recreated #1: render 1180x540, surface 2360x1080
+[MG] FSR1 surface latched: 2360x1080 -> render 1180x540
 [MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
