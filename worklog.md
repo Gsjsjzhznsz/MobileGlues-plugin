@@ -4,7 +4,7 @@
 
 ## ⚡ READ ME FIRST —— 会话速览
 
-> 最后更新：Task 1（2026-09-27，FSR 闪屏第四轮：移植 air（Amethyst fork）Task 82 视口锁存形状过滤到双端 + surface 身份/呈现上下文两条决定性遥测；确认 air MobileGL 方案 = mgl_fsr.mm 桥接层呈现前 EASU+RCAS，插件侧对应物 = vendored 核内置 FSR1 + dispatcher config→env 桥接，链路已验证完整）。
+> 最后更新：Task 2（2026-09-27，FSR 闪屏第五轮：**闪屏根因定案**——多上下文无条件 ApplyFSR + present 时惰性初始化是毒源；修复 = per-context redirect-dirty 交换门控 + 移除惰性初始化；g_dirty 只设不消费的架构洞补上；独立 TU 9/9；等待装机验证）。
 > 新会话规则：新任务记录**追加到本文件最末尾**（`## Task N` 模板）；收尾时同步更新「当前状态」表；本文件超 ~400 行时把最旧 Task 段挪进 worklog-archive.md。
 
 ### 一句话
@@ -15,8 +15,8 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 |---|---|
 | FSR 配置链（已验证） | 插件写 /sdcard/MG/config.json（fsr1Setting 0-4 / fsr1Sharpness 0-100 / backendType）→ dispatcher mg_config_scan（MG_DIR_PATH 优先）→ MobileGlues 核 settings.cpp 直读；MobileGL 核走 setenv("MOBILEGL_FSR1"/"MOBILEGL_FSR1_SHARPNESS") → DirectGLES FSR1 IsEnabled() 惰性 getenv |
 | **DirectVulkan 无 FSR（结构性）** | FSR1 只实现于 GLES 家族；用户若停在默认后端 DirectVulkan，FSR 必然无效。UI 的 FSR 区块已有红字提示 + 一键"切换后端到 GLES"按钮 |
-| 已知闪屏修复史 | ①viewport 触发的 target 翻转（改为 swap 时 surface query 唯一尺寸权威）②surface query 翻转（pendingStreak≥2 去抖）③编译失败自禁用（不再 0x0 视口循环）④本轮：units 锁存形状过滤（air Task 82） |
-| 待用户装机验证 | 本轮 Task 1 锚点（见文末判定表）|
+| 已知闪屏修复史 | ①viewport 触发的 target 翻转（改为 swap 时 surface query 唯一尺寸权威）②surface query 翻转（pendingStreak≥2 去抖）③编译失败自禁用（不再 0x0 视口循环）④air Task 82 units 锁存形状过滤 ⑤**本轮：多上下文无条件 ApplyFSR + present 时惰性初始化（根因定案，见 Task 2）** |
+| 待用户装机验证 | Task 2 锚点：干净单上下文会话应零 skip 日志；若仍闪，`FSR1 present skipped #N (ctx …)` 与 `present context #N` 直接暴露交替 |
 | 推送纪律 | **子模块先、宿主后**；token 配 remote；CI 把关构建（本地无 Android SDK）|
 | 沙箱生存 | /home/z/my-project 会被重置：repo 重 clone + `submodule update --init`；本 worklog 在仓库内所以永存 |
 
@@ -86,3 +86,38 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 遗留 / 下一步
 - 内置 FSR1 → Arm ASR 替换（计划不变）；DirectVulkan 原生 FSR（SPIR-V 双管线挂 Present）为下一个功能里程碑
 - 悬浮底栏居中；BandQQ 主题 + 液态玻璃完整移植；预测手势补齐
+
+---
+
+## Task 2（2026-09-27）—— FSR 闪屏根因定案：多上下文无条件 ApplyFSR + present 时惰性初始化；per-context 交换门控修复
+
+### 用户输入
+"还是一样闪屏"（新构建 = Task 1 的 Task 82 过滤 + 遥测版，无新日志上传）。
+—— 四轮尺寸轴修复（翻转/去抖/自禁用/形状过滤）对症状零影响，这是第五轮，换轴。
+
+### 根因链（本轮定案，证据全部对齐）
+1. **b026f05 日志的 `init #3`（ctx 0x7b879ad2e0）**：单会话内三个上下文各自跑过 InitFSRResources（每上下文状态交换机把新上下文的 fsrInitialized 载入为 false → 首个 glCreateShader/lazy present 触发再初始化）。fcl.log 证实 TextureView + SDL 桥架构，进程内多上下文是结构性的。
+2. **egl.cpp presentSurface 对每个上下文的每次 swap 无条件 ApplyFSR**；`g_dirty`（"画进了重定向"标志）在 framebuffer.cpp 只设不消费——全代码库无读取方（grep 实锤）。门控语义存在但缺失消费端。
+3. **present 时惰性初始化是毒源**：从不编译着色器的裸呈现场景（SDL/TextureView 桥家族、helper 上下文）首个 swap 即被征召为完整 FSR 参与者——拥有自己的 renderFBO，bind 0 被重定向进去，下一次 swap 把这个**没人渲染的空目标**放大铺满整个 surface。
+4. 与游戏正确帧逐帧交替 = 疯狂闪屏；且该循环里 surface 尺寸/身份/目标数全部恒定 → 尺寸轴遥测（churn/identity/翻转）全零，**完美解释四轮修复全部扑空与日志零痕迹**。
+
+### 修复落盘（MobileGlues 4 文件，3634c4d）
+- **FSR1.h/FSR1.cpp**：`FSR1_Context::g_presentDirty`（ rides 既有每上下文状态交换）；`FSR1_NoteRedirectDraw()` / `FSR1_ConsumePresentDirty()`。
+- **三处置脏点**（都向"当前上下文"标记）：① framebuffer.cpp bind-0 重定向 ② 同文件 blit 重写 dst 分支 ③ FSR1.cpp glViewport 重定向分支（保证"只绑一次 0、之后每帧只画"的游戏不因门控而冻结——每帧 viewport 必经此处）。
+- **egl.cpp presentSurface 重写**：惰性初始化**移除**（未初始化上下文裸透传，初始化只留在 glCreateShader 触发点）；`ConsumePresentDirty()==false` → 跳过 ApplyFSR 裸呈现 + 限频日志（前 24 次 + 每 256 次，带 ctx 句柄）；CheckResolutionChange 在跳过路径同样运行（尺寸权威与 identity 遥测不缺帧）。
+- present context #N 遥测移到门控之前（交替即使被跳过也会被记录）。
+
+### 验证
+- 独立 TU 复刻门控状态机 **9/9**（scripts/fsr_gate_test.cpp；沿用"桌面全文件编译受阻、以独立 TU + CI 为准"方法论）：游戏稳态每帧 Apply / 只绑一次不冻结 / blit 呈现开门 / **裸呈现场景跳过且游戏标志跨交换存活** / 无跨上下文泄漏 / 未初始化裸透传 / forget 后干净回归 / Disabled 路径零副作用 / 遥测节奏 24+3。
+- 编辑文件括号平衡快检通过；完整编译由 CI（NDK/libc++）把关。
+
+### 下份日志判定表（Task 2 版）
+1. **干净**（单上下文）：`FSR1 ready (init #N)`、`redirect active`、`surface latched` 之后游戏期零新增 FSR 行、**零 skip 行** → 门控静默，闪屏应消失。若用户仍报闪屏而日志如此 ⇒ 症状重新定性（非 FSR 机制）。
+2. `FSR1 present skipped #N (ctx 0x…)` 零星出现（≤24 条后停）⇒ 有偶发空呈现场景（正常，已被挡）。
+3. `present skipped` 与 `present context` **高频交替且 ctx 不同** ⇒ 第二上下文活着且在呈现（门控挡住了它的空帧）⇒ 若此时不再闪屏，根因实锤；若仍闪 ⇒ 升级调查两个上下文的具体角色（需 eglMakeCurrent ETRACE 或针对性遥测）。
+4. `targets recreated`/`surface identity` 高频 ⇒ 尺寸轴另有问题（回到 Task 1 判定表 3/4）。
+5. 完全无 FSR 行 + 后端非 GLES ⇒ 后端/结构问题（UI 一键切 GLES）。
+
+### 推送与状态
+- MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends **3634c4d**（子模块先行）；宿主（本文件 + 子模块 pin）紧随其后；CI 绿后交付 APK。
+- MobileGL 本轮未动（用户症状只在 MobileGlues 侧；其 Task 82 过滤已在上游）。
