@@ -312,7 +312,11 @@ enum class Fsr1Preset(
     UltraQuality(1, R.string.option_fsr1_preset_ultra_quality),
     Quality(2, R.string.option_fsr1_preset_quality),
     Balanced(3, R.string.option_fsr1_preset_balanced),
-    Performance(4, R.string.option_fsr1_preset_performance);
+    Performance(4, R.string.option_fsr1_preset_performance),
+    // native FSR1_Quality_Preset::Bypass：重定向/门控/尺寸与性能优先完全一致，
+    // 唯独呈现时用一次 NEAREST blit 代替 EASU+RCAS 两趟着色器。用于把闪屏
+    // 归因到"着色器趟"还是"重定向及以下"（run 48f4b1c 判定表结论的后续）。
+    Bypass(5, R.string.option_fsr1_preset_bypass);
 
     override fun label(context: Context): CharSequence = context.getString(labelRes)
 

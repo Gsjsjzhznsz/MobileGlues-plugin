@@ -89,6 +89,36 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 
 ---
 
+## Task 4（2026-09-28）—— 判定表裁决落地：漏斗无罪；空-latch 播种修复 + Bypass 诊断档（第 5 档）
+
+### 用户输入
+"还是闪屏。"（Task 2 修复版报告第七次不变；本轮用户按 Task 3 指引回传了新构建日志 48f4b1c —— 首次拿到判定遥测数据）
+
+### 日志裁决（48f4b1c，83c03f2 构建，Redmi K20 Pro / SM8150 / Adreno 640，00:32 会话）
+- **配置链全通**：`fsr1 from config.json: preset 4` → `MOBILEGL_FSR1 override applied: 4` → `fsr1Setting = 4` → ready/redirect/latched 全齐（本次是 dispatcher + vendored MobileGlues 拓扑，与旧会话的 standalone 拓扑**都**闪屏 ⇒ dispatcher 层排除，嫌疑收敛到公共层）
+- **游戏期（00:32:08→00:32:58 共 50 秒）漏斗全程静默**：`present context` =1（单上下文零交替）、`present skipped` =0（门控零触发）、`surface identity` =1（仅启动 1280x720→2360x1080 一次后恒定）、零 targets recreated、零 latch rejected——**Task 2 判定表情形 1 命中 ⇒ 六轮所修的全部机制在闪屏期间处于稳定状态，症状正式重新定性**
+- **顺带实锤一个真 bug**：`latch rejected: 2360x1080`（启动时 surface 仍 1280x720，宽高比 2.185 vs 1.778 双规则全不命中 ⇒ 真窗口被误杀）→ blit 重写用空-latch 回退比例（render/target=0.5）把 2360x1080 画成 1180x540 塞进 640x360 的 FBO（过冲裁切）。本会话靠 surface 翻转自愈（翻转后 target==window 巧合相等），但 Zalith 型（窗口 2360x1080 / surface 1920x1080 永久不等）会永久腐败
+
+### 重新定性后的嫌疑分支（互斥二选一）
+① EASU+RCAS 着色器趟本身（输出内容异常，但漏斗状态无感知）② 重定向/呈现架构及以下（FCL TextureView 合成、驱动缓冲等）。
+
+### 本轮落盘（代码）
+- **MobileGlues（7f79ec6，子模块先行推送）**：
+  - `FSR1_WindowUnitsCandidate` 新增**空-latch 播种规则**：latch 为空时首个非方形全屏候选直接接受（无物可护；方形=图集仍拒），一次性播种日志。修复启动误杀 + blit 过冲 + Zalith 永久腐败三案
+  - **新枚举 `Bypass=5`（诊断档）**：重定向/units/blit 重写/门控/surface query/初始化全部与 Performance 完全一致，唯独 ApplyFSR 呈现改为一次 GLES 裸 `glBlitFramebuffer`（READ=renderFBO → DRAW=0，NEAREST 拉伸），不跑 EASU/RCAS。CalculateRenderResolution Bypass→2.0x；settings dump 显示 Bypass(diagnostic)
+- **宿主 App**：Fsr1Preset 加 `Bypass(5)`（两主题选择器自动出现，label "旁路诊断（无锐化）"）；strings.xml en/zh 补资源；fromWire wire=5 自动放行
+- **scripts/fsr_units_latch_test.cpp（入库）**：播种规则独立 TU，7 场景（FCL 配对/Zalith 配对/空-latch 方形拒绝/已播种方形拒绝/连续性增长/旋转重播种/grow-only）**全过**
+
+### 用户判定表（下份日志/装机反馈，二选一收口）
+- **旁路档（第 5 档）仍闪** ⇒ 定罪重定向及以下（FCL/驱动/合成层）——下一步转向 FCL 侧验证（FSR 关闭时同窗口尺寸是否也闪；TextureView 默认缓冲尺寸）
+- **旁路档不闪（普通档仍闪）** ⇒ 定罪 EASU/RCAS 着色器趟——重点查 Adreno 640 上的 program/纹理交互（air Task 143 教训：静默初始化失败家族）
+- 无诊断档时序参照：`latch seeded: 2360x1080` 应在启动早期出现一次且不再有 rejected
+
+### 推送与状态
+- MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends **7f79ec6**（子模块先行）；宿主（本文件 + pin + App UI + 测试 TU）随后；CI 绿后交付 APK，用户先测第 5 档再回普通档对照。
+
+---
+
 ## Task 3（2026-09-27）—— 第六轮闪屏报告：证据僵局定性与打破（本轮无代码改动，属刻意决定）
 
 ### 用户输入
