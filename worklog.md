@@ -127,7 +127,8 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 3. FCL 侧同时观察 FSR1 四轴是否依旧干净（预期不变）。
 
 ### 推送与状态
-- MobileGlues（egl.cpp + FSR1.cpp）先推（1bb2a42→**本节推送记录**）；宿主（pojavEnv 注入 + 子模块 pin + 本节 worklog）后推。
+- MobileGlues（egl.cpp + FSR1.cpp）先推（1bb2a42→**3b16911**）；宿主（pojavEnv 注入 + 子模块 pin + 本节 worklog）后推（86e16df→**fd30673**，中途 rebase 吸收用户日志提交）。
+- **CI 绿**：宿主 run 36452730362（fd30673，success，~20 分钟）；产物 `MobileGlues-plugin_2026-09-28_fd306730efe1d6c405daab80d08cfee2c261fa26`（9.6MB，2026-12-27 过期）。该包 = 全桥接引导取证 + flush 纪律 + vsync 兼容注入三合一判定版。
 - 沙箱工件：/home/z/my-project/launchers/{fcl,zl2} = 两启动器浅克隆源码（--depth 1）。
 - 用户侧遗留：session-*.log 为 Vela/QEMU 无关文件；ZL2 报错时请一并回传 ZL2 的 `.minecraft/logs/latest.log` 与 ZL2 日志目录文件。
 
