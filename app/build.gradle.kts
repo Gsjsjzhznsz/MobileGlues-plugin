@@ -93,6 +93,20 @@ android {
                                 put("POJAVEXEC_EGL", "libmobileglues.so")
                                 put("LIBGL_EGL", "libmobileglues.so")
                 put("MG_COUNT_LAUNCH", "1")
+                // 闪屏狩猎 Task 8：FCL 在 pojavInit 里用 setNativeWindowSwapInterval(window, 0)
+                // 把游戏窗口的 BufferQueue 强制切成异步模式（不等生产者、不等垂直同步），
+                // 而重定向机制的呈现 = 每帧往可见缓冲里补一次面绘制（RCAS/ blit）。
+                // 关闭档（preset 0，不碰可见缓冲）干净、任何重定向档都闪的证据组合，
+                // 指向"异步翻转与补面绘制竞速"是最后的候选机制。这两个变量必须在
+                // 进程启动前就在环境里（FCL 读它们的时机早于加载本插件的库），
+                // 所以只能随清单注入，不能运行期 setenv：
+                //   POJAV_VSYNC_IN_ZINK=1 → FCL 跳过异步强制（egl_bridge.c 读到即不置 0）
+                //   FORCE_VSYNC=true      → FCL gl_bridge 强制交换间隔 1（FCLauncher 默认
+                //                            "false"，插件 env 在其后合并，本值获胜）
+                // 代价：帧率锁屏幕刷新率。若本轮闪屏消失即定案；届时如需放开，
+                // 在此移除这两行即可回退。ZL2 的 native 不读这两个变量，注入无副作用。
+                put("POJAV_VSYNC_IN_ZINK", "1")
+                put("FORCE_VSYNC", "true")
             }.run {
                 var env = ""
                 forEach { (key, value) ->

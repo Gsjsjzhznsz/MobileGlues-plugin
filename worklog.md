@@ -4,7 +4,7 @@
 
 ## ⚡ READ ME FIRST —— 会话速览
 
-> 最后更新：Task 5（2026-09-28，移植上游 PR #61 深度纹理 filter-completeness 修复（议题 #57 的回复）到 MobileGlues 子模块 + depth_filter 独立测试 33/33；App 版本号改 18（versionCode 2018）、作者改 yiqiu4178；CI 事故（LFS 配额）已修，**交付构建 = 0e20332（run 36424478374 绿）**。FSR 闪屏收口仍等用户测第 5 档 Bypass 诊断。
+> 最后更新：Task 8（2026-09-28，应用户要求通读 FCL 与 ZL2 两个启动器源码：ZL2 死亡签名解码（SIGABRT→静默 System.exit）+ FCL 强制异步 BufferQueue 实锤（闪屏最后候选机制）；落盘 = 全桥接 EGL 引导取证 + 普通档 flush 纪律 + pojavEnv 注入垂直同步兼容变量；**交付构建见本节推送记录**）。
 > 新会话规则：新任务记录**追加到本文件最末尾**（`## Task N` 模板）；收尾时同步更新「当前状态」表；本文件超 ~400 行时把最旧 Task 段挪进 worklog-archive.md。
 
 ### 一句话
@@ -87,6 +87,49 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 遗留 / 下一步
 - 内置 FSR1 → Arm ASR 替换（计划不变）；DirectVulkan 原生 FSR（SPIR-V 双管线挂 Present）为下一个功能里程碑
 - 悬浮底栏居中；BandQQ 主题 + 液态玻璃完整移植；预测手势补齐
+
+---
+
+## Task 8（2026-09-28）—— 双启动器源码研究：ZL2 静默死亡解码 + FCL 异步 BufferQueue 定位；桥接全取证 + flush 纪律 + vsync 兼容注入
+
+### 用户输入
+"fcl依旧闪屏。zl2依旧报错。能不能看一下这2个启动器的源码进行研究呀"
+—— 三件事：① FCL 普通档仍闪（86e16df 日志 = preset 1 会话，非 Task 7 要求的 Bypass 5 探针档，glFinish 探针仍未被测试）；② ZL2 仍报错但本轮上传里 **没有 ZL2 日志**（session-*.log 是无关的 Vela/QEMU 模拟器文件，疑似误传）；③ 明确要求通读两个启动器源码。已克隆 FCL-Team/FoldCraftLauncher 与 ZalithLauncher/ZalithLauncher2 到 /home/z/my-project/launchers/。
+
+### 日志判读（86e16df，23:51–23:54 FCL 会话，xaga / Mali-G610 MC6 / Android 15，FSR preset 1 / 锐化 90）
+- Task 7 遥测全部生效：`native init complete` → `bootstrap eglCreateWindowSurface #1`（全程仅 1 个窗口 surface）→ `bootstrap eglMakeCurrent #1`；`init #3` 依旧（3 个上下文初始化过 FSR，呈现上下文恒 #1）。
+- 四轴全程干净（present ctx #1 恒定 / surface identity 仅开局 1280x720→2360x1080 一次 / targets 仅重建一次 / 零 skip 零拒绝）→ **再次验证 Task 6 判决：闪屏在重定向机制以下**。游戏期 53 秒（标题屏）零新 FSR 行。
+- 本会话设备是 Mali-G610（天玑 8100），此前 Adreno 640（K20 Pro）同样闪 ⇒ 驱动特异性假说降权，FCL 桥/呈现层权重上升。
+
+### FCL 源码研究结论（与闪屏直接相关）
+1. **MC 走 GLFW 桥而非 SDL**：pojavSetWindowHint(GLFW_OPENGL_API) + POJAV_RENDERER=opengles3 → RENDERER_GL4ES 类（ctxbridges/gl_bridge.c 家族）；窗口 = pojavWindow（TextureView Surface 经 CallbackBridge.setupBridgeWindow）。
+2. **FCL 强制异步 BufferQueue（本轮最大发现）**：egl_bridge.c pojavInit() 无条件 `setNativeWindowSwapInterval(pojavWindow, 0)`——直接改 ANativeWindow 交换模式（swap_interval_no_egl.c 自带 ANativeWindow_real 私有结构），**BufferQueue 切入异步模式（生产者不再阻塞）**。受两个 env 门控：`POJAV_VSYNC_IN_ZINK`（读到即跳过强制）与 `FORCE_VSYNC=true`（gl_bridge.c gl_swap_interval 强制间隔 1）。
+3. **异步模式与本项目证据组合咬合**：preset 0（纯透传，可见缓冲只有 MC 自己的绘制+交换）干净；preset 1-5（每帧交换前往可见缓冲补一次面绘制：RCAS 或 blit）全闪。异步翻转与补绘制的排序竞速 = 重定向及以下里最后一个未被证伪的机制。
+4. **env 注入窗口可行**：FCLauncher.setEnv 顺序 = addCommonEnv（FORCE_VSYNC 默认 "false"，:214）→ addModLoaderEnv → **addRendererEnv（插件 pojavEnv 最后合并，本值获胜，:387）**；pojavInit 读 env 早于加载插件库 ⇒ 只能走清单静态注入，运行期 setenv 来不及。
+5. SDL 路径（sdl_hook.c）仅代理 eglChooseConfig/eglCreateContext/eglSwapBuffers 计帧，MC 不走；eglSwapBuffers 代理最终仍进入本插件呈现漏斗。
+
+### ZL2 源码研究结论（静默死亡解码）
+1. **插件解析契约完备无缺**：RendererPluginManager 要求 fclPlugin(bool) + renderer(3 段) + des + pojavEnv，本插件清单全齐；`com.fcl.plugin.mobileglues` 已被 ZL2 硬编码为可配置插件。**报错不在解析层**。
+2. **死亡签名解码（关键）**：jre_launcher.c launchJVM() 把 **SIGABRT 路由进 abort_waiter → nominal_exit → System.exit（静默干净退出，无 tombstone 无崩溃框）**、SIGSEGV 置 SIG_IGN——JVM 启动后任何 native abort/断言都是无声死亡，与 Task 7 观察完全吻合。
+3. **死亡区间再收窄**：ZL2 的 JVM 是 **in-process**（VMLauncher.launchJVM native 调用，同启动器进程）；stdout 经 LoggerBridge.start dup2 管道 **行缓冲** 写 `.minecraft/logs/latest.log`（= getLogFile()，MC 日志文件本身）；27 行 = 本插件库 dlopenEngine 加载期输出（自身 latest.log 通道），其后 **零字节** ⇒ 死亡点在"库加载完成"与"JVM 第一行输出"之间（launchJavaVM native 链 / JLI_Launch / JVM 引导 / 早期 LWJGL），且**任何一步的 native abort 都不会留痕**。
+4. **两份 gl_bridge.c 功能等价**（FCL vs ZL2 diff 仅排版+newNativeSurface 前置）；egl_loader 经 `GLGetProcAddress`（先 eglGetProcAddress 后 dlsym）解析，本插件核心的 eglGetProcAddress 对全部标准 EGL 函数**自引用返回自身实现**（静态表逐项核对在案：eglBindAPI/eglGetConfigAttrib/eglCreatePbufferSurface/eglGetCurrentSurface/eglReleaseThread 等全部有导出）⇒ ZL2 桥拿到的全是本插件 EGL，符号缺失假说排除。
+5. ZL2 自有设置项 `vsyncInZink` 也写 POJAV_VSYNC_IN_ZINK（Launcher.kt），其 native 不读 FORCE_VSYNC ⇒ 本轮 env 注入对 ZL2 无副作用。
+
+### 本轮落盘（代码）
+1. **MobileGlues（egl/egl.cpp，5 处引导取证）**：eglGetDisplay / eglInitialize / eglChooseConfig（含 num_config 结果与属性重写拒绝分支）/ eglCreateContext（ES 与 desktop 双分支共用序列号）/ eglBindAPI——与 Task 7 的 eglCreateWindowSurface/eglMakeCurrent 同款（首 4 次 + 每 64 次，LOG_W_FORCE）。LOG_W_FORCE → write_log **逐行 fflush**（mg.cpp 实锤）⇒ 静默死亡后取证在 /sdcard/MG/latest.log 幸存。
+2. **MobileGlues（gl/FSR1/FSR1.cpp，flush 纪律铺普通档）**：ApplyFSR 质量路径 RCAS 面绘制后 `GLES.glFlush()`（一次性日志 `[MG] FSR1 flush discipline active`）。提交≠排水：Bypass 档保留 glFinish 探针（更强的排水档）——两种强度并存，配合 vsync 注入一轮构建拆三个候选。
+3. **宿主（app/build.gradle.kts，pojavEnv 注入）**：`POJAV_VSYNC_IN_ZINK=1` + `FORCE_VSYNC=true`（载明读点/合并顺序/回退方法：删两行即回退）。代价 = 帧率锁屏幕刷新率；若闪屏消失即定案。
+4. 版本号不动（2.0.18，用户明示归属，本轮不擅动）。
+
+### 下份日志判定表（Task 8 版）
+1. **FCL + 新包（任意 FSR 开启档）**：闪屏消失 ⇒ 异步 BufferQueue 竞速定案（保留注入或后续做成 UI 开关）；仍闪 ⇒ 看是否出现 `flush discipline active`：出现仍闪 + Bypass（glFinish）也闪 ⇒ 病灶在翻转之下（FCL 桥/合成器），FSR-on 转向启动器侧方案（Arm ASR / FCL 配合缩窗）。
+2. **ZL2 + 新包重试**：/sdcard/MG/latest.log（本插件自有文件日志，逐行 fflush）里 `bootstrap eglGetDisplay/eglInitialize/eglChooseConfig/eglCreateContext/eglBindAPI/eglCreateWindowSurface/eglMakeCurrent` 最后出现的哪一行 = 死亡调用点：全到 eglCreateWindowSurface 且 ok ⇒ 死在更深的 LWJGL/MC 段（追 ZL2 侧）；停在 eglChooseConfig/eglCreateContext ⇒ 本插件 EGL 应答路径有问题（按 FAILED 值定位）。
+3. FCL 侧同时观察 FSR1 四轴是否依旧干净（预期不变）。
+
+### 推送与状态
+- MobileGlues（egl.cpp + FSR1.cpp）先推（1bb2a42→**本节推送记录**）；宿主（pojavEnv 注入 + 子模块 pin + 本节 worklog）后推。
+- 沙箱工件：/home/z/my-project/launchers/{fcl,zl2} = 两启动器浅克隆源码（--depth 1）。
+- 用户侧遗留：session-*.log 为 Vela/QEMU 无关文件；ZL2 报错时请一并回传 ZL2 的 `.minecraft/logs/latest.log` 与 ZL2 日志目录文件。
 
 ---
 
