@@ -1,7 +1,7 @@
 ==================== Before Start ====================
 invoke redirectStdio
-invoke setLogPipeReady
 Log pipe ready.
+invoke setLogPipeReady
 invoke setFCLNativeWindow
 invoke setEventPipe
 ==================== Start Minecraft ====================
@@ -56,23 +56,23 @@ sodium-shadowy-path-blocks-fabric-8.0.0 | sspb | 8.0.0 | FABRIC
 Env: PATH=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin:/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
 Env: FCL_VERSION_CODE=1335
 Env: POJAV_RENDERER=opengles3
-Env: SDL_OPENGL_LIBRARY=/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64/libmobileglues.so
+Env: SDL_OPENGL_LIBRARY=/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64/libmobileglues.so
 Env: POJAV_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Env: MG_COUNT_LAUNCH=1
 Env: FORCE_VSYNC=false
-Env: DALVIK_JAVAVM=-5476376654165278096
+Env: DALVIK_JAVAVM=-5476376669463866352
 Env: JAVA_HOME=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25
 Env: MOD_ANDROID_RUNTIME=/data/user/0/com.tungsten.fcl/app_runtime_mod
 Env: VULKAN_DRIVER_SYSTEM=1
 Env: POJAVEXEC_EGL=libmobileglues.so
 Env: TMPDIR=/data/user/0/com.tungsten.fcl/cache
 Env: LIBGL_ES=3
-Env: DALVIK_APPLICATION=0x394a
+Env: DALVIK_APPLICATION=0x38e6
 Env: LIBGL_EGL=libmobileglues.so
 Env: FCL_NATIVEDIR=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
-Env: SDL_EGL_LIBRARY=/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64/libmobileglues.so
+Env: SDL_EGL_LIBRARY=/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64/libmobileglues.so
 Env: DRIVER_PATH=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
-Env: LD_LIBRARY_PATH=/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Env: LD_LIBRARY_PATH=/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Env: ALSOFT_DRIVERS=opensl
 Env: HOME=/storage/emulated/0/FCL/log
 Env: INST_FABRIC=1
@@ -123,7 +123,7 @@ DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjima
 DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libextnet.so
 DLOPEN: loading /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/libjsound.so
 DLOPEN: loading /data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
-DLOPEN: loading /data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64/libmobileglues.so
+DLOPEN: loading /data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64/libmobileglues.so
 Working directory: /storage/emulated/0/FCL/.minecraft/versions/Fabulously Optimized
 ==================== Minecraft Arguments ====================
 Java argument: /data/user/0/com.tungsten.fcl/app_runtime/java/jre25/bin/java
@@ -170,8 +170,8 @@ Java argument: -Dext.net.resolvPath=/data/user/0/com.tungsten.fcl/app_runtime/ja
 Java argument: -Djava.io.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher
 Java argument: -Dos.name=Linux
 Java argument: -Dos.version=Android-15
-Java argument: -Dorg.lwjgl.opengl.libname=/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64/libmobileglues.so
-Java argument: -Dorg.lwjgl.egl.libname=/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.opengl.libname=/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64/libmobileglues.so
+Java argument: -Dorg.lwjgl.egl.libname=/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64/libmobileglues.so
 Java argument: -Dorg.lwjgl.openal.libname=/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64/libopenal.so
 Java argument: -Dorg.lwjgl.freetype.libname=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a/libfreetype.so
 Java argument: -Dorg.lwjgl.librarypath=/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a
@@ -194,7 +194,7 @@ Java argument: -XX:StackShadowPages=32
 Java argument: --enable-native-access=ALL-UNNAMED
 Java argument: --add-exports
 Java argument: java.base/jdk.internal.misc=ALL-UNNAMED
-Java argument: -Djava.library.path=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/jli:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server:/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~9HpwEoqmCOl7EOsCv0J1tw==/com.fcl.plugin.mobileglues-dd3XoA-gpt4ISDscry18Xg==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
+Java argument: -Djava.library.path=/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/jli:/data/user/0/com.tungsten.fcl/app_runtime/java/jre25/lib/server:/data/user/0/com.tungsten.fcl/app_runtime/jna:/data/app/~~WxvdiaiVyudjFzl8JFy1SQ==/com.fcl.plugin.mobileglues-fhSkj_R9zMTpXYT93KgT8A==/lib/arm64:/data/user/0/com.tungsten.fcl/app_runtime_mod:/system/lib64:/vendor/lib64:/vendor/lib64/hw:/system_ext/lib64:/data/user/0/com.tungsten.fcl/app_runtime/lwjgl/3.4.1/natives/arm64-v8a:/data/app/~~qqLtg13dBGCPoaGtmSn_Gw==/com.tungsten.fcl-dwHiLfq06-GQ_Uui8MpD5g==/lib/arm64
 Java argument: -Djna.tmpdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/jna
 Java argument: -Dorg.lwjgl.system.SharedLibraryExtractPath=/data/user/0/com.tungsten.fcl/cache/fclauncher/lwjgl
 Java argument: -Dio.netty.native.workdir=/data/user/0/com.tungsten.fcl/cache/fclauncher/netty
@@ -230,7 +230,7 @@ Minecraft argument: --width
 Minecraft argument: 2360
 Minecraft argument: --height
 Minecraft argument: 1080
-Successfully initialized exit hook, stub: 0x7408405700SDL_Hook: Successfully initialized SDL hooks, stubs: InitSubSystem=0x7408406cf0 GetWindowFromEvent=0x740840f120 GetWindowFromID=0x740840f2d0 LoadFunction=0x74084215a0 CreateWindow=0x7408424210 CreateWindowWithProps=0x7408421e10 LoadObject=0x7408421000 UnloadObject=0x7408404980 DestroyWindow=0x7408406f30
+Successfully initialized exit hook, stub: 0x6ef861ff80SDL_Hook: Successfully initialized SDL hooks, stubs: InitSubSystem=0x6ef861d670 GetWindowFromEvent=0x6ef8616290 GetWindowFromID=0x6ef8616050 LoadFunction=0x6ef8614940 CreateWindow=0x6ef86149d0 CreateWindowWithProps=0x6ef8616a70 LoadObject=0x6ef8617520 UnloadObject=0x6ef8616ef0 DestroyWindow=0x6ef8616b90
 Hook success
 Done processing args
 Found JLI lib
@@ -242,12 +242,12 @@ WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.github.caciocav
 WARNING: Please consider reporting this to the maintainers of class com.github.caciocavallosilano.cacio.agent.CTCJavaAgent
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [MioLibPatcher/INFO]: MioPatcher is running!
-[00:30:26] [main/INFO]: Loading Minecraft 26.3 with Fabric Loader 0.19.5
-[00:30:26] [main/INFO]: Dependencies overridden for minecraft, polytone
-[00:30:26] [main/WARN]: Warnings were found!
+[21:44:08] [main/INFO]: Loading Minecraft 26.3 with Fabric Loader 0.19.5
+[21:44:08] [main/INFO]: Dependencies overridden for minecraft, polytone
+[21:44:08] [main/WARN]: Warnings were found!
  - 'Minecraft' (minecraft) 26.3 建议安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本，但没有安装它！
 	 - 为了最佳体验，您应该安装 Fabulously Optimized 的 15.0.0-alpha.3 以上任意版本。
-[00:30:26] [main/INFO]: Loading 121 mods:
+[21:44:08] [main/INFO]: Loading 121 mods:
 	- animatica 0.6.2+26.3
 	- betterblockentities 1.3.9+mc26.3
 	- bettergrass 1.8.8+fabric.26.3
@@ -372,72 +372,72 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 	- sodium-extra 0.9.4+mc26.3
 	   \-- me_flashyreese_mods_greenlight-api 0.1.0+mc26.3
 	- sspb 8.0.0
-[00:30:27] [main/INFO]: No flag found, running a usual copy
-[00:30:27] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-fabric-26.2-26.3-1.11.13.jar)
+[21:44:08] [main/INFO]: No flag found, running a usual copy
+[21:44:09] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-fabric-26.2-26.3-1.11.13.jar)
 [MioLibPatcher/INFO]: Patch target class: oshi/hardware/platform/linux/LinuxCentralProcessor
 [MioLibPatcher/INFO]: Patch target class: oshi/hardware/CentralProcessor$ProcessorIdentifier
-[00:30:28] [CrashAssistantApp process logger/ERROR]: Error changing dalvik-cache ownership : Permission denied
-[00:30:28] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[00:30:28] [CrashAssistantApp process logger/ERROR]: CrashAssistantApp failed to start with exit code: 134
+[21:44:10] [CrashAssistantApp process logger/ERROR]: Error changing dalvik-cache ownership : Permission denied
+[21:44:10] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/storage/emulated/0/FCL/.minecraft/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[21:44:10] [CrashAssistantApp process logger/ERROR]: CrashAssistantApp failed to start with exit code: 134
 Crash Assistant won't work.
 This won't cause any issues to the main game process, just Crash Assistant won't popup after crash.
 Please report to https://github.com/KostromDan/Crash-Assistant/issues
-[00:30:28] [main/WARN]: Reference map 'entityculling.refmap.mixins.json' for entityculling.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/WARN]: Ixeris is not supported on Android!
-[00:30:29] [main/WARN]: Reference map 'ixeris.mixins.refmap.json' for ixeris.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:29] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
-[00:30:29] [main/INFO]: Option 'mixin.world.chunk_ticking.random_block_ticking' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.world.chunk_ticking.random_block_ticking=false'.
-[00:30:29] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
-[00:30:29] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
-[00:30:29] [main/INFO]: Loaded configuration file for Lithium: 170 options available, 0 override(s) found.
-[00:30:29] [main/WARN]: Reference map 'mixintrace-refmap.json' for mixintrace.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:30] [main/INFO]: Loaded configuration file for ModernFix 5.27.20-build.1: 67 options available, 4 override(s) found
-[00:30:30] [main/WARN]: Option 'mixin.feature.measure_time' overriden (by user configuration) to 'false'
-[00:30:30] [main/WARN]: Option 'mixin.feature.snapshot_easter_egg' overriden (by user configuration) to 'false'
-[00:30:30] [main/WARN]: Option 'mixin.feature.branding' overriden (by user configuration) to 'false'
-[00:30:30] [main/WARN]: Option 'mixin.feature.remove_telemetry' overriden (by user configuration) to 'false'
-[00:30:30] [main/INFO]: Applying Nashorn fix
-[00:30:30] [main/INFO]: Configuring Minecraft's max.bg.threads option with 5 threads
-[00:30:30] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:30] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-common.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:30] [main/WARN]: Reference map 'reeses-sodium-options.refmap.json' for reeses-sodium-options.mixins.json could not be read. If this is a development environment you can ignore this message
-[00:30:30] [main/INFO]: Loaded configuration file for Sodium: 37 options available, 1 override(s) found
-[00:30:30] [main/INFO]: Loaded configuration file for Sodium Extra: 26 options available, 0 override(s) found
-[00:30:34] [main/WARN]: Error loading class: dev/zelo/renderscale/RenderScale (java.lang.ClassNotFoundException: dev/zelo/renderscale/RenderScale)
-[00:30:34] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
-[00:30:35] [main/INFO]: Searching for graphics cards...
-[00:30:35] [main/WARN]: Could not find any graphics adapters! Probably the device is not on a bus we can probe, or there are no devices supporting 3D acceleration.
-[00:30:35] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
-[00:30:35] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
-[00:30:35] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[21:44:11] [main/WARN]: Reference map 'entityculling.refmap.mixins.json' for entityculling.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Ixeris is not supported on Android!
+[21:44:12] [main/WARN]: Reference map 'ixeris.mixins.refmap.json' for ixeris.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
+[21:44:12] [main/INFO]: Option 'mixin.world.chunk_ticking.random_block_ticking' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.world.chunk_ticking.random_block_ticking=false'.
+[21:44:12] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
+[21:44:12] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
+[21:44:12] [main/INFO]: Loaded configuration file for Lithium: 170 options available, 0 override(s) found.
+[21:44:12] [main/WARN]: Reference map 'mixintrace-refmap.json' for mixintrace.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/INFO]: Loaded configuration file for ModernFix 5.27.20-build.1: 67 options available, 4 override(s) found
+[21:44:12] [main/WARN]: Option 'mixin.feature.measure_time' overriden (by user configuration) to 'false'
+[21:44:12] [main/WARN]: Option 'mixin.feature.snapshot_easter_egg' overriden (by user configuration) to 'false'
+[21:44:12] [main/WARN]: Option 'mixin.feature.branding' overriden (by user configuration) to 'false'
+[21:44:12] [main/WARN]: Option 'mixin.feature.remove_telemetry' overriden (by user configuration) to 'false'
+[21:44:12] [main/INFO]: Applying Nashorn fix
+[21:44:12] [main/INFO]: Configuring Minecraft's max.bg.threads option with 5 threads
+[21:44:12] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'modernfix.refmap.json' for modernfix-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/WARN]: Reference map 'reeses-sodium-options.refmap.json' for reeses-sodium-options.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:44:12] [main/INFO]: Loaded configuration file for Sodium: 37 options available, 1 override(s) found
+[21:44:12] [main/INFO]: Loaded configuration file for Sodium Extra: 26 options available, 0 override(s) found
+[21:44:15] [main/WARN]: Error loading class: dev/zelo/renderscale/RenderScale (java.lang.ClassNotFoundException: dev/zelo/renderscale/RenderScale)
+[21:44:15] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[21:44:16] [main/INFO]: Searching for graphics cards...
+[21:44:16] [main/WARN]: Could not find any graphics adapters! Probably the device is not on a bus we can probe, or there are no devices supporting 3D acceleration.
+[21:44:16] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
+[21:44:16] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
+[21:44:17] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
 [MioLibPatcher/INFO]: Patch target class: org/lwjgl/system/Library
 Registered forkAndExec
 Installing LWJGL dlopen() hook
 EGLBridge: LWJGL-side Vulkan loader requested the Vulkan handle
 OSMDroid: loading vulkan regularly...
-OSMDroid: loaded vulkan, ptr=0x96e4d0a78b13ca01
-[00:30:47] [main/WARN]: Did not find udev library in operating system. Some features may not work.
-[00:30:48] [Datafixer Bootstrap #0/INFO]: 307 Datafixer optimizations took 1536 milliseconds
-[00:30:48] [main/WARN]: File not found or not readable: /proc/stat
-[00:30:48] [main/WARN]: File not found or not readable: /etc/os-release
-[00:30:48] [main/WARN]: File not found or not readable: /etc/lsb-release
-[00:30:48] [main/WARN]: File not found or not readable: /proc/version
-[00:30:49] [main/INFO]: ModernFix reached bootstrap stage (25.90 s after launch)
-[00:31:02] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
-[00:31:31] [Render thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
-[00:31:31] [Render thread/INFO]: Setting user: yiqiu4178
+OSMDroid: loaded vulkan, ptr=0x988fc2a5d38186a9
+[21:44:30] [main/WARN]: Did not find udev library in operating system. Some features may not work.
+[21:44:31] [Datafixer Bootstrap #0/INFO]: 307 Datafixer optimizations took 2193 milliseconds
+[21:44:31] [main/WARN]: File not found or not readable: /proc/stat
+[21:44:31] [main/WARN]: File not found or not readable: /etc/os-release
+[21:44:31] [main/WARN]: File not found or not readable: /etc/lsb-release
+[21:44:31] [main/WARN]: File not found or not readable: /proc/version
+[21:44:32] [main/INFO]: ModernFix reached bootstrap stage (26.48 s after launch)
+[21:44:42] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[21:45:11] [Render thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[21:45:11] [Render thread/INFO]: Setting user: yiqiu4178
 [MioLibPatcher/INFO]: Patch target class: io/netty/util/internal/PlatformDependent
-[00:31:33] [Render thread/INFO]: Building config cache from user defined config file...
-[00:31:33] [Render thread/INFO]: Collecting API Entrypoint's...
-[00:31:33] [Render thread/INFO]: Registering alt renderers via each collected entrypoint...
-[00:31:33] [Render thread/INFO]: [BetterGrassify] [FAST] Gamers can finally touch grass!?
-[00:31:33] [Download-2/ERROR]: Failed to fetch user properties
+[21:45:14] [Render thread/INFO]: Building config cache from user defined config file...
+[21:45:14] [Render thread/INFO]: Collecting API Entrypoint's...
+[21:45:14] [Render thread/INFO]: Registering alt renderers via each collected entrypoint...
+[21:45:14] [Render thread/INFO]: [BetterGrassify] [FAST] Gamers can finally touch grass!?
+[21:45:14] [Download-2/ERROR]: Failed to fetch user properties
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at knot//com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:70)
 	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:168)
@@ -453,38 +453,36 @@ Caused by: MinecraftClientHttpException[type=HTTP_ERROR, status=401, response=Er
 	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:65)
 	at knot//com.mojang.authlib.services.MinecraftServicesUserApiService.fetchProperties(MinecraftServicesUserApiService.java:118)
 	... 5 more
-[00:31:34] [Render thread/INFO]: [ETF]: Modifying ETF Render State constructor because: for EMF
-[00:31:34] [Render thread/INFO]: Loading Entity Model Features, is this 'EPF' in the room with us now?
-[00:31:34] [Render thread/INFO]: [ETF]: 6 new ETF Random Properties registered by entity_model_features
-[00:31:35] [Render thread/INFO]: Loading Entity Texture Features, Lisa needs braces.
-[00:31:35] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
-[00:31:36] [Render thread/INFO]: [FastQuit] Initialized
-[00:31:41] [Render thread/INFO]: Config service: org.redlance.dima_dencep.mods.rrls.fabric.config.FabricConfigImpl
-[00:31:42] [Render thread/INFO]: [SSPB] Broken dirt path lighting is best dirt path lighting lol
-[00:31:42] [Render thread/INFO]: [STDOUT]: [TRender] Initializing Client...
-[00:31:42] [Render thread/INFO]: Initializing mods (entrypoint yumi:init)...
-[00:31:43] [Render thread/INFO]: [LambDynLights] Initializing LambDynamicLights...
-[00:31:43] [Render thread/INFO]: [LambDynLights] Configuration loaded.
-[00:31:46] [Render thread/INFO]: Backend library: LWJGL version 3.4.1-snapshot
+[21:45:15] [Render thread/INFO]: [ETF]: Modifying ETF Render State constructor because: for EMF
+[21:45:15] [Render thread/INFO]: Loading Entity Model Features, special thanks to Cody, top donator!
+[21:45:15] [Render thread/INFO]: [ETF]: 6 new ETF Random Properties registered by entity_model_features
+[21:45:15] [Render thread/INFO]: Loading Entity Texture Features, Curse you Perry the Platypus!
+[21:45:16] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[21:45:16] [Render thread/INFO]: [FastQuit] Initialized
+[21:45:22] [Render thread/INFO]: Config service: org.redlance.dima_dencep.mods.rrls.fabric.config.FabricConfigImpl
+[21:45:22] [Render thread/INFO]: [SSPB] Broken dirt path lighting is best dirt path lighting lol
+[21:45:22] [Render thread/INFO]: [STDOUT]: [TRender] Initializing Client...
+[21:45:22] [Render thread/INFO]: Initializing mods (entrypoint yumi:init)...
+[21:45:23] [Render thread/INFO]: [LambDynLights] Initializing LambDynamicLights...
+[21:45:23] [Render thread/INFO]: [LambDynLights] Configuration loaded.
+[21:45:26] [Render thread/INFO]: Backend library: LWJGL version 3.4.1-snapshot
 SDL dlsym proxy for SDL_InitSubSystem
-[00:31:46] [Render thread/INFO]: SDL [SYSTEM]: App name: Minecraft
-[00:31:46] [Render thread/INFO]: SDL [SYSTEM]: App version: 26.3
-[00:31:46] [Render thread/INFO]: SDL [SYSTEM]: App ID: com.mojang.minecraft
-[00:31:46] [Render thread/INFO]: SDL [SYSTEM]: SDL revision: 
+[21:45:26] [Render thread/INFO]: SDL [SYSTEM]: App name: Minecraft
+[21:45:26] [Render thread/INFO]: SDL [SYSTEM]: App version: 26.3
+[21:45:26] [Render thread/INFO]: SDL [SYSTEM]: App ID: com.mojang.minecraft
+[21:45:26] [Render thread/INFO]: SDL [SYSTEM]: SDL revision: 
 SDL dlsym proxy for SDL_CreateWindow
 SDL dlsym proxy for SDL_CreateWindowWithProperties
 SDL dlsym proxy for SDL_GetWindowFromID
 SDL dlsym proxy for SDL_DestroyWindow
-[00:31:47] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required features from FeatureSet [Minecraft base required], missing: [VkPhysicalDeviceSynchronization2Features.synchronization2, VkPhysicalDeviceDynamicRenderingFeatures.dynamicRendering, VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.vertexAttributeInstanceRateDivisor]
-[00:31:47] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required extensions from FeatureSet [Minecraft base required], missing: [VK_KHR_dynamic_rendering, VK_KHR_push_descriptor, VK_KHR_synchronization2, VK_EXT_vertex_attribute_divisor]
-[00:31:47] [Render thread/WARN]: Device [Mali-G610 MC6] does not support Vulkan 1.2
+[21:45:27] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required features from FeatureSet [Minecraft base required], missing: [VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.vertexAttributeInstanceRateDivisor, VkPhysicalDeviceSynchronization2Features.synchronization2, VkPhysicalDeviceDynamicRenderingFeatures.dynamicRendering]
+[21:45:27] [Render thread/WARN]: Device [Mali-G610 MC6] does not support required extensions from FeatureSet [Minecraft base required], missing: [VK_KHR_dynamic_rendering, VK_KHR_push_descriptor, VK_KHR_synchronization2, VK_EXT_vertex_attribute_divisor]
+[21:45:27] [Render thread/WARN]: Device [Mali-G610 MC6] does not support Vulkan 1.2
 [mg-dispatch] backend from config.json: "MobileGlues"
-[mg-dispatch] fsr1 from config.json: preset 4
 [mg-dispatch] fsr1 from config.json: sharpness 90
 Initializing MobileGlues ...
 The Open Source License of MobileGlues: 
   GNU LGPL-2.1 License
-[mg-3backends] MOBILEGL_FSR1 override applied: 4
 MG_DIR_PATH = /sdcard/MG
 [MobileGlues] Setting: enableAngle                 = false
 [MobileGlues] Setting: ignoreError                 = 0
@@ -495,7 +493,7 @@ MG_DIR_PATH = /sdcard/MG
 [MobileGlues] Setting: angleDepthClearFixMode      = 0
 [MobileGlues] Setting: bufferCoherentAsFlush       = 1
 [MobileGlues] Setting: customGLVersion             = 4.0.0
-[MobileGlues] Setting: fsr1Setting                 = 4
+[MobileGlues] Setting: fsr1Setting                 = 5
 [MobileGlues] Setting: fsr1Sharpness               = 90
 [MobileGlues] Setting: hideMGEnvLevel              = 0
 EGL initialized successfully
@@ -510,30 +508,30 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MobileGlues] multidrawOrderArraysIndirect       = indirect
 [MobileGlues] multidrawOrderElementsIndirect     = indirect
 [mg-dispatch] backend=MobileGlues core=libmg_gles.so (dispatcher ready)
-[00:31:47] [Render thread/INFO]: SDL [APPLICATION]: pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
-SDL_Hook: reusing primary window 0x72f85d5700
-[00:31:48] [Render thread/INFO]: Debug functionality is disabled.
-[00:31:48] [Render thread/INFO]: DSA support not detected.
-[00:31:49] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
-[00:31:49] [Render thread/INFO]: Initializing ImmediatelyFast 1.17.1+26.3 on Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten) with OpenGL 4.0.0 MobileGlues 2.0.17
-[00:31:49] [Render thread/INFO]: Using graphics backend OpenGL, using drivers: 4.0.0 MobileGlues 2.0.17
-[00:31:49] [Render thread/INFO]: Using graphics device: Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten)
-[00:31:49] [Render thread/INFO]: Using graphics device extensions: GL_ARB_buffer_storage, GL_ARB_vertex_attrib_binding
-SDL_Hook: reusing primary window 0x72f85d5700
-[00:31:49] [Render thread/INFO]: Created window using SDL video driver: android
-[00:31:49] [Render thread/ERROR]: Couldn't leave fullscreen: That operation is not supported
-[00:31:49] [Render thread/WARN]: Failed to set window icon: That operation is not supported
+[21:45:27] [Render thread/INFO]: SDL [APPLICATION]: pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
+SDL_Hook: reusing primary window 0x6f48705e90
+[21:45:28] [Render thread/INFO]: Debug functionality is disabled.
+[21:45:28] [Render thread/INFO]: DSA support not detected.
+[21:45:28] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[21:45:28] [Render thread/INFO]: Initializing ImmediatelyFast 1.17.1+26.3 on Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten) with OpenGL 4.0.0 MobileGlues 2.0.17
+[21:45:28] [Render thread/INFO]: Using graphics backend OpenGL, using drivers: 4.0.0 MobileGlues 2.0.17
+[21:45:28] [Render thread/INFO]: Using graphics device: Mali-G610 MC6 | OpenGL ES 3.2 (Swung0x48, BZLZHH, Tungsten)
+[21:45:28] [Render thread/INFO]: Using graphics device extensions: GL_ARB_buffer_storage, GL_ARB_vertex_attrib_binding
+SDL_Hook: reusing primary window 0x6f48705e90
+[21:45:28] [Render thread/INFO]: Created window using SDL video driver: android
+[21:45:28] [Render thread/ERROR]: Couldn't leave fullscreen: That operation is not supported
+[21:45:28] [Render thread/WARN]: Failed to set window icon: That operation is not supported
 SDL dlsym proxy for SDL_GetWindowFromEvent
 [MioLibPatcher/INFO]: Patch target class: org/lwjgl/openal/ALC10
 [MG] depth alloc #1: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 9, driver-bound tex 9, upload err 0x0, depth bits 32
 [MG] depth alloc #2: GL_DEPTH_COMPONENT32F 2360x1080, shadow tex 10, driver-bound tex 10, upload err 0x0, depth bits 32
-[00:31:53] [Render thread/INFO]: Hardware information:
-[00:31:54] [Render thread/INFO]: CPU: 8x MT6895Z/TCZA
-[00:31:54] [Render thread/INFO]: GPU: Mali-G610 MC6 | OpenGL ES 3.2 (Supports OpenGL 4.0.0 MobileGlues 2.0.17)
-[00:31:54] [Render thread/INFO]: OS: Linux (Android-15)
-[00:31:55] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 2d305ec5523b4aba8464618c8404769b
-[00:31:55] [Download-2/ERROR]: Failed to fetch Realms feature flags
-com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 2d305ec5523b4aba8464618c8404769b'
+[21:45:32] [Render thread/INFO]: Hardware information:
+[21:45:33] [Render thread/INFO]: CPU: 8x MT6895Z/TCZA
+[21:45:33] [Render thread/INFO]: GPU: Mali-G610 MC6 | OpenGL ES 3.2 (Supports OpenGL 4.0.0 MobileGlues 2.0.17)
+[21:45:33] [Render thread/INFO]: OS: Linux (Android-15)
+[21:45:33] [Download-1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 3760397398da4d8aaffcbc8c9bacf4f8
+[21:45:33] [Download-1/ERROR]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 3760397398da4d8aaffcbc8c9bacf4f8'
 	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
 	at knot//com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:204)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
@@ -544,31 +542,31 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 3 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 5 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 6 converted OK (glslver=450 -> essl ver=320)
-[MG] FSR1 ready: preset 4, sharpening 90%, surface 1280x720 (init #2, ctx 0x7408ab5170)
+[MG] FSR1 ready: preset 5, sharpening 90%, surface 1280x720 (init #2, ctx 0x6ef8cc59a0)
 [MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 11 converted OK (glslver=330 -> essl ver=320)
 [MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/Narrator
 [MioLibPatcher/INFO]: Patch target class: com/mojang/text2speech/NarratorLinux
-[00:31:57] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
+[21:45:36] [Render thread/INFO]: Reloading ResourceManager: vanilla, vanilla, animatica, betterblockentities, bettergrass, bettermounthud, cape-provider, cloth-config, conditional-mixin, config_manager, continuity, dynamic_fps, dynamic_fps_common, e4mc, entity_model_features, entity_texture_features, entityculling, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fastquit, forgeconfigapiport, immediatelyfast, iris, lambdynlights, lambdynlights_api, lithium, modernfix, modmenu, morechathistory, moreculling, optigui, placeholder-api, pride, reeses-sodium-options, renice-shot, rrls, sodium, sodium-extra, spruceui, sspb, trender
 [MG] FSR1 redirect active: framebuffer 0 -> render 640x360 (surface 1280x720)
 [MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] FSR1 window-units latch rejected (air Task 82): 2360x1080 is not a window viewport (surface 1280x720, latch 0x0) -- intermediate render pass kept out of the upscale geometry
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
-[MG] FSR1 present context #1: 0x7408ab5170
-[MG] FSR1 surface identity #1: surface 0x7408ab50e0 now 2360x1080
-[00:32:00] [Render thread/INFO]: Thread[#3,Render thread,5,main]
-[00:32:01] [Render thread/INFO]: OpenGL Vendor: Swung0x48, BZLZHH, Tungsten
-[00:32:01] [Render thread/INFO]: OpenGL Renderer: Mali-G610 MC6 | OpenGL ES 3.2
-[00:32:01] [Render thread/INFO]: OpenGL Version: 4.0.0 MobileGlues 2.0.17
+[MG] FSR1 window-units latch seeded: 2360x1080 (empty-latch rule, surface 1280x720; square intermediate passes stay refused)
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.271x0.333, view 2360x1080): -> 0,0 2360x1080 draw 0,0 640x360
+[MG] FSR1 present context #1: 0x6ef8cc59a0
+[MG] FSR1 surface identity #1: surface 0x6ef8cc6b10 now 2360x1080
+[21:45:38] [Render thread/INFO]: Thread[#3,Render thread,5,main]
+[21:45:38] [Render thread/INFO]: OpenGL Vendor: Swung0x48, BZLZHH, Tungsten
+[21:45:38] [Render thread/INFO]: OpenGL Renderer: Mali-G610 MC6 | OpenGL ES 3.2
+[21:45:38] [Render thread/INFO]: OpenGL Version: 4.0.0 MobileGlues 2.0.17
 [MioLibPatcher/INFO]: Patch target class: net/caffeinemc/mods/sodium/client/compatibility/checks/PostLaunchChecks
-[00:32:01] [Render thread/INFO]: Cached all modded block culling states
-[00:32:01] [Worker-ResourceReload-3/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
+[21:45:39] [Render thread/INFO]: Cached all modded block culling states
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.271x0.333, view 2360x1080): -> 0,0 2360x1080 draw 0,0 640x360
 [MG] FSR1 targets recreated #1: render 1180x540, surface 2360x1080
 [MG] FSR1 surface latched: 2360x1080 -> render 1180x540
+[21:45:39] [Worker-ResourceReload-4/INFO]: Found unifont_all_no_pua-17.0.01.hex, loading
 [MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 17 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 19 converted OK (glslver=330 -> essl ver=320)
@@ -579,6 +577,7 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 26 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 28 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 29 converted OK (glslver=330 -> essl ver=320)
+[21:45:40] [Worker-ResourceReload-4/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
 [MG] Shader 31 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 32 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 34 converted OK (glslver=330 -> essl ver=320)
@@ -597,7 +596,6 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 53 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 55 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 56 converted OK (glslver=330 -> essl ver=320)
-[00:32:02] [Worker-ResourceReload-3/INFO]: Found unifont_jp_patch-17.0.01.hex, loading
 [MG] Shader 58 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 59 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 61 converted OK (glslver=330 -> essl ver=320)
@@ -668,7 +666,6 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 158 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 160 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 161 converted OK (glslver=330 -> essl ver=320)
-[00:32:02] [Worker-ResourceReload-3/INFO]: Found unifont_pua-17.0.01.hex, loading
 [MG] Shader 163 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 164 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 166 converted OK (glslver=330 -> essl ver=320)
@@ -715,6 +712,7 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 227 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 229 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 230 converted OK (glslver=330 -> essl ver=320)
+[21:45:41] [Worker-ResourceReload-4/INFO]: Found unifont_pua-17.0.01.hex, loading
 [MG] Shader 232 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 233 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 235 converted OK (glslver=330 -> essl ver=320)
@@ -959,29 +957,29 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 [MG] Shader 593 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 595 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 596 converted OK (glslver=330 -> essl ver=320)
-[00:32:05] [Render thread/INFO]: OpenAL initialized on device OpenSL
-[00:32:05] [Render thread/INFO]: Sound engine started
-[00:32:05] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/blocks.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
-[00:32:05] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
-[00:32:07] [Render thread/INFO]: 35727 cache(s) were cleared!
-[00:32:07] [Render thread/INFO]: Geometry registry populated! Task successfully completed
-[00:32:07] [Render thread/INFO]: [ETF]: reloading ETF data.
-[00:32:07] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
-[00:32:07] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
-[00:32:07] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
-[00:32:07] [Download-2/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 2d305ec5523b4aba8464618c8404769b
-[00:32:07] [Download-2/ERROR]: Couldn't connect to realms
-com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 2d305ec5523b4aba8464618c8404769b'
+[21:45:44] [Render thread/INFO]: OpenAL initialized on device OpenSL
+[21:45:44] [Render thread/INFO]: Sound engine started
+[21:45:44] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/blocks.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[21:45:44] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[21:45:46] [Render thread/INFO]: 35727 cache(s) were cleared!
+[21:45:46] [Render thread/INFO]: Geometry registry populated! Task successfully completed
+[21:45:46] [Render thread/INFO]: [ETF]: reloading ETF data.
+[21:45:46] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[21:45:46] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[21:45:46] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[21:45:46] [Download-1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 3760397398da4d8aaffcbc8c9bacf4f8
+[21:45:46] [Download-1/ERROR]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 3760397398da4d8aaffcbc8c9bacf4f8'
 	at knot//com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:625)
 	at knot//com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:354)
 	at knot//com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:48)
@@ -989,12 +987,11 @@ com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication 
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-[00:32:08] [Render thread/INFO]: Overlay is removed!
-[00:32:58] [CullThread/INFO]: [STDOUT]: Shutting down culling task!
-[00:32:58] [Render thread/INFO]: Stopping!
-[00:32:58] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
-[00:32:58] [Render thread/INFO]: [FastQuit] Exiting FastQuit.
+[21:45:47] [Render thread/INFO]: Overlay is removed!
+[21:46:18] [CullThread/INFO]: [STDOUT]: Shutting down culling task!
+[21:46:18] [Render thread/INFO]: Stopping!
+[21:46:18] [Render thread/INFO]: [ETF]: emissive suffixes loaded: [_e]
+[21:46:18] [Render thread/INFO]: [FastQuit] Exiting FastQuit.
+Going to free args
 
 OpenJDK exited with code : 0
-Going to free args
-Free done
