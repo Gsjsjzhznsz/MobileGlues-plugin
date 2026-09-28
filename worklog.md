@@ -4,7 +4,7 @@
 
 ## ⚡ READ ME FIRST —— 会话速览
 
-> 最后更新：Task 5（2026-09-28，移植上游 PR #61 深度纹理 filter-completeness 修复（议题 #57 的回复）到 MobileGlues 子模块 + depth_filter 独立测试 33/33；App 版本号改 18（versionCode 2018）、作者改 yiqiu4178。FSR 闪屏收口仍等用户测第 5 档 Bypass 诊断（98b4dd1 构建）。
+> 最后更新：Task 5（2026-09-28，移植上游 PR #61 深度纹理 filter-completeness 修复（议题 #57 的回复）到 MobileGlues 子模块 + depth_filter 独立测试 33/33；App 版本号改 18（versionCode 2018）、作者改 yiqiu4178；CI 事故（LFS 配额）已修，**交付构建 = 0e20332（run 36424478374 绿）**。FSR 闪屏收口仍等用户测第 5 档 Bypass 诊断。
 > 新会话规则：新任务记录**追加到本文件最末尾**（`## Task N` 模板）；收尾时同步更新「当前状态」表；本文件超 ~400 行时把最旧 Task 段挪进 worklog-archive.md。
 
 ### 一句话
@@ -123,6 +123,7 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 推送与状态
 - MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends **d651080**（子模块先行）；宿主 **6257a12**（worklog 本节 + pin + 版本/作者）随后
 - **CI 事故（非代码）**：6257a12 首跑 run 36423575187 失败于 "Init submodules"——账号 **LFS 带宽配额耗尽**（MobileGL 的 tools/trace_replay/fixtures PNG smudge 被拒；今日 main 分支失败 run 36419697836 同因；98b4dd1 时代尚有余量）。修复：mg.yml 的 Init submodules 步骤加 `GIT_LFS_SKIP_SMUDGE: 1`（trace fixture 是测试数据，Android 构建不读，指针桩即可）。副作用预期为零
+- **CI 绿**：run 36424478374（0e20332，2026-09-28 13:1x）success——LFS 修复生效，PR #61 移植 NDK 编译通过，产物 `MobileGlues-plugin_2026-09-28_0e203327…zip`（9.6MB，12-27 过期）已可下载。**装机包 = 这个**（版本号 18 / 作者 yiqiu4178 / Bypass 诊断档 / PR #61 移植四合一）
 - MobileGL → Gsjsjzhznsz/MobileGL@mg-3backends（子模块先行）；宿主（worklog 本节 + pin + 版本/作者）随后；CI 绿后交付 APK
 - MobileGL 子模块：862 文件纯 mode 噪音（0 insertions/deletions），不提交
 - **闪屏收口仍等用户测第 5 档 Bypass**（98b4dd1 构建，settings 里选"旁路诊断（无锐化）"）：仍闪 ⇒ 重定向及以下；不闪 ⇒ EASU/RCAS 色彩器趟。本 Task 不改变该判定表
