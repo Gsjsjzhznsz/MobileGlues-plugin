@@ -90,6 +90,32 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 
 ---
 
+## Task 6（2026-09-28）—— Bypass 判决落地：闪屏定罪"重定向及以下"；版本纠偏（渲染器 2.0.18 / app 版本还原 / 作者 yiqiu4178）
+
+### 用户输入
+"还是闪屏" + "对了，app版本不要改，我只是让你改渲染器版本号2.0.18，作者也改成我"。
+—— 前者伴随 b5602ac 日志上传（21:49:37），经核对**正是 Task 4/5 设计的 Bypass 判决实验**（fsr1Setting = 5）；后者纠正 Task 5 对"版本号 18"的错误归属：改的应是渲染器版本而非 app 版本。
+
+### Bypass 判决（b5602ac 日志判读，本轮最重要结果）
+- 会话：21:45:47–21:46:18（标题屏 31 秒，Realms 检查后 Stopping，退出码 0）；构建 = d8cb2a6 线（MobileGlues d651080）。Renderer: MobileGlues，POJAV_RENDERER=opengles3。
+- 配置链全通：`fsr1Setting = 5` → `FSR1 ready: preset 5 (init #2/#3, ctx 0x6ef8cc59a0)` → `redirect active` → `window-units latch seeded: 2360x1080 (empty-latch rule)`（Task 4 修复生效）→ `present context #1` → `surface identity #1: 0x6ef8cc6b10 now 2360x1080` → `targets recreated #1: render 1180x540` → `surface latched`。
+- **四轴全部干净**：①呈现上下文恒为 0x6ef8cc59a0——`present context #N` 计数器是上下文身份切换数（s_ctxSwitches，置于未初始化透传之前，第二呈现者无法隐身），全程仅 #1 = 严格单上下文，双上下文假说**终审死刑**；②surface 身份仅开局一次 1280x720→2360x1080 翻转（FCL 桥的正常启动跃迁），无交替；③targets 仅重建一次，零 churn；④零 skip、零 latch 拒绝。
+- **判决（Task 4/5 判定表第 1 条命中）**：Bypass 档 = 重定向、闩锁、门控、surface 查询照跑，唯独 EASU+RCAS 换成 NEAREST blit 直呈——用户在此档仍闪屏 ⇒ **闪屏病灶在重定向及以下**（延迟单 blit 呈现机制 / FCL SDL 桥呈现 / 设备 GLES 驱动 / 系统合成器）；着色器趟、漏斗逻辑、双上下文、surface 轴、尺寸轴全部洗清。
+- **下一分裂实验（用户，零新构建可做）**：FSR 选**关闭**（preset 0，Disabled = 纯透传，重定向机制一概不跑）进游戏 ≥30 秒后回传日志。干净 ⇒ 重定向+延迟呈现机制定罪（下一代码轮换呈现路径：纹理四边形画代替 blit / flush 纪律）；仍闪 ⇒ 整个 MobileGlues GLES 后端在该设备/桥上闪（与 FSR 彻底无关），调查 FCL 桥配置。
+- 历史旁证：用户九轮报告均指认"开 FSR 才闪"（老版本无 FSR 时代无此诉）——若本轮关闭档确认为净，"重定向+延迟呈现"定罪闭环。
+
+### 版本纠偏（Task 5 误读的还原与正确落点）
+- **app 版本还原**：app/build.gradle.kts versionCode 2018→**2001**、versionName "18"→**"2.0.1"**（上轮改错对象，本轮恢复原样）。
+- **渲染器版本 2.0.17→2.0.18**：MobileGlues-cpp/version.h `REVISION 17→18`，按惯例补 REVISION 18 注释块（fork 发布线，维护者 yiqiu4178；载明 PR #61 语义移植 + FSR1 闪屏狩猎机器 + Bypass 诊断档；cache-key 惰性失效旧 ESSL 缓存）。消费点自动生效：getter.cpp 版本串、glsl_for_es 缓存键与 converter rev 日志。
+- **作者**：app/src/main/res/values/strings.xml `info_author = yiqiu4178`（Task 5 已改对，保持）。
+- 验证：g++ -dM -E 展开 version.h 得 MAJOR 2 / MINOR 0 / REVISION 18 / VERSION_TYPE RELEASE，头文件自包含编译通过；strings.xml yiqiu4178 在位。
+- MobileGL 子模块本轮未动（其工作区 .clang-format/.gitattributes 等杂项为环境性改动，不入库、不影响 pin）；宿主 pin 只记 commit，脏文件不随行。
+
+### 推送与状态
+- MobileGlues（version.h）先推，宿主（版本还原 + 子模块 pin + 本节 worklog）后推；CI 把关构建，绿后交付 APK。
+
+---
+
 ## Task 5（2026-09-28）—— 移植上游 PR #61（D32F 深度纹理 filter-completeness，议题 #57 的"回复"）+ 版本 18 / 作者 yiqiu4178
 
 ### 用户输入
