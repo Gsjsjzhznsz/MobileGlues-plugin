@@ -24,7 +24,7 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 关键路径与命令
 - 仓库根（本地）：/home/z/my-project/plugin3b/repo；上游：Gsjsjzhznsz/MobileGlues-plugin（host）+ MobileGlues / MobileGL 子模块（同一账号）
 - 推送：`git remote set-url origin https://<token>@github.com/Gsjsjzhznsz/<repo>.git`（三仓库各自配）
-- 用户日志渠道：直接推仓库根 latest_game.log / latest.log（"Add files via upload"）
+- 用户日志渠道：直接推仓库根 latest_game.log / latest.log（"Add files via upload"）——**分支不固定：main 与 mg-3backends 都要查**（Task 7 实录：日志传在 main，mg-3backends 空手而归）
 - CI 轮询：`gh api /repos/Gsjsjzhznsz/MobileGlues-plugin/actions/runs?per_page=N`（子模块 CI 同理）
 - 产物验证：`strings lib*.so | grep -E "FSR1|mg-dispatch"` 校验新日志串已编入
 
@@ -87,6 +87,38 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 遗留 / 下一步
 - 内置 FSR1 → Arm ASR 替换（计划不变）；DirectVulkan 原生 FSR（SPIR-V 双管线挂 Present）为下一个功能里程碑
 - 悬浮底栏居中；BandQQ 主题 + 液态玻璃完整移植；预测手势补齐
+
+---
+
+## Task 7（2026-09-28）—— FCL 关闭档净 = 重定向机制正式定罪；ZL2 启动静默死亡 + 引导期死亡点遥测 + Bypass glFinish 探针
+
+### 用户输入
+"fcl正常了，但是使用zl2启动器启动会错误。" + "我不是上传了吗"（日志传在 **main 分支** bdd73bf，22:50:26 —— 本轮才发现双分支问题，已把"两分支都要查"写入日志渠道守则）。
+
+### 日志判读（bdd73bf：latest_game.log 1150 行 + latest.log 27 行 + log_2026-09-28T22-49-35_main.log 6 行）
+1. **干净会话 22:44:44–22:46:43 = FCL**（Env 实锤：com.tungsten.fcl / FCL_VERSION_CODE=1335 / SDL_OPENGL_LIBRARY 直指插件内 libmobileglues.so），`fsr1Setting = 0`（关闭档），标题屏，OpenJDK exit 0。日志内仅有的 error 行（CrashAssistant 附属进程 134、Realms 401、RenderScale 类缺失）全部非致命。
+   → **Task 6 判定表命中：关闭档净 ⇒ 重定向+延迟呈现机制定罪闭合**（历史旁证同步成立：九轮报告均指认"开 FSR 才闪"）。
+2. **ZL2 = ZalithLauncher 2.6.1**（com.movtery.zalithlauncher.v2，Android 15，xaga/Redmi Note 11T Pro）启动失败签名：
+   - `log_…_main.log`（ZL2 启动器日志）**仅 6 行头部**，零内容；
+   - latest.log = 渲染器自身初始化 27 行：设置全载 → `EGL initialized successfully` → GLES 3.2 → multidraw 秩序表 dump，**戛然而止**；
+   - ZL2 那次尝试**没有对应 latest_game.log**（MC 侧日志根本没建立，现有 game log 是 22:44 FCL 会话的）。
+   → **死亡区间：渲染器 native init 完成 → MC 第一次 GL 调用之间**（LWJGL/GLFW/窗口 surface 创建段），进程静默消失，无 Java 堆栈无原生 trace。FCL 同包同配置全链正常 ⇒ 差异变量在 ZL2 的窗口/surface 引导，而非渲染器自身。
+
+### 本轮落盘（MobileGlues，3 文件，纯遥测+诊断探针，零行为改动）
+1. **egl.cpp eglCreateWindowSurface**：一次性引导遥测（首 4 次 + 每 64 次；仅 EGL_NO_SURFACE 时才读 eglGetError——健康路径绝不消费驱动的 error flag，防改变应用语义）。
+2. **egl.cpp eglMakeCurrent**：首 4 次 currenting 结果遥测。
+3. **config/settings.cpp init_settings_post**：multidraw 秩序 dump 后打 `[MG] native init complete`——native init 最后一个检查点；下一份 ZL2 日志里它后面的第一行就是幸存阶段。
+4. **gl/FSR1/FSR1.cpp Bypass 分支**：blit 后加 `glFinish()` 探针（一次性日志标记）。逻辑：关闭档已净 ⇒ 重定向定罪；RCAS draw 与 NEAREST blit **两种呈现形态都闪** ⇒ 呈现动作类型不是判别子；剩余分裂 = **缓冲翻转是否与拷贝竞速**。探针净 ⇒ 修复 = flush 纪律（下一轮铺全档位）；探针仍闪 ⇒ 病灶在翻转之下（合成器/桥），FSR-on 在该设备的故事转向启动器侧渲染缩放或 Arm ASR。
+- 验证：三文件括号平衡快检全 0；完整编译由 CI 把关。崩溃前已刷盘的 W_FORCE 行会留在 latest.log——最后一行即死亡点。
+
+### 下份日志判定表（Task 7 版）
+1. **ZL2 重试**：`native init complete` 之后若出现 `bootstrap eglCreateWindowSurface #N` → surface 创建是幸存阶段；`bootstrap eglMakeCurrent` → 更深一步；两行都没有 → 死在 native init 与 EGL 窗口创建之间（LWJGL/GLFW 段，追启动器侧）。若 ZL2 直接能玩 → 上次为时序性死亡（如竞态），观察即可。
+2. **FCL + Bypass（第 5 档）重试**：日志出现 `FSR1 Bypass glFinish probe active` → 探针在跑；不闪 ⇒ flush 纪律定案（下一轮实现到全档位）；仍闪 ⇒ 翻转之下的层定罪，FSR-on 转向启动器侧方案。
+3. 用户可选：FCL 上把 FSR 开回普通档（1-4）再玩一次——确认 glFinish 探针（仅 Bypass 挂载）之外的普通档是否仍闪，为 flush 纪律的铺设范围提供数据。
+
+### 推送与状态
+- MobileGlues（3 文件遥测+探针）先推；宿主（子模块 pin + 本节 worklog）后推；CI 绿后交付 APK。
+- MobileGL 子模块继续冻结（ZL2 问题与 MobileGL 无关；用户当前后端 = MobileGlues）。
 
 ---
 
