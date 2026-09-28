@@ -32,7 +32,7 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MG] Shader 3 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 5 converted OK (glslver=450 -> essl ver=320)
 [MG] Shader 6 converted OK (glslver=450 -> essl ver=320)
-[MG] FSR1 ready: preset 4, sharpening 90%, surface 1280x720 (init #3, ctx 0x7408ab5170)
+[MG] FSR1 ready: preset 4, sharpening 90%, surface 1280x720 (init #3, ctx 0x6ef8ccafb0)
 [MG] Shader 7 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 8 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 10 converted OK (glslver=330 -> essl ver=320)
@@ -40,11 +40,11 @@ multidrawModeArrays is no longer used; see multidrawOrder / multidrawOrderArrays
 [MG] FSR1 redirect active: framebuffer 0 -> render 640x360 (surface 1280x720)
 [MG] Shader 13 converted OK (glslver=330 -> essl ver=320)
 [MG] Shader 14 converted OK (glslver=330 -> essl ver=320)
-[MG] FSR1 window-units latch rejected (air Task 82): 2360x1080 is not a window viewport (surface 1280x720, latch 0x0) -- intermediate render pass kept out of the upscale geometry
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
-[MG] FSR1 present context #1: 0x7408ab5170
-[MG] FSR1 surface identity #1: surface 0x7408ab4a20 now 2360x1080
-[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.500x0.500, view 0x0): -> 0,0 2360x1080 draw 0,0 1180x540
+[MG] FSR1 window-units latch seeded: 2360x1080 (empty-latch rule, surface 1280x720; square intermediate passes stay refused)
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.271x0.333, view 2360x1080): -> 0,0 2360x1080 draw 0,0 640x360
+[MG] FSR1 present context #1: 0x6ef8ccafb0
+[MG] FSR1 surface identity #1: surface 0x6ef8ccb9d0 now 2360x1080
+[MG] fsr1 blit rewrite (src=0 dst=1, scale 0.271x0.333, view 2360x1080): -> 0,0 2360x1080 draw 0,0 640x360
 [MG] FSR1 targets recreated #1: render 1180x540, surface 2360x1080
 [MG] FSR1 surface latched: 2360x1080 -> render 1180x540
 [MG] Shader 16 converted OK (glslver=330 -> essl ver=320)
