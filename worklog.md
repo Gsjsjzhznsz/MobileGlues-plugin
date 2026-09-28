@@ -112,7 +112,9 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 - MobileGL 子模块本轮未动（其工作区 .clang-format/.gitattributes 等杂项为环境性改动，不入库、不影响 pin）；宿主 pin 只记 commit，脏文件不随行。
 
 ### 推送与状态
-- MobileGlues（version.h）先推，宿主（版本还原 + 子模块 pin + 本节 worklog）后推；CI 把关构建，绿后交付 APK。
+- MobileGlues（version.h）先推（d651080→**3367185**），宿主（版本还原 + 子模块 pin + 本节 worklog）后推（b5602ac→**b9310e3**）。
+- **CI 绿**：宿主 run 36434054896（b9310e3，success，本次 runner 偏慢 ~50 分钟，历史均值 ~20 分钟）；产物 `MobileGlues-plugin_2026-09-28_b9310e3202a22cd1ac301dd2cb26a60bab1e4d4c`（9.6MB，2026-12-27 过期）。该包 = 渲染器自报 2.0.18 + app 版本 2.0.1 + 作者 yiqiu4178 + Bypass 判决机器全量。
+- 待用户：装 b9310e3 包 → **FSR 关闭（preset 0）** 进游戏 ≥30 秒 → 回传 latest.log + latest_game.log（Task 6 下一分裂实验）。
 
 ---
 
