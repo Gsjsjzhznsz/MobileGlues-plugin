@@ -4,7 +4,7 @@
 
 ## ⚡ READ ME FIRST —— 会话速览
 
-> 最后更新：Task 2（2026-09-27，FSR 闪屏第五轮：**闪屏根因定案**——多上下文无条件 ApplyFSR + present 时惰性初始化是毒源；修复 = per-context redirect-dirty 交换门控 + 移除惰性初始化；g_dirty 只设不消费的架构洞补上；独立 TU 9/9；等待装机验证）。
+> 最后更新：Task 5（2026-09-28，移植上游 PR #61 深度纹理 filter-completeness 修复（议题 #57 的回复）到 MobileGlues 子模块 + depth_filter 独立测试 33/33；App 版本号改 18（versionCode 2018）、作者改 yiqiu4178。FSR 闪屏收口仍等用户测第 5 档 Bypass 诊断（98b4dd1 构建）。
 > 新会话规则：新任务记录**追加到本文件最末尾**（`## Task N` 模板）；收尾时同步更新「当前状态」表；本文件超 ~400 行时把最旧 Task 段挪进 worklog-archive.md。
 
 ### 一句话
@@ -16,7 +16,8 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 | FSR 配置链（已验证） | 插件写 /sdcard/MG/config.json（fsr1Setting 0-4 / fsr1Sharpness 0-100 / backendType）→ dispatcher mg_config_scan（MG_DIR_PATH 优先）→ MobileGlues 核 settings.cpp 直读；MobileGL 核走 setenv("MOBILEGL_FSR1"/"MOBILEGL_FSR1_SHARPNESS") → DirectGLES FSR1 IsEnabled() 惰性 getenv |
 | **DirectVulkan 无 FSR（结构性）** | FSR1 只实现于 GLES 家族；用户若停在默认后端 DirectVulkan，FSR 必然无效。UI 的 FSR 区块已有红字提示 + 一键"切换后端到 GLES"按钮 |
 | 已知闪屏修复史 | ①viewport 触发的 target 翻转（改为 swap 时 surface query 唯一尺寸权威）②surface query 翻转（pendingStreak≥2 去抖）③编译失败自禁用（不再 0x0 视口循环）④air Task 82 units 锁存形状过滤 ⑤**本轮：多上下文无条件 ApplyFSR + present 时惰性初始化（根因定案，见 Task 2）** |
-| 待用户装机验证 | Task 2 锚点：干净单上下文会话应零 skip 日志；若仍闪，`FSR1 present skipped #N (ctx …)` 与 `present context #N` 直接暴露交替 |
+| 待用户装机验证 | **Task 4/5 锚点：装 ≥98b4dd1 构建（现含 PR #61 移植），FSR 选第 5 档 Bypass 进游戏 ≥30 秒**：仍闪 ⇒ 重定向及以下（FCL/驱动/合成）；不闪、普通档闪 ⇒ EASU/RCAS 色彩器趟 |
+| MC 26.x 透明排序 | PR #61 已移植（Task 5）：D32F 深度纹理在 MIPMAP_LINEAR 采样器下不再 filter-incomplete；云穿地形/水无遮挡应修复（与 FSR 闪屏无关） |
 | 推送纪律 | **子模块先、宿主后**；token 配 remote；CI 把关构建（本地无 Android SDK）|
 | 沙箱生存 | /home/z/my-project 会被重置：repo 重 clone + `submodule update --init`；本 worklog 在仓库内所以永存 |
 
@@ -86,6 +87,43 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 遗留 / 下一步
 - 内置 FSR1 → Arm ASR 替换（计划不变）；DirectVulkan 原生 FSR（SPIR-V 双管线挂 Present）为下一个功能里程碑
 - 悬浮底栏居中；BandQQ 主题 + 液态玻璃完整移植；预测手势补齐
+
+---
+
+## Task 5（2026-09-28）—— 移植上游 PR #61（D32F 深度纹理 filter-completeness，议题 #57 的"回复"）+ 版本 18 / 作者 yiqiu4178
+
+### 用户输入
+"还是闪屏，还有能不能看看我有一个对mg的议题被恢复了，能不能把那个恢复搬过来，并改版本号为18，改作者为yiqiu4178"
+—— "被恢复"按同音解读为"被回复"：用户在上游 MobileGL-Dev/MobileGlues 的议题 **#57**（D32F 深度纹理在 MIPMAP_LINEAR 采样器下 filter-incomplete，MC 26.x 透明排序退化）收到了 HEBEI77 的修复 PR **#61**（2026-09-23 交叉引用），要求把该修复搬进本项目；另有版本号/作者个性化两项。"还是闪屏" = 用户仍在普通档复现（Bypass 诊断档构建 98b4dd1 已在远端但用户尚未测第 5 档——Task 4 判定表仍在收口中）。
+
+### PR #61 移植（MobileGlues 子模块，语义级合并）
+上游 11 文件 +670/-45（base=upstream main，与本 vendored 树无共同祖先；`git apply --reject` 后 3 文件手工合并）。关键事实：**本树早已自带同族修复的约 70%**（议题 #57 本就基于本 fork 的 2.0.11/2.0.12 诊断写成）——g_sampler_records/g_sampler_forced 强制机制、sampler shadow 表、glDeleteSamplers/glBindSampler/glSamplerParameteri/f 包装、参数改写均已在树。本轮真正新增的缺口：
+
+1. **新文件 depth_filter.h/.cpp**（上游原文，纯谓词：mg_is_sized_depth_format / mg_depth_pairing_incomplete / mg_depth_filter_make_legal / mg_filter_value_legal）+ CMakeLists 挂入 + tests/depth_filter_test.cpp + run.sh 条目
+2. **mg_depth_draw_guard**（mg.h 已由补丁带入）：绘制期配对强制。ctor/dtor 落 texture.cpp（上游补丁自身文本损坏 `movedoved_count++]` 已修为 `moved[moved_count++]`），并做两处本地适配：
+   - **force 感知**：采样器在 g_sampler_forced 中 ⇒ driver 侧已是 NEAREST/NEAREST（合法），保持绑定不拆（拆了会丢 MC 采样器的 MAX_LOD 夹持，单层 D32F 反而变 mip-incomplete 黑图）；
+   - **未跟踪上下文门控**：`driver_texture_shadow_trustworthy()` 为假直接返回——遵守本树"记录只是提示，不得对 fallback 记录行动"的既有不变量（与 2.0.12 force 的 FSR1 前置条款同理）。
+3. **glTexParameterf/glTexParameteri 重写**：按 PR 改为 record（应用值）+ push_depth_sampling_state（深度图给 driver 法定视图），取代 2.0.12 的盲改 NEAREST（记录从此为真值，glGet 与 guard 可信）
+4. **glGetTexParameteriv/fv**（新增，从记录应答三个影子 pname；gl_native 相应两行注释掉——补丁已做）+ **glSamplerParameteriv/fv**（新增，双记录 = g_sampler_records + SamplerShadowTable，含 stale-force 失效；gl_native 248/250 两行本轮注释掉）+ **ARB 别名补齐**（__APPLE__ 两分支）
+5. **桥接宏**：`SamplerShadowTable = g_tg->sampler_objects`、`SamplerBindings = g_tc->driver_samplers`（上游字段 sampler_bindings 与本树 driver_samplers 同义，不重复建字段）；glDeleteSamplers 增 shadow 表清扫
+6. **补丁自动应用部分**：texture.h 三字段（min_filter/mag_filter/compare_mode，GL 默认值）、drawing.cpp/multidraw.cpp 全部 `auto depth_guard = prepareForDraw()` 调用点、glTexImage1D/glTexImage3D/glCopyTexImage2D 的分配点 push、glDrawArraysIndirect/glDrawElementsIndirect 从 native 前转改包装、glGetTexParameterfv/iv 与 glTexParameterfv 前转注释
+7. **刻意偏离（记录在案）**：glTexImage2D/glTexStorage2D/glTexStorage3D 不加 push——三处已有 2.0.12 arm（depth registry + MIN/MAG 直改 NEAREST/NEAREST，mip 安全），push 若排后会降级为 mip-requiring 视图（单层纹理反而 incomplete）；2.0.12 arm 保留
+8. **prepareForDraw 签名**：`void → mg_depth_draw_guard`（int api 重载同步）；补丁误插入的重复 glDrawArrays/glDrawArraysInstanced 已删（本树 364/379 早已是包装）；5 个裸调用点全部改 guard 捕获（含 763 行 BaseInstance(4)）
+
+### 验证
+- tests/depth_filter_test.cpp 本机 g++ 编译运行 **33/33 全过**（-Iinclude 用树内 vendored GL 头）
+- 四个编辑文件括号平衡快检（注释/字符串剥离后 braces=0, parens=0）
+- multidraw.cpp 无裸调用残留；glDrawArrays/glDrawArraysInstanced 各恰一处定义
+- 完整编译仍由 CI（NDK/libc++）把关；FSR 闪屏与此修复相互独立（本修复治 MC 26.x 透明排序，不治 FSR strobe）
+
+### 版本号 / 作者（宿主 App）
+- app/build.gradle.kts：versionCode 2001 → **2018**（保持 ≥ 已装 2001，避免 Android 拒装降级包），versionName "2.0.1" → **"18"**（关于页 BuildConfig.VERSION_NAME 直接显示 18）
+- values/strings.xml：info_author "Swung, BZLZHH, Tungsten" → **"yiqiu4178"**（Material/Miuix 两主题关于页共用；打赏页链接区不动）
+
+### 推送与状态
+- MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends（子模块先行）；宿主（worklog 本节 + pin + 版本/作者）随后；CI 绿后交付 APK
+- MobileGL 子模块：862 文件纯 mode 噪音（0 insertions/deletions），不提交
+- **闪屏收口仍等用户测第 5 档 Bypass**（98b4dd1 构建，settings 里选"旁路诊断（无锐化）"）：仍闪 ⇒ 重定向及以下；不闪 ⇒ EASU/RCAS 色彩器趟。本 Task 不改变该判定表
 
 ---
 

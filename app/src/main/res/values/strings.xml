@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MobileGlues</string>
 
-    <string name="info_author" translatable="false">Swung, BZLZHH, Tungsten</string>
+    <string name="info_author" translatable="false">yiqiu4178</string>
     <string name="info_copyright" translatable="false">GNU LGPL-2.1 License</string>
     <string name="info_launcher" translatable="false">Fold Craft Launcher (>=1.2.0.5)\nZalith Launcher (>=1.4.0)\nPojav Glow·Worm (>=20250211)</string>
     <string name="info_logo" translatable="false">Aou156</string>
