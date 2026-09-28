@@ -117,8 +117,10 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 3. 用户可选：FCL 上把 FSR 开回普通档（1-4）再玩一次——确认 glFinish 探针（仅 Bypass 挂载）之外的普通档是否仍闪，为 flush 纪律的铺设范围提供数据。
 
 ### 推送与状态
-- MobileGlues（3 文件遥测+探针）先推；宿主（子模块 pin + 本节 worklog）后推；CI 绿后交付 APK。
+- MobileGlues（3 文件遥测+探针）先推（3367185→**1bb2a42**）；宿主（子模块 pin + 本节 worklog）后推（7454767→**b0653fa**）。
+- **CI 绿**：宿主 run 36441127006（b0653fa，success，~20 分钟）；产物 `MobileGlues-plugin_2026-09-28_b0653fac08cce4a3d4624c30cd5b9d964949d8f0`（9.6MB）。main 分支 bdd73bf 的 CI 失败 = 用户日志上传提交，与构建无关（历史已排除类）。
 - MobileGL 子模块继续冻结（ZL2 问题与 MobileGL 无关；用户当前后端 = MobileGlues）。
+- 待用户三实验：①ZL2 重试（死亡点入日志）②FCL+Bypass 重试（glFinish 探针分裂）③可选 FCL 普通档确认。
 
 ---
 
