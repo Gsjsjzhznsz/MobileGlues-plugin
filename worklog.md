@@ -121,7 +121,9 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 - values/strings.xml：info_author "Swung, BZLZHH, Tungsten" → **"yiqiu4178"**（Material/Miuix 两主题关于页共用；打赏页链接区不动）
 
 ### 推送与状态
-- MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends（子模块先行）；宿主（worklog 本节 + pin + 版本/作者）随后；CI 绿后交付 APK
+- MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends **d651080**（子模块先行）；宿主 **6257a12**（worklog 本节 + pin + 版本/作者）随后
+- **CI 事故（非代码）**：6257a12 首跑 run 36423575187 失败于 "Init submodules"——账号 **LFS 带宽配额耗尽**（MobileGL 的 tools/trace_replay/fixtures PNG smudge 被拒；今日 main 分支失败 run 36419697836 同因；98b4dd1 时代尚有余量）。修复：mg.yml 的 Init submodules 步骤加 `GIT_LFS_SKIP_SMUDGE: 1`（trace fixture 是测试数据，Android 构建不读，指针桩即可）。副作用预期为零
+- MobileGL → Gsjsjzhznsz/MobileGL@mg-3backends（子模块先行）；宿主（worklog 本节 + pin + 版本/作者）随后；CI 绿后交付 APK
 - MobileGL 子模块：862 文件纯 mode 噪音（0 insertions/deletions），不提交
 - **闪屏收口仍等用户测第 5 档 Bypass**（98b4dd1 构建，settings 里选"旁路诊断（无锐化）"）：仍闪 ⇒ 重定向及以下；不闪 ⇒ EASU/RCAS 色彩器趟。本 Task 不改变该判定表
 

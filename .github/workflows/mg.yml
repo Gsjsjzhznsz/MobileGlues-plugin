@@ -22,7 +22,14 @@ jobs:
       # (profiling only) — a 55-minute clone for nothing. The Android build
       # needs exactly: MobileGlues (recursive), MobileGL, and the MobileGL
       # 3rdparty set that the root CMakeLists add_subdirectory's unconditionally.
+      # Task 5: the account's LFS bandwidth budget is exhausted (the only LFS
+      # objects in reach are MobileGL's trace_replay fixture PNGs -- test data
+      # the Android build never reads), so the submodule checkout dies in
+      # smudge and the whole build fails before compiling a line. Skip the
+      # smudge: those paths check out as pointer stubs, which is fine here.
       - name: Init submodules (Android build set)
+        env:
+          GIT_LFS_SKIP_SMUDGE: 1
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git submodule update --init --recursive MobileGlues
