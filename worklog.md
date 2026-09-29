@@ -348,3 +348,8 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 推送与状态
 - MobileGlues egl.cpp → mg-3backends（本节同 commit）；宿主（pin + 本节）随后；CI 绿后交付。
 - FCL 侧证据链现状：关闭档净 ✓、全档闪 ✓、FIFO ✓、状态净化 ✓、flush ✓、env 生效 ✓ —— 剩余：翻转缓冲内容 / FCL TextureView 消费。buffer-age 将二选一收口。
+
+### Task 9 推送记录（收尾补记）
+- MobileGlues：3b16911→**8c323e5**（egl.cpp buffer-age 取证 + eglSwapInterval 异步拒绝；rebase 吸收 Task 8 提交后干净落位）
+- 宿主：d176453→**5e6db6a**（pin + worklog Task 9）→ 收尾 **worklog CI commit**
+- **CI 绿**：宿主 run **36551960222**（5e6db6a，success）；产物 `MobileGlues-plugin_2026-09-29_5e6db6a4af2cf97d74b0390829de11890e476e82`（10.1MB）= 判定版（preset 1 即可测，无需改档）；so 内字符串验证：buffer-age / vsync clamp / interval now / flush discipline 全部在 libmg_gles.so
