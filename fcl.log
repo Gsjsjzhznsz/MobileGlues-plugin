@@ -1,0 +1,354 @@
+[16:38:22] [com.tungsten.fcl.activity.SplashActivity.initState/INFO] Using DNS servers for game: [10.144.148.129, 10.144.148.5, 223.5.5.5, 119.29.29.29]
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[16:38:23] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[], baseDirectory=/storage/emulated/0/Android/data/com.tungsten.fcl/files/.minecraft]] gets fired
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[16:38:23] [com.tungsten.fclcore.auth.authlibinjector.AuthlibInjectorDownloader.checkUpdate/INFO] Checking update of authlib-injector
+[16:38:23] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[1.8.9, Fabulously Optimized], baseDirectory=/storage/emulated/0/FCL/.minecraft]] gets fired
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.game.GameRepository.refreshVersionsAsync(GameRepository.java:87)
+[16:38:23] [com.tungsten.fclcore.event.EventBus.fireEvent/INFO] RefreshedVersionsEvent [source=FCLGameRepository [versions=[1.8.9, Fabulously Optimized], baseDirectory=/storage/emulated/0/FCL/.minecraft]] gets fired
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:57)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:56)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:162)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.upgrade.UpdateChecker.check(UpdateChecker.java:55)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:161)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:56)
+[16:38:23] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.mio.skin.SkinTextureLoader.load(SkinTextureLoader.kt:57)
+[16:38:24] [com.tungsten.fcl.game.LauncherHelper.launch/INFO] Launching game version: Fabulously Optimized
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StagesHintTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$64@4ce88cb
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@e38f79a
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@e85b445
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@f901cbc
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@68f90af
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$59@d63608e
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$58@8ed1889
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkGameState(LauncherHelper.java:568)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkGameState(LauncherHelper.java:568)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$58@8ed1889
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameLibrariesTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:178)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameAssetDownloadTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:178)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:166)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameAssetIndexDownloadTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$UniCompose$0@9c97638
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.DefaultDependencyManager.checkGameCompletionAsync(DefaultDependencyManager.java:83)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.DefaultDependencyManager.checkGameCompletionAsync(DefaultDependencyManager.java:83)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.DefaultDependencyManager.checkPatchCompletionAsync(DefaultDependencyManager.java:102)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.mod.modrinth.ModrinthCompletionTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameAssetIndexDownloadTask
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: 下载整合包相关文件
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$2(LauncherHelper.java:166)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.DefaultDependencyManager.checkPatchCompletionAsync(DefaultDependencyManager.java:102)
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@9c97638
+[16:38:25] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameLibrariesTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: 检查资源文件完整性
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$59@d63608e
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@68f90af
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@f901cbc
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.download.game.GameVerificationFixTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.download.game.GameVerificationFixTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@e85b445
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.logIn(LauncherHelper.java:633)
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.logIn(LauncherHelper.java:633)
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$UniCompose$0@e38f79a
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fclcore.task.Task$StageTask
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:266)
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$26@ef1dad7
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$25@d255a56
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$24@2473c71
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$23@2b73a18
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$21@c6d99fb
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$20@71cf8a
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$19@99c35f5
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:202)
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:202)
+[16:38:29] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$11(LauncherHelper.java:246)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$11(LauncherHelper.java:246)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$19@99c35f5
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkPathValid(LauncherHelper.java:378)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkPathValid(LauncherHelper.java:378)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$20@71cf8a
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkRenderer(LauncherHelper.java:410)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkRenderer(LauncherHelper.java:410)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$21@c6d99fb
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkNativeLibPlugin(LauncherHelper.java:448)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkNativeLibPlugin(LauncherHelper.java:448)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$23@2b73a18
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkModLoader(LauncherHelper.java:479)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkModLoader(LauncherHelper.java:479)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$24@2473c71
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper.checkMod(LauncherHelper.java:507)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$20/FINE] Executing task: com.tungsten.fcl.game.LauncherHelper$13@2bc1b45
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$13@2bc1b45
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.checkMod(LauncherHelper.java:507)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$25@d255a56
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$11/FINE] Executing task: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeCompletableFutureTask$13/FINER] Task finished: com.tungsten.fclcore.task.Task$4
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$26@ef1dad7
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper.lambda$launch0$21(LauncherHelper.java:266)
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StageTask
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fcl.game.LauncherHelper$64@4ce88cb
+[16:38:30] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$30/FINER] Task finished: com.tungsten.fclcore.task.Task$StagesHintTask
+[16:38:30] [com.tungsten.fcl.game.LauncherHelper.lambda$launch0$19/INFO] Start JVMActivity!
+[16:38:31] [com.tungsten.fcl.activity.JVMActivity.onSurfaceTextureAvailable/INFO] surface ready, start jvm now!
+[16:38:38] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$32/FINE] Task failed: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:161)
+java.net.SocketTimeoutException: failed to connect to raw.giteeusercontent.com/180.76.199.86 (port 443) from /10.100.147.71 (port 58166) after 10000ms
+	at libcore.io.IoBridge.connectErrno(IoBridge.java:235)
+	at libcore.io.IoBridge.connect(IoBridge.java:179)
+	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:142)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:390)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:230)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:212)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:436)
+	at java.net.Socket.connect(Socket.java:646)
+	at com.android.okhttp.internal.Platform.connectSocket(Platform.java:182)
+	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:145)
+	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:186)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:164)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.lambda$getString$0(HttpRequest.java:154)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.$r8$lambda$DcdRoLEMXOeJUQb4O1ePrnrlf20(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest$0.get(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.io.HttpRequest.getStringWithRetry(HttpRequest.java:239)
+	at com.tungsten.fclcore.util.io.HttpRequest.-$$Nest$smgetStringWithRetry(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.getString(HttpRequest.java:152)
+	at com.tungsten.fclcore.util.io.HttpRequest.getJson(HttpRequest.java:108)
+	at com.tungsten.fcl.ui.main.MainUI.lambda$checkAnnouncement$7(MainUI.java:161)
+	at com.tungsten.fcl.ui.main.MainUI$7.call(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.task.Task$SimpleTask.execute(Task.java:1020)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$23(AsyncTaskExecutor.java:250)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.$r8$lambda$URi777UOgLTEQWhu7fVbRQEfdec(Unknown Source:0)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor$4.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.Lang.lambda$wrap$2(Lang.java:291)
+	at com.tungsten.fclcore.util.Lang$7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1780)
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1772)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:377)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1185)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1658)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1625)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+[16:38:38] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$32/FINE] Task failed: com.tungsten.fcl.ui.main.MainUI.checkAnnouncement(MainUI.java:162)
+java.net.SocketTimeoutException: failed to connect to raw.giteeusercontent.com/180.76.199.86 (port 443) from /10.100.147.71 (port 58166) after 10000ms
+	at libcore.io.IoBridge.connectErrno(IoBridge.java:235)
+	at libcore.io.IoBridge.connect(IoBridge.java:179)
+	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:142)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:390)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:230)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:212)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:436)
+	at java.net.Socket.connect(Socket.java:646)
+	at com.android.okhttp.internal.Platform.connectSocket(Platform.java:182)
+	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:145)
+	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:186)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:164)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.lambda$getString$0(HttpRequest.java:154)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.$r8$lambda$DcdRoLEMXOeJUQb4O1ePrnrlf20(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest$0.get(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.io.HttpRequest.getStringWithRetry(HttpRequest.java:239)
+	at com.tungsten.fclcore.util.io.HttpRequest.-$$Nest$smgetStringWithRetry(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.getString(HttpRequest.java:152)
+	at com.tungsten.fclcore.util.io.HttpRequest.getJson(HttpRequest.java:108)
+	at com.tungsten.fcl.ui.main.MainUI.lambda$checkAnnouncement$7(MainUI.java:161)
+	at com.tungsten.fcl.ui.main.MainUI$7.call(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.task.Task$SimpleTask.execute(Task.java:1020)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$23(AsyncTaskExecutor.java:250)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.$r8$lambda$URi777UOgLTEQWhu7fVbRQEfdec(Unknown Source:0)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor$4.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.Lang.lambda$wrap$2(Lang.java:291)
+	at com.tungsten.fclcore.util.Lang$7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1780)
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1772)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:377)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1185)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1658)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1625)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+[16:38:38] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$start$1/WARNING] An exception occurred in task execution
+java.net.SocketTimeoutException: failed to connect to raw.giteeusercontent.com/180.76.199.86 (port 443) from /10.100.147.71 (port 58166) after 10000ms
+	at libcore.io.IoBridge.connectErrno(IoBridge.java:235)
+	at libcore.io.IoBridge.connect(IoBridge.java:179)
+	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:142)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:390)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:230)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:212)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:436)
+	at java.net.Socket.connect(Socket.java:646)
+	at com.android.okhttp.internal.Platform.connectSocket(Platform.java:182)
+	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:145)
+	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:186)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:164)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.lambda$getString$0(HttpRequest.java:154)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.$r8$lambda$DcdRoLEMXOeJUQb4O1ePrnrlf20(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest$0.get(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.io.HttpRequest.getStringWithRetry(HttpRequest.java:239)
+	at com.tungsten.fclcore.util.io.HttpRequest.-$$Nest$smgetStringWithRetry(Unknown Source:0)
+	at com.tungsten.fclcore.util.io.HttpRequest$HttpGetRequest.getString(HttpRequest.java:152)
+	at com.tungsten.fclcore.util.io.HttpRequest.getJson(HttpRequest.java:108)
+	at com.tungsten.fcl.ui.main.MainUI.lambda$checkAnnouncement$7(MainUI.java:161)
+	at com.tungsten.fcl.ui.main.MainUI$7.call(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.task.Task$SimpleTask.execute(Task.java:1020)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$23(AsyncTaskExecutor.java:250)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.$r8$lambda$URi777UOgLTEQWhu7fVbRQEfdec(Unknown Source:0)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor$4.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.Lang.lambda$wrap$2(Lang.java:291)
+	at com.tungsten.fclcore.util.Lang$7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1780)
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1772)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:377)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1185)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1658)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1625)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+[16:38:38] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$32/FINE] Task failed: com.tungsten.fcl.upgrade.UpdateChecker.check(UpdateChecker.java:55)
+java.net.SocketTimeoutException: failed to connect to raw.giteeusercontent.com/180.76.199.86 (port 443) from /10.100.147.71 (port 58178) after 10000ms
+	at libcore.io.IoBridge.connectErrno(IoBridge.java:235)
+	at libcore.io.IoBridge.connect(IoBridge.java:179)
+	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:142)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:390)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:230)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:212)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:436)
+	at java.net.Socket.connect(Socket.java:646)
+	at com.android.okhttp.internal.Platform.connectSocket(Platform.java:182)
+	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:145)
+	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:186)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:164)
+	at com.tungsten.fclcore.util.io.NetworkUtils.doGet(NetworkUtils.java:214)
+	at com.tungsten.fcl.upgrade.UpdateChecker.lambda$check$3(UpdateChecker.java:60)
+	at com.tungsten.fcl.upgrade.UpdateChecker.$r8$lambda$ngtWYNYBvcGreK9fbLDCk1kJWa8(Unknown Source:0)
+	at com.tungsten.fcl.upgrade.UpdateChecker$0.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable.lambda$toCallable$0(ExceptionalRunnable.java:28)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable.$r8$lambda$EhR4lHKQfTGqqLQleF6QrLSBl6A(Unknown Source:0)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable$0.call(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.task.Task$SimpleTask.execute(Task.java:1020)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$23(AsyncTaskExecutor.java:250)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.$r8$lambda$URi777UOgLTEQWhu7fVbRQEfdec(Unknown Source:0)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor$4.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.Lang.lambda$wrap$2(Lang.java:291)
+	at com.tungsten.fclcore.util.Lang$7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1780)
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1772)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:377)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1185)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1658)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1625)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+[16:38:38] [com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$start$1/WARNING] An exception occurred in task execution
+java.net.SocketTimeoutException: failed to connect to raw.giteeusercontent.com/180.76.199.86 (port 443) from /10.100.147.71 (port 58178) after 10000ms
+	at libcore.io.IoBridge.connectErrno(IoBridge.java:235)
+	at libcore.io.IoBridge.connect(IoBridge.java:179)
+	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:142)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:390)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:230)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:212)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:436)
+	at java.net.Socket.connect(Socket.java:646)
+	at com.android.okhttp.internal.Platform.connectSocket(Platform.java:182)
+	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:145)
+	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getResponseCode(DelegatingHttpsURLConnection.java:106)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:30)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:186)
+	at com.tungsten.fclcore.util.io.NetworkUtils.resolveConnection(NetworkUtils.java:164)
+	at com.tungsten.fclcore.util.io.NetworkUtils.doGet(NetworkUtils.java:214)
+	at com.tungsten.fcl.upgrade.UpdateChecker.lambda$check$3(UpdateChecker.java:60)
+	at com.tungsten.fcl.upgrade.UpdateChecker.$r8$lambda$ngtWYNYBvcGreK9fbLDCk1kJWa8(Unknown Source:0)
+	at com.tungsten.fcl.upgrade.UpdateChecker$0.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable.lambda$toCallable$0(ExceptionalRunnable.java:28)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable.$r8$lambda$EhR4lHKQfTGqqLQleF6QrLSBl6A(Unknown Source:0)
+	at com.tungsten.fclcore.util.function.ExceptionalRunnable$0.call(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.task.Task$SimpleTask.execute(Task.java:1020)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.lambda$executeNormalTask$23(AsyncTaskExecutor.java:250)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor.$r8$lambda$URi777UOgLTEQWhu7fVbRQEfdec(Unknown Source:0)
+	at com.tungsten.fclcore.task.AsyncTaskExecutor$4.run(D8$$SyntheticClass:0)
+	at com.tungsten.fclcore.util.Lang.lambda$wrap$2(Lang.java:291)
+	at com.tungsten.fclcore.util.Lang$7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1780)
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1772)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:377)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1185)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1658)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1625)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+[16:39:38] [com.tungsten.fcl.setting.GameOption.load/INFO] No colon on line "showSubtitle", skipping
+[16:39:39] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: loading SDL3
+[16:39:39] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: loading SDL2
+[16:39:39] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: setting up SDL JNI
+[16:39:39] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: binding SDL surface
+[16:39:39] [org.lwjgl.glfw.CallbackBridge.notifyLauncher/INFO] FCL: SDL support enabled!
