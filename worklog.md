@@ -4,7 +4,7 @@
 
 ## ⚡ READ ME FIRST —— 会话速览
 
-> 最后更新：Task 8（2026-09-28，应用户要求通读 FCL 与 ZL2 两个启动器源码：ZL2 死亡签名解码（SIGABRT→静默 System.exit）+ FCL 强制异步 BufferQueue 实锤（闪屏最后候选机制）；落盘 = 全桥接 EGL 引导取证 + 普通档 flush 纪律 + pojavEnv 注入垂直同步兼容变量；**交付构建见本节推送记录**）。
+> 最后更新：Task 9（2026-09-29，e9a2fc7 日志判定：pojavEnv 注入生效实锤 ⇒ FCL 异步 BufferQueue 竞速排除；落盘 = present 期 EGL_BUFFER_AGE 取证（未绘制缓冲上屏测谎仪）+ eglSwapInterval 异步拒绝钳制（堵 LWJGL 直呼 EGL 的绕行通道）；ZL2 死点前移至插件库加载之前，游戏侧 latest.log 为下一证据载体；**交付构建见本节推送记录**）。
 > 新会话规则：新任务记录**追加到本文件最末尾**（`## Task N` 模板）；收尾时同步更新「当前状态」表；本文件超 ~400 行时把最旧 Task 段挪进 worklog-archive.md。
 
 ### 一句话
@@ -320,3 +320,31 @@ MobileGlues-plugin（分支 mg-3backends）= 安卓插件壳 app + 两个渲染�
 ### 推送与状态
 - MobileGlues → Gsjsjzhznsz/MobileGlues@mg-3backends **3634c4d**（子模块先行）；宿主（本文件 + 子模块 pin）紧随其后；CI 绿后交付 APK。
 - MobileGL 本轮未动（用户症状只在 MobileGlues 侧；其 Task 82 过滤已在上游）。
+
+---
+
+## Task 9（2026-09-29）—— 注入生效实证 + 异步竞速排除；翻转向取证（buffer-age）+ EGL 层异步拒绝；ZL2 死点前移
+
+### 用户输入
+"mg渲染器依旧开启fsr闪屏。zl2依旧错误"。日志 = e9a2fc7（16:44-16:45 上传）：fcl.log（FCL Java 侧，首次）+ latest.log / latest_game.log（fd30673 构建，preset 1）+ log_2026-09-29T16-44-46_main.log（ZL2，仅 6 行头部）。
+
+### 本轮判定（证据全部落袋）
+1. **Task 8 修复链在包里且生效**：latest.log 有 `FSR1 flush discipline active`（glFlush 纪律）+ `FSR1 window-units latch seeded: 2360x1080`（Task 7 空 latch 播种）——用户装的是 fd30673 判定版无疑。
+2. **pojavEnv 注入生效实锤（本轮最大价值）**：latest_game.log 出现 `Env: POJAV_VSYNC_IN_ZINK=1` 与 `Env: FORCE_VSYNC=true`（FCLauncher.setEnv 逐条打印，FCL 源码 :340-348 核对过）⇒ egl_bridge.c 三处消费点全部走"跳过"分支：pojavInit 不再 setNativeWindowSwapInterval(window,0)、gl_swap_interval 强制间隔 1。**⇒ 异步 BufferQueue 竞速假设正式排除**——闪屏是在 FIFO 阻塞翻转下发生的。
+3. **四轴依旧干净**（present ctx #1 / surface identity 仅开局一次 / targets 仅一次 / 零 skip 零拒绝）；ApplyFSR 的 GLStateGuard 逐行复核（scissor/blend/depth/cull/colorMask 全保，Bypass 裸 blit 同样受保护）——状态污染假设也排除。
+4. **会话形态**：94 秒会话 = ~85 秒加载 + ~2 秒标题屏即退出；闪屏具体出现时段（加载屏/标题/世界）用户未描述，本版取证不依赖该信息。
+5. **ZL2 死点前移**：上次会话 /sdcard/MG/latest.log 有 27 行插件库加载输出（库已加载，死于库加载后 JVM 首行输出前）；本次 MG 日志**零 ZL2 会话行** ⇒ 本次死于 dlopenEngine 之前（Env Map / dlopenJavaRuntime 段，或 launch() 根本没被调到 = UI 校验层报错）。ZL2 源码复核：插件解析契约无恙（fclPlugin + renderer 3 段 + pojavEnv 冒号切分全部兼容，isConfigurable 白名单含本插件）。
+
+### 本轮落盘（代码，MobileGlues 侧）
+1. **egl.cpp presentSurface：buffer-age 取证**（翻转层直接测谎仪）：每次 present（门控前后两条路径共用）查 `eglQuerySurface(EGL_BUFFER_AGE_KHR)`——全重绘管线恒为 1；0 = 从未绘制过的新缓冲（未定义内容上屏 = 闪屏签名实锤）；≥2 = 有帧没画满。前 12 次 + 每 512 次心跳，异常（0 或 >2）独立限频响报（≤24 条 + 每 128 条）；后端不支持则一次性静默降级。
+2. **egl.cpp eglSwapInterval：异步拒绝 + 遥测**：FSR 非 Disabled 时 interval<1 一律钳到 1（LWJGL 自解析 EGL 入口可绕过 FCL 的 gl_swap_interval shim 直呼 EGL——这是注入生效后仅剩的异步生产者通道）；`MOBILEGL_FSR1_VSYNC_CLAMP=0` 可关。生效区间变化即打 `eglSwapInterval: interval now N (requested M)`。
+
+### 下份日志判定表（Task 9 版，preset 1 即可，无需用户改档）
+1. `FSR1 buffer-age #N: age 0 ANOMALY` 或 age 高频 ≥2 ⇒ **翻转层实锤**：存在未绘制缓冲上屏。age 0 + 时间点对应 surface resize/重建 ⇒ 缓冲重分配窗口期（FSR targets/缓冲追赶）；age 恒 1 仍闪 ⇒ 内容层（FSR 输出本身）或 FCL TextureView 消费层。
+2. `eglSwapInterval: interval now 0` 出现 ⇒ 有调用方绕过 FCL 强 0（钳制已兜住）；全程 interval 1 ⇒ FCL 层翻转纪律无洞。
+3. 顺手欢迎：Bypass 档（第 5 档）≥30 秒对照（glFinish 探针仍未被测过）；以及闪屏出现时段的一句话描述（加载屏/标题/世界）。
+4. **ZL2**：请上传 ZL2 实例的 `.minecraft/logs/latest.log`（其 launch 链 Env Map / DLOPEN Java Runtime / JVM Args / Java Exit code 全在其中）+ 报错截图。ZL2 main.log 只有应用头部 ⇒ 游戏侧日志才是死亡点载体。
+
+### 推送与状态
+- MobileGlues egl.cpp → mg-3backends（本节同 commit）；宿主（pin + 本节）随后；CI 绿后交付。
+- FCL 侧证据链现状：关闭档净 ✓、全档闪 ✓、FIFO ✓、状态净化 ✓、flush ✓、env 生效 ✓ —— 剩余：翻转缓冲内容 / FCL TextureView 消费。buffer-age 将二选一收口。
